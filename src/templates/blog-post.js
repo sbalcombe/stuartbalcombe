@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1 style={{ fontFamily: 'Fjalla One, sans-serif', lineHeight: 1.4 }}>
+        <h1>
           {post.frontmatter.title}
         </h1>
         <p
@@ -23,12 +23,11 @@ class BlogPostTemplate extends React.Component {
             display: 'block',
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
-            fontFamily: 'Cantarell, sans-serif', 
           }}
         >
           {post.frontmatter.date}
         </p>
-        <div style={{ fontFamily: 'Cantarell, sans-serif' }}  dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),

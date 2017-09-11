@@ -37,7 +37,6 @@ export default function SignupForm(props) {
               border: '1px solid #DBDBDB',
               fontSize: '19px',
               fontWeight: 300,
-              fontFamily: 'Cantarell, sans-serif',
               marginRight: '8px',
               color: '#484848'
             }}
@@ -69,7 +68,6 @@ export default function SignupForm(props) {
               color: '#ffffff',
               fontSize: '19px',
               fontWeight: 300,
-              fontFamily: 'Cantarell, sans-serif'
             }}
           />
         </span>
@@ -79,7 +77,6 @@ export default function SignupForm(props) {
             marginTop: '1em',
             lineHeight: 1,
             fontSize: '0.8em',
-            fontFamily: 'Cantarell, sans-serif'
           }}
         >
           I won't share your email with anyone. 

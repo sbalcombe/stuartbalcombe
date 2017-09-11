@@ -36,9 +36,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-segment',
       options: {
-        trackingId: `UA-105976615-1`,
+        writeKey: 'QdongpkiColO4fpxscxlu0ytPXtZ9KGA'
       },
     },
     `gatsby-plugin-offline`,

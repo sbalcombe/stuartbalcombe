@@ -13,7 +13,6 @@ class Bio extends React.Component {
       <p
         style={{
           marginBottom: rhythm(2.5),
-          fontFamily: 'Cantarell, sans-serif'
         }}
       >
         <img

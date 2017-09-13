@@ -16,6 +16,7 @@ class BlogIndex extends React.Component {
       <div>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
         <About />
+        {/*
         <BlogIntro />
         {posts.map(post => {
           if (post.node.path !== "/404/") {
@@ -25,7 +26,6 @@ class BlogIndex extends React.Component {
                 <h3
                   key={post.node.frontmatter.path}
                   style={{
-                    fontFamily: 'Fjalla One, sans-serif',
                     lineHeight: 1.4,
                     marginBottom: rhythm(1 / 4),
                   }}
@@ -45,6 +45,7 @@ class BlogIndex extends React.Component {
             )
           }
         })}
+        */}
       </div>
     )
   }

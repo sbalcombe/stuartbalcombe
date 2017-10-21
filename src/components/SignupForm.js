@@ -22,14 +22,13 @@ export default function SignupForm(props) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div style={{ display: 'inline-block' }} >
         <label htmlFor="email">{text}</label>
         <span style={{ whiteSpace: 'nowrap' }} >
           <input
             id="email"
             type="email"
             name="EMAIL"
-            placeholder="Your email"
+            placeholder="Your email address..."
             style={{
               padding: '11px',
               lineHeight: '24px',
@@ -38,7 +37,8 @@ export default function SignupForm(props) {
               fontSize: '19px',
               fontWeight: 300,
               marginRight: '8px',
-              color: '#484848'
+              color: '#484848',
+              width: '65%'
             }}
             required
           />
@@ -68,6 +68,7 @@ export default function SignupForm(props) {
               color: '#ffffff',
               fontSize: '19px',
               fontWeight: 300,
+              width: '35%'
             }}
           />
         </span>
@@ -82,7 +83,6 @@ export default function SignupForm(props) {
           I won't share your email with anyone. 
 
         </div>
-      </div>
     </form>
   </div>;
 }

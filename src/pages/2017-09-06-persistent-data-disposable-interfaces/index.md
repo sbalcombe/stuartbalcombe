@@ -1,7 +1,7 @@
 ---
-title: (Coming Soon) Data is persistent, interfaces are disposable
-date: "2017-09-06T23:46:37.121Z"
-path: "/persistent-data-disposable-interfaces/"
+title: Side Projects & Learning
+date: "2017-08-17T23:46:37.121Z"
+path: "/side-projects"
 ---
 
 Full essay coming soon.

@@ -1,81 +1,32 @@
 import React from "react"
 import Link from "gatsby-link"
 import get from "lodash/get"
-import Helmet from "react-helmet"
 
-import About from "../components/About"
-import Work from "../components/Work"
-import SignupForm from "../components/SignupForm"
+import SEO from '../components/SEO'
+import Intro from "../components/Intro"
+import Offerings from "../components/Offerings"
+import QuoteBlock from "../components/QuoteBlock"
 import { rhythm } from "../utils/typography"
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
-    const siteTitle = get(this, "props.data.site.siteMetadata.title")
-    const posts = get(this, "props.data.allMarkdownRemark.edges")
-
     return (
       <div>
-        <Helmet> 
-          <title>{get(this, "props.data.site.siteMetadata.title")}</title>
-          <meta name="description" content="Stuart Balcombe is a product designer from Philadelphia, PA." />
-
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@stubalcombe" />
-          <meta name="twitter:title" content="Stuart Balcombe" />
-          <meta name="twitter:description" content="Product Design" />
-          <meta name="twitter:creator" content="@stubalcombe" />
-          <meta name="twitter:image" content="https://www.stuartbalcombe.com/static/profile-pic.9c85a375.jpg" />
-
-          <meta property="og:title" content="Stuart Balcombe" />
-          <meta property="og:type" content="article" />
-          <meta property="og:url" content="https://www.stuartbalcombe.com/" />
-          <meta property="og:image" content="https://www.stuartbalcombe.com/static/profile-pic.9c85a375.jpg" />
-          <meta property="og:description" content="Product Design" /> 
-          <meta property="og:site_name" content="Stuart Balcombe" />
-        </Helmet>
-        <About />
-        {/*
-        <Work />
-        <h4>Writing</h4>
-        {posts.map(post => {
-          if (post.node.path !== "/404/") {
-            const title = get(post, "node.frontmatter.title") || post.node.path
-            return (
-              <div>
-                <h3
-                  key={post.node.frontmatter.path}
-                  style={{
-                    lineHeight: 1.4,
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: "none" }}
-                    to={post.node.frontmatter.path}
-                  >
-                    {post.node.frontmatter.title}
-                  </Link>
-                </h3>
-                <small>
-                  {post.node.frontmatter.date}
-                </small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
-            )
-          }
-        })}
-        */}
+        <SEO />
+        <Intro />
+        <Offerings />
+        <QuoteBlock quoteText='Jane’s been a godsend for us. Not only did she interpret our needs perfectly, but she was proactive about making additional design suggestions that enhanced our new product.' quoteAuthor='– Vince Drahman'/>
       </div>
     )
   }
 }
 
-BlogIndex.propTypes = {
+Index.propTypes = {
   route: React.PropTypes.object
 }
 
-export default BlogIndex
-
+export default Index;
+/*
 export const pageQuery = graphql`
   query IndexQuery {
     site {
@@ -99,3 +50,4 @@ export const pageQuery = graphql`
     }
   }
 `
+*/

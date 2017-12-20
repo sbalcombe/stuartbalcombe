@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Stuart Balcombe | Product Designer",
+    title: "Stuart Balcombe | Product Design",
     author: "Stuart Balcombe",
   },
   plugins: [

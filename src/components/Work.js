@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from "gatsby-link"
 
-export default function () {
+export default function Work (props) {
 	return (
 		<div>
 			<Link>

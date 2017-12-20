@@ -8,29 +8,6 @@ import { rhythm, scale } from '../utils/typography'
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    let header
-    if (location.pathname !== '/') {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Fjalla One, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Stuart Balcombe | Product Design
-          </Link>
-        </h3>
-      )
-    }
     return (
       <Container
         style={{
@@ -38,7 +15,6 @@ class Template extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        {header}
         {children()}
         <Footer />
       </Container>

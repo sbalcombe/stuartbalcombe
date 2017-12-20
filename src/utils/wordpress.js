@@ -10,30 +10,30 @@ const theme: OptionsType = {
   scaleRatio: 5 / 2,
   googleFonts: [
     {
-      name: 'Fjalla One',
-      styles: ['700'],
+      name: 'Montserrat',
+      styles: ['500', '700'],
     },
     {
-      name: 'Cantarell',
+      name: 'Varela Round',
       styles: ['400', '400i', '700', '700i', '900', '900i'],
     },
   ],
-  headerFontFamily: ['Fjalla One', 'Georgia', 'sans-serif'],
-  bodyFontFamily: ['Cantarell', 'sans-serif'],
+  headerFontFamily: ['Montserrat', 'sans-serif'],
+  bodyFontFamily: ['Varela Round', 'sans-serif'],
   bodyColor: 'hsla(0,0%,0%,0.9)',
-  headerWeight: 900,
+  headerWeight: 700,
   bodyWeight: 400,
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     h1: {
-      fontFamily: ['Fjalla One', 'sans-serif'].join(','),
+      fontFamily: ['Montserrat', 'sans-serif'].join(','),
     },
     blockquote: {
-      ...scale(1 / 5),
+      //...scale(1 / 5),
       color: gray(41),
       fontStyle: 'italic',
       paddingLeft: rhythm(13 / 16),
-      marginLeft: rhythm(-1),
+      marginLeft: 0,//rhythm(-1),
       borderLeft: `${rhythm(3 / 16)} solid ${gray(10)}`,
     },
     'blockquote > :last-child': {

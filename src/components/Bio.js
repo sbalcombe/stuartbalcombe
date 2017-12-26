@@ -1,9 +1,4 @@
 import React from 'react'
-
-// Import typefaces
-import 'typeface-fjalla-one'
-import 'typeface-cantarell'
-
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
@@ -12,7 +7,7 @@ class Bio extends React.Component {
     return (
       <p
         style={{
-          marginBottom: rhythm(2.5),
+          marginBottom: 0,//rhythm(2.5),
         }}
       >
         <img
@@ -27,9 +22,9 @@ class Bio extends React.Component {
             borderRadius: '2px'
           }}
         />
-        Written by <strong>Stuart Balcombe</strong> who lives and works in Philadelphia building useful things.{' '}
-        <a href="https://twitter.com/stubalcombe">
-          You should follow him on Twitter
+        <strong>Stuart Balcombe</strong> lives and works in Philadelphia, building useful things to solve complex problems.{' '}
+        <a target='_blank' href="mailto:stuartbalcombe@gmail.com">
+          Get in touch
         </a>
       </p>
     )

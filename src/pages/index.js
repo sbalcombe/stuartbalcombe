@@ -4,18 +4,37 @@ import get from "lodash/get"
 
 import SEO from '../components/SEO'
 import Intro from "../components/Intro"
-import Offerings from "../components/Offerings"
 import QuoteBlock from "../components/QuoteBlock"
+import Bio from "../components/Bio"
 import { rhythm } from "../utils/typography"
 
 class Index extends React.Component {
   render() {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const recentPosts = get(this, 'props.data.allMarkdownRemark.edges')
     return (
       <div>
         <SEO />
         <Intro />
-        <Offerings />
-        <QuoteBlock quoteText='Jane’s been a godsend for us. Not only did she interpret our needs perfectly, but she was proactive about making additional design suggestions that enhanced our new product.' quoteAuthor='– Vince Drahman'/>
+        {/* <QuoteBlock quoteText='Stuart’s been a godsend for us. Not only did he interpret our needs perfectly, but he was proactive about making additional design suggestions that enhanced our new product.' quoteAuthor='– Mike Wilner, CEO, Sail'/> */}
+        <h4>Work</h4>
+        {recentPosts.map(({ node }) => {
+          const title = get(node, 'frontmatter.title') || node.fields.slug
+          return (
+            <div style={{ margin: '1rem 0' }} key={node.fields.slug}>
+              <Link style={{ margin: '1rem 0' }} to={node.fields.slug}>
+                {title}
+              </Link>
+              <p dangerouslySetInnerHTML={{ __html: node.frontmatter.excerpt }} />
+            </div>
+          )
+        })}
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <Bio />
       </div>
     )
   }
@@ -26,7 +45,7 @@ Index.propTypes = {
 }
 
 export default Index;
-/*
+
 export const pageQuery = graphql`
   query IndexQuery {
     site {
@@ -37,17 +56,16 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
-          frontmatter {
-            path
-            date(formatString: "DD MMMM, YYYY")
+          fields {
+            slug
           }
           frontmatter {
             title
+            tags
+            excerpt
           }
         }
       }
     }
   }
 `
-*/

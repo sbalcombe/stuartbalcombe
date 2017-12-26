@@ -7,12 +7,12 @@ class Intro extends React.Component {
   render() {
     return (
     	  <div>
-	        <h1>Grow your business with customer-focused design</h1>
+	        <h1>Helping tech companies grow with human-centered design.</h1>
 	        <p style={{ textAlign: 'justify' }}>
-            Stuart Balcombe is a designer who uses customer-driven tests to increase successful adoption for online products. Unlike other growth marketers, I take a customer centered approach to business problems and design end-to-end experiences to drive sustainable growth.
+            Hi, I’m Stuart Balcombe. I'm a product designer with more than 3 years experience using customer-driven design to increase adoption and user retention for online products. I use a problem first approach to craft simple experiences that drive sustainable growth.
           </p> 
           <p>
-            I’m Stuart Balcombe, a designer and user experience specialist with more than 3 years of experience working with companies like <a>Sail</a> and <a>Betaspring</a>.
+            Most recently I've been solving customer problems at <a href='https://www.letssail.co' rel="nofollow" target="_blank">Sail</a>, <a href='https://www.hellocompass.com' rel="nofollow" target="_blank">Compass</a> and <a href='https://www.revupfund.com/' rel="nofollow">RevUp by Betaspring</a>.
           </p>
       	</div>
     )

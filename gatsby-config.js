@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "Stuart Balcombe | Product Design",
     author: "Stuart Balcombe",
+    description: "",
+    siteURL: "https://www.stuartbalcombe.com"
   },
   plugins: [
     {
@@ -19,6 +21,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              linkImagesToOriginal: false,
             },
           },
           {

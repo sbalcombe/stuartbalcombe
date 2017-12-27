@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import favicon from "./favicon.ico";
 
 class SEO extends Component {
 	render () {
@@ -7,6 +8,7 @@ class SEO extends Component {
 			<Helmet> 
 			  <meta charSet="utf-8" />
 			  <title>{this.props.title}</title>
+			  <link rel="shortcut icon" href={favicon} />
 			  <meta name="description" content={this.props.description} />
 
 			  {/* Schema.org markup for Google+ */}

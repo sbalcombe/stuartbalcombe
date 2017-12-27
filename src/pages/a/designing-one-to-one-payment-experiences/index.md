@@ -9,58 +9,58 @@ excerpt: "Turning a technically challenging problem, into a powerful yet frictio
 ## Problem & Opportunity
 On the surface, freelancers seem to have it all. They can be their own boss, take back their independence, and only spend time doing what they love. It turns out running a freelance business is a little more involved than that.
 
-One thing that every freelancer has to figure out, is how they are going to get paid for their work. Unfortunately leaving a steady full-time job means there is no more accounting department and no more payroll. Keeping that in mind, we began interviewing creative freelancers about how they got paid by their clients and started to identify the frustrations they had with their existing solutions.
+One thing that every freelancer has to figure out, is how they are going to get paid for their work. Unfortunately, leaving a full-time job means no more administrative support. We began interviewing  freelancers to learn more about how they got paid by their clients. This process helped identify their frustrations with their existing solution.
 
-During our research, we identified three very different high-level solutions that freelancers were using to get paid for their work.
+We identified three high-level solutions that freelancers were using to get paid.
 
-**Offline Solutions -** Some of the freelancers I spoke to were not using a specific payments tool to get paid for their work. This group often created invoices manually using an Excel template or used a free invoice template tool to request payment and accepted checks.
+**Offline Solutions -** This group often created invoices using Excel or a free invoice template tool and accepted checks as payment.
 
-**Online Invoicing Solutions -** Many freelancers I interviewed and who responded to our beta survey used an accounting tool that supported invoicing and online payments to get paid by their clients. Examples included Quickbooks, Freshbooks, Wave, Paypal Invoicing, and HelloBonsai.
+**Online Invoicing Solutions -** Many freelancers used an online accounting tool that supported invoicing and online payments. Examples included Quickbooks, Freshbooks, Wave, Paypal Invoicing, and HelloBonsai.
 
-**Consumer Payment Solutions -** An unexpected discovery was the number of freelancers (most commonly moonlighters) who used a consumer payments solution like Venmo or a personal PayPal account to get paid for their work.
+**Consumer Payment Solutions -** An unexpected discovery was the number of freelancers who used a consumer payments products like Venmo or PayPal to get paid for their work.
 
-The most common frustration expressed by the people we interviewed was late or non-payment of invoices for completed work. This frustration was shared across each solution type with freelancers often waiting weeks or even months after work was complete to receive payment.
+The most common frustration expressed by the people we interviewed was late or non-payment of invoices for completed work. This frustration was shared across each solution type. Freelancers often waited weeks or months after work was complete to receive payment.
 
-A secondary frustration that freelancers using Offline Solutions or even Online Invoicing Solutions reported was the perceived amount of time it took to send an invoice because it felt like an administrative task. Several freelancers told us they often delay sending invoices to clients several weeks after work has been completed. 
+A secondary frustration that freelancers using Offline Solutions or even Online Invoicing Solutions reported was the perceived amount of time it took to send an invoice because it felt like an administrative task. Several freelancers told us they often delay sending invoices to clients several weeks after work was complete.  
 
 ## Introducing Sail Payments
-A powerful and secure way to get paid that’s simple to use and designed specifically for freelancers who have personal relationships with their clients. Our first release focused on providing freelancers with greater control over payments by saving a client’s card on file while making it easy to send professional invoices.
+A secure way to get paid that’s simple to use and designed for freelancers who have personal relationships with their clients. The goal of our first release was to provide freelancers with greater control over payments by saving a client’s card on file.
 
 ![Screenshot of the client experience from the inital release of Sail](./initial-release-client.png)
 
 ## Process
 
-The first step to designing an initial solution was to understand freelancers current processes and the motivations driving their existing behavior. I used job stories to add context to the problems identified in my research.
+The first step was to understand the motivations driving freelancers existing behavior. I used job stories to add context to the problems identified in my research.
 
 > When I work with a freelance client, I want to spend less time sending invoices and chasing late payments. So I can spend more time doing the work I love.
 
 > When I work with a freelance client, I want to provide a professional payment experience. So I can build trust with my client.
 
-These job stories formed the basis of the initial problem brief I communicated to the team, along with excerpts from our user research to provide some additional context where required. At this stage, we also determined how we would measure the success of the project using both quantitative and qualitative measures. The key events we tracked for the initial release were:
+These job stories formed the basis of the initial problem brief I communicated to the team. I included quotes from my user research to provide extra context where required. At this stage, we also determined how we would measure the success of the project. The key events we decided to track for the initial release were:
 
 **Acquisition:** The number of new accounts created.
 **Activation:** The number of acquired users who sent a payment request.
-**Retention:** The number of users who sent multiple payment requests in a rolling 30 day period.
+**Retention:** The number of users who sent more than 1 payment requests in a rolling 30 day period.
 
-With the customer problem clearly defined the next step was to begin designing possible solutions.
+With the problem defined the next step was to begin designing possible solutions.
 
 #### Designing the initial solution
 
-I began by mapping out 5 key user flows that would be required to support the freelancer's job of getting paid on time by their clients.
+I began by mapping out 5 key user flows that were critical for freelancers to get paid on time by their clients.
 
 ![Flow diagrams for initial user actions](./flow-mockups.png)
 
 With the initial mockups complete, I created an Invision prototype and began scheduling user testing sessions to get feedback before changes were committed to code.
 
-Conducting early user tests helped us ensure that our initial release was scoped to the smallest valuable product we could ship. I scheduled design reviews and release planning sessions with our engineers to answer questions and ensure that the solution we shipped was aligned with the learnings from our beta user interviews. 
+These early tests helped us iterate on the solution design before committing changes to code. User feedback also helped ensure that our initial release was the smallest valuable product possible. I scheduled design reviews and release planning meetings with our engineers to answer questions. Maintaining a short feedback loop helped ensure alignment with the learnings from our user interviews.
 
-To ensure our team was able to move quickly, we created a lightweight workflow in Github to ensure everyone had the context they required at all times. All project documents were linked from the project brief in Github along with any Invision prototypes or project conversations.
+Shipping fast was a top priority of the product team. We created a lightweight workflow in Github to ensure everyone had the context they required at all times. A single project brief linked all relevant documents along with any prototypes or conversations.
 
 ## Payment request workflow
 Our initial user research identified ease of requesting payment and providing a professional client experience as key requirements. I developed a UI that focused on reducing the number of actions required to send an invoice, while empowering users to customize the payment experience for their clients as required. 
 
 #### Designing for transparency
-Freelancers typically establish personal relationships with their clients over the course of a project. The way they communicate and present themselves is very important for establishing trust and building their personal brand. Our goal was to ensure freelancers felt comfortable using Sail as an extension of their brand. To do this, we needed to help freelancers understand the experience their clients would have while making payments with Sail. In the payment request workflow, freelancers can customize the experience their client will have and quickly understand what their client will see. We also provided the option to preview all communication that would be sent to clients by Sail on their behalf. This step was particularly important for first time users who may still be considering whether to switch from their existing solution.
+Freelancers typically establish personal relationships with their clients over the course of a project. Effective communication is very important for establishing trust and building a personal brand. Our goal was to ensure freelancers felt comfortable using Sail as an extension of their brand. To do this, we needed to help freelancers understand the experience their clients would have while making payments with Sail. In the payment request workflow, freelancers can customize the experience their client will have and quickly understand what their client will see. We also provided the option to preview all communication that would be sent to clients by Sail on their behalf. This step was particularly important for first time users who may still be considering whether to switch from their existing solution.
 
 ![Screenshot of editing an invoice in the inline editor](./send-invoice.png)
 
@@ -72,11 +72,11 @@ The scheduled payment workflow was designed to provide freelancers with the opti
 By saving a payment method on file, clients would not be required to enter their card information each time they paid. Existing invoicing solutions required client actions in all cases regardless of the relationship or terms the client and freelancer had in place. By providing the option to schedule payments, freelancers have the option to remove client actions as a dependency to payment.
 
 ## Tracking changes and responding to user feedback
-We initially launched Sail in closed beta and created an application survey to ensure we sent invites only to freelancers who would benefit from Sail’s current feature set. The survey was completed by more than 100 freelancers and provided valuable data on the problems potential users were trying to solve.
+We launched Sail in closed beta and created a user survey to ensure we only sent invites to freelancers who could use Sail’s current feature set. The survey received more than 100 responses and provided valuable data on the problems potential users were trying to solve.
 
-I was responsible for customer support and user communication via both live chat and email. As freelancers began using the product and visiting the marketing site, I triaged conversations in Intercom and added new feature requests to our Public Roadmap. I communicated new insights and learnings to the team during daily recaps and ran a weekly roadmap review meeting to prioritize incoming requests.
+I was responsible for customer support and user communication via both live chat and email. As freelancers began using the product and visiting the marketing site, I triaged conversations in Intercom and added new feature requests to our Public Roadmap. I communicated new insights and learnings to the team during daily recaps. We prioritized feature requests during a weekly roadmap review meeting.
 
-By maintaining a personal dialogue with our early users I was able to get high fidelity feedback as we tested new features and gain a deep understanding of how the product was being used in their daily workflow. This feedback helped to reduce the time needed to understand and ship new features and helped build brand evangelism.
+Maintaining a dialogue with early users ensured I was able to get high fidelity feedback and gain a deep understanding of how the product was being used. This feedback helped to reduce the time needed to understand and ship new features and helped build brand evangelism.
 
 ![Screenshot of the Sail public roadmap](./sail-roadmap.png)
 
@@ -96,22 +96,22 @@ Referring back to our initial customer research, we decided to ask:
 
 Freelancers typically have one-to-one relationships with their clients. The initial payment request UI was designed to ensure this relationship was enhanced by providing transparency into what clients would experience. However, usage data showed that after the first use less than 2% of users were making changes to their client's experience.
 
-Rather than forcing users to navigating a verbose UI, I designed a streamlined payment request flow with the goal to reduce the time required to send a request. I created a new prototype in Invision and began testing the flow side-by-side against our existing feature with users.
+Rather than forcing users to navigating a verbose UI, I designed a streamlined flow to reduce the time required to send a payment request. I created a new prototype in Invision and began testing the flow side-by-side against our existing solution with users.
 
 ![Screenshot of the updated payment request flow](./payment-request-screen.png)
 
 #### Charges vs Invoices
-The initial release of Sail payments allowed clients to save payment methods on file and schedule future payments to be charged automatically. In the first few weeks after launch the most common feature request we got was to offer recurring billing. We discovered that many users who worked with clients on an ongoing basis billed on a set payment schedule, but still wanted to control when their client was charged. We decided to enable the option to immediately charge a saved payment method to fit this existing behavior and provide greater flexibility than requiring clients to be subscribed to a fixed plan.
+The initial release of Sail payments allowed clients to save payment methods on file and schedule future charges. In the first few weeks after launch the most common feature request we got was to offer recurring billing. We discovered that many users who worked with clients on an ongoing basis billed on a set payment schedule, but still wanted to control when their client was charged. We added the option to immediately charge a saved payment method to fit this behavior and provide greater flexibility than subscribing clients to a fixed plan.
 
-At the same time we also decided to de-prioritize the role of invoices in the payment flow. Looking at our user data allowed us to understand how invoices were being used and design a more focused payment experience.
+At the same time we also decided to de-prioritize the role of invoices in the payment flow. Looking at user data helped us understand how invoices were being used and design a more focused payment experience.
 
 ![Screenshot of the client payment experience](./payment-profile-screen.png)
 
 ## Results & Lessons Learned
-I worked on designing a simple solution to a problem that was too technically prohibitive for most freelancers to implement themselves. Sail now has more than 20 monthly active users and has processed just north of $125k in client payments in the 6 months since launching in July 2017.
+I worked on creating a simple solution to a problem that was prohibitive for most freelancers to build themselves. Sail now has more than 20 monthly active users and has processed north of $125k in client payments in the 6 months since it's launch in July 2017.
 
 > Sail allows me to bill my clients professionally and get paid in the most efficient way possible.
 > 
 > – Hicham Moutahir, Owner, Shibi Designs
 
-Running an independent business requires freelancers to be marketers, creatives, strategists, accountants, and managers. Making it easier to understand the financial side of freelance businesses is an exciting challenge that will not only give freelancers more time to focus on providing value for their clients but will help to professionalize their perception to the clients they hire.
+Running an independent business requires freelancers to be marketers, strategists, accountants, and managers. Making it easier to understand business finances will not only give freelancers more time to focus on their clients but will help them run more profitable businesses.

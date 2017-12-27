@@ -14,7 +14,10 @@ class Index extends React.Component {
     const recentPosts = get(this, 'props.data.allMarkdownRemark.edges')
     return (
       <div>
-        <SEO />
+        <SEO 
+          title={siteTitle}
+          description="Stuart Balcombe is a product designer from Philadelphia, PA."
+        />
         <Intro />
         {/* <QuoteBlock quoteText='Stuart’s been a godsend for us. Not only did he interpret our needs perfectly, but he was proactive about making additional design suggestions that enhanced our new product.' quoteAuthor='– Mike Wilner, CEO, Sail'/> */}
         <h4>Work</h4>
@@ -61,7 +64,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            tags
+            category
             excerpt
           }
         }

@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
+import SEO from '../components/SEO'
 import Bio from '../components/Bio'
 import './BlogPost.css'
 import { rhythm, scale } from '../utils/typography'
@@ -10,11 +11,9 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-
-    return (
-      <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>{post.frontmatter.title}</h1>
+    let workMeta
+    if (post.frontmatter.category === 'work') {
+      workMeta = (
         <div style={{ marginBottom: '3rem' }}>
           <div style={{ display: 'inline-block', marginRight: '3rem' }}>
             <span style={{ display: 'block', textTransform: 'uppercase', fontSize: '0.7em', opacity: 0.54 }}>Role</span>
@@ -25,6 +24,16 @@ class BlogPostTemplate extends React.Component {
             <strong>Sail</strong>
           </div>
         </div>
+      )
+    }
+    return (
+      <div>
+        <SEO 
+          title={`${post.frontmatter.title} - ${siteTitle}`}
+          description={post.frontmatter.excerpt}
+        />
+        <h1>{post.frontmatter.title}</h1>
+        {workMeta}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -53,6 +62,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        category
+        excerpt
       }
     }
   }

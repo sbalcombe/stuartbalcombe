@@ -2,7 +2,7 @@
 title: Designing one-to-one payment experiences
 date: "2017-12-21T22:12:03.284Z"
 path: "/designing-one-to-one-payment-experiences/"
-tags: ["work", "recent"]
+category: "work"
 excerpt: "Turning a technically challenging problem, into a powerful yet frictionless payment experience for freelancers and their clients."
 ---
 

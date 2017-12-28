@@ -5,6 +5,7 @@ import get from "lodash/get"
 import SEO from '../components/SEO'
 import Intro from "../components/Intro"
 import QuoteBlock from "../components/QuoteBlock"
+import Offerings from "../components/Offerings"
 import Bio from "../components/Bio"
 import { rhythm } from "../utils/typography"
 
@@ -19,8 +20,9 @@ class Index extends React.Component {
           description="Stuart Balcombe is a product designer from Philadelphia, PA."
         />
         <Intro />
-        {/* <QuoteBlock quoteText='Stuart’s been a godsend for us. Not only did he interpret our needs perfectly, but he was proactive about making additional design suggestions that enhanced our new product.' quoteAuthor='– Mike Wilner, CEO, Sail'/> */}
-        <h4>Work</h4>
+        <Offerings />
+        <QuoteBlock quoteText="Stuart was critical to Compass's success. His work helped the Compass team execute on more projects, with better results, without needing to hire more project managers." quoteAuthor='– Taylor Sundali, Co-Founder, Compass'/>
+        <h4 style={{ marginBottom: rhythm(0.25)}}>Recent posts</h4>
         {recentPosts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
@@ -56,7 +58,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           fields {

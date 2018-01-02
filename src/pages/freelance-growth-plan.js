@@ -48,15 +48,21 @@ export default function FreelanceGrowthPlan (props) {
 			<QuoteBlock quoteText="Stuart helped me realize the true value of my services and encouraged me to double my prices. Stuart has a vast knowledge on the freelance industry and I always value his input. I'm so thankful for his advice that pushed me in the right direction." quoteAuthor='– Paige Brunton, Owner, The Paige Studio'/>
 			<p><strong>Here's what you'll get:</strong></p>
 			<ul>
-				<li>An application that will help me get an idea of who you are, what you do for clients, and how I can help you achieve your goals.</li>
-				<li>An initial consultation (takes 90-120 minutes) where I’ll dig deeper into your business and we’ll come up with a plan of action to grow your income.</li>
+				<li>An initial 90-minute consultation where I’ll dig deeper into your business and we’ll come up with a plan of action to grow your income.</li>
 				<li><strong>Deliverable #1:</strong> I’ll create clear documentation of the process improvements and marketing pillars we discuss.</li>
 				<li><strong>Deliverable #2:</strong> I’ll create all the workflows you need to automatically qualify and onboard new clients.</li>
-				<li><strong>Deliverable #3:</strong> I’ll create a 5-point checklist of promising growth opportunities for future exploration.</li>
 			</ul>
-
-			<p>The cost for a Freelance Growth Plan is currently $995. This includes everything you need to run a more profitable freelance business. To get started, apply below to tell me more about your business – you'll hear back from me within 48 hours.</p>
-			<Button buttonText='Apply now for free' buttonLink='https://stuartbalcombe.typeform.com/to/RCbOPD' />
+			<p><strong>What it costs (and a bonus option):</strong></p>
+			<p>The <strong>Freelance Growth Plan</strong> currently costs $495. Your process documentation and automation setup will be completed within 7 days of our initial consultation. To get started, apply below to tell me more about your business – you'll hear back from me within 48 hours.</p>
+			<Button buttonText='Apply for the Freelance Growth Plan' buttonLink='https://stuartbalcombe.typeform.com/to/RCbOPD' />
+			<p style={{ marginTop: '0.75rem'}}>All your information will be kept strictly confidential.</p>
+			<p>If you’d like ongoing support to help execute your Freelance Growth Plan I offer <strong>Monthly One-to-One Coaching</strong>. Coaching costs $350/month and availability is on a first come first served basis. Here’s what you’ll get:</p>
+			<ul>
+				<li>A 60-minute one-to-one video call every other week.</li>
+				<li>Unlimited access to me via email and Slack.</li>
+				<li>Everything included in the <strong>Freelance Growth Plan</strong> when you commit to 3 months of coaching.</li>
+			</ul>
+			<Button buttonText='Apply for 1-1 coaching' buttonLink='https://stuartbalcombe.typeform.com/to/RCbOPD' />
 			<p style={{ marginTop: '0.75rem'}}>All your information will be kept strictly confidential.</p>
 			<hr style={{ marginBottom: '1rem' }} />
 			<Bio />

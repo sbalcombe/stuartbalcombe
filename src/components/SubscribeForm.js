@@ -81,13 +81,13 @@ class SubscribeForm extends React.Component {
             onClick={this.onSubmit}
             type="submit"
             style={{
-              background: '#000',
-              color: '#fff',
+              background: 'none',
+              color: '#000',
               padding: '16px 40px',
               height: '52px',
               lineHeight: '0.8em',
               borderRadius: '5px',
-              border: 'none',
+              border: 'solid 2px #000',
               outline: 'none',
               resize: 'none',
               cursor: 'pointer',
@@ -110,9 +110,9 @@ class SubscribeForm extends React.Component {
 SubscribeForm.defaultProps = {
   messages: {
     inputPlaceholder: "Your email...",
-    btnLabel: "Sign Up",
-    sending: "Envoi en cours...",
-    success: "Almost finished!<p>We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.</p>",
+    btnLabel: "Subscribe",
+    sending: "...",
+    success: "Almost finished!<p>To complete the subscription process, please click the link in the email I just sent you.</p>",
     error: "Oops, something went wrong please try again."
   },
   styles: {

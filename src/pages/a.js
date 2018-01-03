@@ -16,11 +16,16 @@ class Articles extends React.Component {
 				<h1>Articles about building customer-driven products.</h1>
 				{posts.map(({ node }) => {
 		          const title = get(node, 'frontmatter.title') || node.fields.slug
+		          const excerpt = get(node, 'frontmatter.excerpt') || ''
 		          return (
 		            <div style={{ margin: '1rem 0' }} key={node.fields.slug}>
+		            <p>
+		              <strong>
 		              <Link style={{ margin: '1rem 0' }} to={node.fields.slug}>
 		                {title}
-		              </Link>
+		              </Link>  
+		              </strong> – {excerpt}
+		             </p>
 		            </div>
 		          )
 		        })}
@@ -54,6 +59,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            excerpt
           }
         }
       }

@@ -17,6 +17,24 @@ const NavBar = () => {
             Stuart Balcombe
           </h1>
         </Link>
+        <ul className='nav-list'>
+          <li>
+            <Link
+              className='nav-list-link'
+              to={'/work-with-me'}
+            >
+              Work with Me
+            </Link>
+          </li>
+          <li>
+            <Link
+              className='nav-list-link'
+              to={'/a'}
+            >
+              Articles
+            </Link>
+          </li>
+        </ul>
       </div>
 	)
 }

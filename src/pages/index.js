@@ -10,11 +10,10 @@ import { rhythm } from "../utils/typography"
 
 class Index extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
       <div>
         <SEO 
-          title={siteTitle}
+          title="Stuart Balcombe | Product Design"
           description="Stuart Balcombe is a product designer from Philadelphia, PA."
         />
         <Intro />

@@ -6,14 +6,14 @@ category: "post"
 excerpt: "I did a lot of different things in 2017 and learned from a lot of amazing people. Here’s my year in review and some goals for 2018."
 ---
 
-2017 was a roller coaster year. This is the first time I’ve done this a retrospective publically, but binging on the great reviews from people I look up to it seemed like the thing to do. So without further ado, here’s my year in review and some goals for 2018.
+2017 was a roller coaster year. This is the first time I’ve done a retrospective publically, but binging on the great reviews from people I look up to it seemed like the thing to do. So without further ado, here’s my year in review and some goals for 2018.
 
 ### Building Sail
 My main focus in 2017 was designing, marketing and launching Sail.
 
 First, some backstory. In August 2016 I joined Compass as Director of Growth to help make creating a professional online presence affordable for everyone. In mid March 2017 the team split to focus on 1. Making client projects more profitable and 2. Building tools to help creative projects run smoothly. I spent the next month rapidly prototyping ways to scale the client <> creative match process while providing a clear understanding of the costs and work involved to all parties. This was a great exercise in building a complete solution with non-technical tools.
 
-In mid April, the difficult decision was made to downsize the team and build a SaaS product to tackle some of the most painful problems yeh freelancers we were working with faced. After 2 months of user research, design, and engineering we launched Sail in private beta on July 5th. The launch went well with early users keen to give feedback and use the product.
+In mid April, the difficult decision was made to downsize the team and build a SaaS product to tackle some of the most painful problems the freelancers we were working with faced. After 2 months of user research, design, and engineering we launched Sail in private beta on July 5th. The launch went well with early users keen to give feedback and use the product.
 
 > Sail allows me to bill my clients professionally and get paid in the most efficient way possible.
 > 

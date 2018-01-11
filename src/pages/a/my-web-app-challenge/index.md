@@ -24,7 +24,7 @@ Within 3 months I'll build a web application and generate more than $1000 in rev
 
 - I must share my progress publically each week. This is partly to keep me focused on delivering value but also to help me get to [my goal of publishing 24 blog posts](/a/what-i-learned-in-2017) this year.
 
-As I’ll to be sharing everything I do, you can follow what I learn and all the mistakes I make on this blog. There’s an email signup on the [blog page](/a) if you’re that way inclined. The deadline is **April 10th to have received $1000 from paying customers**.
+As I’ll be sharing everything I do, you can follow what I learn and all the mistakes I make on this blog. There’s an email signup on the [blog page](/a) if you’re that way inclined. The deadline is **April 10th to have received $1000 from paying customers**.
 
 Having not shipped a software product solo before,  I’ll be asking lots of questions of people who’ve already done this and learning a lot on the fly.
 

@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 
 import SEO from '../components/SEO'
+import QuoteBlock from '../components/QuoteBlock.js'
 import Button from '../components/Button'
 import Bio from '../components/Bio'
 
@@ -20,6 +21,7 @@ export default function CustomProductDesign (props) {
 				<li>How can I test my idea without writing any code?</li>
 				<li>Why are trial users not paying for my product?</li>
 			</ul>
+			<QuoteBlock quoteText="Working with Stuart is a pleasure — he is a thoughtful, proactive product leader with a breadth of skills positioning him to get his hands dirty. On the hands-dirty side, Stuart took charge of customer research, design, UX, and prototyping to great effect. As a leader, Stuart collaborated with engineering management to get buy-in and set scope, worked directly with individual engineers on implementation issues, and deftly coordinated across product and and non-product stakeholders." quoteAuthor='– Matt Fulton, CTO, Sail & Compass'/>
 			<h3>I can help...</h3>
 			<p>We'll start by creating a roadmap for success. If you have an existing  product that usually means a <Link to='/user-experience-review'>UX Review</Link>. For new products or features we'll define how we'll measure success and create a plan to get there. Here's a <Link to='/a/designing-one-to-one-payment-experiences'>look at the process</Link> I used to develop a payment product that processed more than <strong>$125k in 6 months</strong> at Sail.</p>
 			<p>To give you a rough idea, creating a ready-to-test Invision prototype for a web app concept might cost $2000 and take 5 days. Tell me about your project by completing the application below. I'll review your answers and respond with a scheduling link to chat on the phone within 48-hours.</p>

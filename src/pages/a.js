@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import get from "lodash/get"
 
+import Tags from '../components/Tags'
 import SubscribeForm from "../components/SubscribeForm"
 import Bio from "../components/Bio"
 import { rhythm } from "../utils/typography"
@@ -43,13 +44,14 @@ class Articles extends React.Component {
 		          const excerpt = get(node, 'frontmatter.excerpt') || ''
 		          return (
 		            <div style={{ margin: '1rem 0' }} key={node.fields.slug}>
-		            <p>
+		             <p style={{ marginBottom: 0}}>
 		              <strong>
 		              <Link style={{ margin: '1rem 0' }} to={node.fields.slug}>
 		                {title}
 		              </Link>  
 		              </strong> – {excerpt}
 		             </p>
+		             <Tags list={node.frontmatter.tags || []} />
 		            </div>
 		          )
 		        })}
@@ -85,6 +87,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             excerpt
+            tags
           }
         }
       }

@@ -3,6 +3,7 @@ title: Designing one-to-one payment experiences
 date: "2017-12-21T22:12:03.284Z"
 path: "/designing-one-to-one-payment-experiences/"
 category: "work"
+tags: ["projects"]
 excerpt: "Creating simple, yet powerful payment experiences for freelancers and their clients. From research to $125k in  processed payments."
 ---
 

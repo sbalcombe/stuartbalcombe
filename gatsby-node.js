@@ -3,46 +3,94 @@ const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+const createTagPages = (createPage, edges) => {
+  // Tell it to use our tags template.
+  const tagTemplate = path.resolve(`src/templates/tags.js`);
+  // Create an empty object to store the posts.
+  const posts = {};
+  console.log("creating posts");
 
+  // Loop through all nodes (our markdown posts) and add the tags to our post object.
+
+  edges.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!posts[tag]) {
+          posts[tag] = [];
+        }
+        posts[tag].push(node);
+      });
+    }
+  });
+
+  // Create the tags page with the list of tags from our posts object.
+  createPage({
+    path: "/tags",
+    component: tagTemplate,
+    context: {
+      posts,
+    },
+  });
+
+  // For each of the tags in the post object, create a tag page.
+
+  Object.keys(posts).forEach(tagName => {
+    const post = posts[tagName];
+    createPage({
+      path: `/tags/${tagName}`,
+      component: tagTemplate,
+      context: {
+        posts,
+        post,
+        tag: tagName,
+      },
+    });
+  });
+};
+
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+  // add the tags to the query
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(limit: 1000) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                }
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                tags
+                title
+                excerpt
+                date
               }
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
         }
+      }
+    `).then(result => {
+      console.log(result);
+      const posts = result.data.allMarkdownRemark.edges;
 
-        // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
-          createPage({
-            path: edge.node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: edge.node.fields.slug,
-            },
-          })
-        })
-      })
-    )
-  })
-}
+      // call createTagPages with the result of posts
+      createTagPages(createPage, posts);
+
+      // this is the original code used to create the pages from markdown posts
+      result.data.allMarkdownRemark.edges.map(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/blog-post.js`),
+          context: {
+            slug: node.fields.slug,
+          },
+        });
+      });
+      resolve();
+    });
+  });
+};
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators

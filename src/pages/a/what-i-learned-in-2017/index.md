@@ -1,8 +1,9 @@
 ---
 title: What I learned in 2017
-date: "2018-01-01T22:12:03.284Z"
+date: "2018-01-10T22:12:03.284Z"
 path: "/what-i-learned-in-2017/"
 category: "post"
+tags: ["life"]
 excerpt: "I did a lot of different things in 2017 and learned from a lot of amazing people. Here’s my year in review and some goals for 2018."
 ---
 

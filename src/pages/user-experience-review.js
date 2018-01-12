@@ -8,7 +8,7 @@ import Bio from '../components/Bio'
 export default function UserExperienceReview (props) {
   	return (
   		<div>
-  			<SEO />
+  			<SEO description='Do your free accounts not convert to paying users as often as you’d like? Do you get repetitive support requests from users trying to complete the same task? Are you experiencing problems with churn? Get an actionable plan to improve your products user experience and grow your online business.'/>
   			<h1 style={{ marginBottom: '0.25rem' }}>Custom UX Review:</h1>
 			<h3 style={{ marginTop: 0, fontWeight: 500 }}>An actionable plan to improve your products user experience and grow your online business.</h3>
 			<p>Do your free accounts not convert to paying users as often as you’d like? Do you get repetitive support requests from users trying to complete the same task? Are you experiencing problems with churn?</p>

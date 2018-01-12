@@ -21,17 +21,17 @@ const NavBar = () => {
           <li>
             <Link
               className='nav-list-link'
-              to={'/work-with-me'}
+              to={'/a'}
             >
-              Work with Me
+              Articles
             </Link>
           </li>
           <li>
             <Link
               className='nav-list-link'
-              to={'/a'}
+              to={'/work-with-me'}
             >
-              Articles
+              Work with Me
             </Link>
           </li>
         </ul>

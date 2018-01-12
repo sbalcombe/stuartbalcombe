@@ -26,13 +26,13 @@ My biggest learning was the importance of targeting a specific audience when you
 
 ### Coaching Freelancers
 One of the most enjoyable parts of building Sail was having the opportunity to work closely with so many awesome freelancers. I was able to learn a lot about the specific problems that freelancers face; both as independent business owners and as digital creatives.
-Sharing my knowledge and seeing the impact on an individuals business was especially rewarding. The biggest success was helping Paige Brunton more than double her prices! If you're a freelancer interested in increasing your income in 2018 take a look at my new [Freelance Growth Plan](/freelance-growth-plan).
+Sharing my knowledge and seeing the impact on an individual's business was especially rewarding. The biggest success was helping Paige Brunton more than double her prices! If you're a freelancer interested in increasing your income in 2018 take a look at my new [Freelance Growth Plan](/freelance-growth-plan).
 
 ### Personal
-This year was much more stable than 2016 without visa applications and weekly train journeys between Boston and Philadelphia. Brittany and I passed celebrated our first year of marriage and began the tormentuos process of buying a house (yet to close, but close). We found a house we love and are looking forward to making it a home in 2018. We will still be a short commute to Philadelphia and close to family in the area. I’m excited and a little nervous to move in and take on some new “hobbies”.
+This year was much more stable than 2016 without visa applications and weekly train journeys between Boston and Philadelphia. Brittany and I celebrated our first year of marriage and began the tormentuos process of buying a house (yet to close, but close). We found a house we love and are looking forward to making it a home in 2018. We will still be a short commute to Philadelphia and close to family in the area. I’m excited and a little nervous to move in and take on some new “hobbies”.
 
 ## Key Takeaways
-**Simple doesn’t mean easy**. Anything that appears simple is usually anything but behind the scenes. It takes conscious effort to build a simple, focused product. Don’t be afraid to cut bloated features, or even better don’t build at to begin with.
+**Simple doesn’t mean easy**. Anything that appears simple is usually anything but behind the scenes. It takes conscious effort to build a simple, focused product. Don’t be afraid to cut bloated features, or even better don’t build it to begin with.
 
 **Marketing is getting personal**. Sending blanket emails and “hacking” growth provides a poor user experience. Get to know your customers better and focus on positioning your solution to their unique problems. This usually requires a combination of product design and education.
 

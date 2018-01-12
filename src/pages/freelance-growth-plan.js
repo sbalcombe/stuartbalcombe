@@ -9,7 +9,7 @@ import Bio from '../components/Bio'
 export default function FreelanceGrowthPlan (props) {
 	return (
 		<span>
-			<SEO />
+			<SEO description='Take your freelance business to the next level. Your personal roadmap to building a more profitable business.' />
 			<h1 style={{ marginBottom: '0.25rem' }}>Freelance Growth Plan:</h1>
 			<h3 style={{ marginTop: 0, fontWeight: 500 }}>Your personal roadmap to building a more profitable freelance business.</h3>
 			

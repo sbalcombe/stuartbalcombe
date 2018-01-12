@@ -9,7 +9,7 @@ import Bio from '../components/Bio'
 export default function CustomProductDesign (props) {
 	return (
 		<span>
-			<SEO />
+			<SEO description='User experience design can make or break your product and will help drive your key business metrics. Get dedicated user-experience support to launch your new product or redesign an existing feature.'/>
 			<h1 style={{ marginBottom: '0.25rem' }}>Custom product design:</h1>
 			<h3 style={{ marginTop: 0, fontWeight: 500 }}>Get dedicated user-experience support to launch your new product or redesign an existing feature.</h3>
 			<p>User experience design can make or break your product and will help drive your key business metrics. I'm most valuable during the early stages of product development where I can transform user research into functional prototypes.</p>

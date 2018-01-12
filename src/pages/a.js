@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import get from "lodash/get"
 
+import SEO from '../components/SEO'
 import Tags from '../components/Tags'
 import SubscribeForm from "../components/SubscribeForm"
 import Bio from "../components/Bio"
@@ -38,6 +39,7 @@ class Articles extends React.Component {
 	    }
 	    return (
 			<div>
+				<SEO description='Stuart Balcombe writing about products. I publish articles about my experience and learnings from building customer-focused products.' />
 				<h1>Articles about building customer-driven products.</h1>
 				{posts.map(({ node }) => {
 		          const title = get(node, 'frontmatter.title') || node.fields.slug

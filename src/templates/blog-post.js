@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
 import SEO from '../components/SEO'
+import NewsletterSignUp from '../components/NewsletterSignup'
 import Bio from '../components/Bio'
 import './BlogPost.css'
 import { rhythm, scale } from '../utils/typography'
@@ -41,6 +42,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
+        <NewsletterSignUp sell={post.frontmatter.sell} />
         <Bio />
       </div>
     )
@@ -65,6 +67,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         category
         excerpt
+        sell
       }
     }
   }

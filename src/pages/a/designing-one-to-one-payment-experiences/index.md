@@ -5,6 +5,7 @@ path: "/designing-one-to-one-payment-experiences/"
 category: "work"
 tags: ["projects"]
 excerpt: "Creating simple, yet powerful payment experiences for freelancers and their clients. From research to $125k in  processed payments."
+sell: "Enjoyed the article? Drop your email in the box below to get new posts straight to your inbox."
 ---
 
 ## Problem & Opportunity

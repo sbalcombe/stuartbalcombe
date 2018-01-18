@@ -5,6 +5,7 @@ path: "/what-i-learned-in-2017/"
 category: "post"
 tags: ["life"]
 excerpt: "I did a lot of different things in 2017 and learned from a lot of amazing people. Here’s my year in review and some goals for 2018."
+sell: "Want to follow my progress? Drop your email in the box below to get updates."
 ---
 
 2017 was a roller coaster year. This is the first time I’ve done a retrospective publically, but binging on the great reviews from people I look up to it seemed like the thing to do. So without further ado, here’s my year in review and some goals for 2018.
@@ -49,6 +50,6 @@ This year I wore many hats in both product and marketing roles. My focus for 201
 What was the most important lesson you learned in 2017? Shoot me an email [stuartbalcombe@gmail.com](mailto:stuartbalcombe@gmail.com). I’d love to hear from you. If you’d like to help me achieve my goals you can help in 2 ways:
 
 1. Sign up for my new product [PaymentLink](https://www.paymentlink.me) (or tell a friend about it).
-2. Apply to [work with me](/work-with-me) on a project
+2. Apply to [work with me](/work-with-me) on a project.
 
 I hope 2018 brings you much success and happiness. 

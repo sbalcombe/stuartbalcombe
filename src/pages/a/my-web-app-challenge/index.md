@@ -5,6 +5,7 @@ path: "/my-web-app-challenge/"
 category: "post"
 tags: ["web app challenge"]
 excerpt: "I'm challenging myself to build a web application generating $1000 in revenue in 3 months and share everything I learn."
+sell: "Want to follow my progress? Drop your email in the box below."
 ---
 
 For the past 3 years I’ve been focused on helping companies build and grow customer-focused products. I’ve been lucky enough to meet a lot of new people and do many different things. I’d like to think I’ve learned a lot from my experiences. One thing that I have not done is to build something of my own.

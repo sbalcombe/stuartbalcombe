@@ -16,9 +16,7 @@ Identifying and validating problems is actually pretty simple. Here’s the 4 st
 
 #### 1. Identify your target audience
 
-The first step to identifying problems is to pick a target audience and find where they hang out. It's important to remember that this is just a starting point. The goal is to let you research guide your path forward. If you've experienced a problem yourself you may already know where to find other people like you.
-
-The first step to identifying problems is to pick your target audience and find where they hang out. It's important to remember that this is only a starting point. The goal is to let you research guide your path forward. If you've experienced a problem yourself you may already know where to find other people like you.
+The first step to identifying problems is to pick a target audience and find where they hang out. It's important to remember that this is just a starting point. The goal is to let your research guide your path forward. If you've experienced a problem yourself you may already know where to find other people like you.
 
 Here are my favorite places for finding people to ask about their problems.
 
@@ -45,7 +43,7 @@ Once you’ve found your target audience, I've found the best next step is to ge
 
 *Hey { first name },*
 
-*I saw that you were using { product/service } to handle payments for your { product/service } and I was hoping I could bug your for 10 minutes to ask you a few questions. I've got nothing to sell, just wanted to hear about your experience with { product/service }.*
+*I saw that you were using { product/service } to handle payments for your { product/service } and I was hoping I could bug you for 10 minutes to ask you a few questions. I've got nothing to sell, just wanted to hear about your experience with { product/service }.*
 
 *Let me know – thanks!*
 
@@ -91,7 +89,7 @@ Here is an example job story I created from my research.
 
 **When**
 
-When a potential client visits a designers website and decides they want to work with them on a design concept...
+When a potential client visits a designer's website and decides they want to work with them on a design concept...
 
 **Motivation**
 

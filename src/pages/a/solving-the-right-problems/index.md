@@ -58,7 +58,7 @@ I particularly like this advice from Jared Erondu. [Be your number one user](htt
 
 **A quick note on pricing:**
 
-My goal by April 10th is to have received $1000 in revenue from real customers. While I anticipated I would build a product with recurring revenue this was not a required. I've decided to charge a one-time fee for my initial release for 2 reasons.
+My goal by April 10th is to have received $1000 in revenue from real customers. While I anticipated I would build a product with recurring revenue this was not a requirement. I've decided to charge a one-time fee for my initial release for 2 reasons.
 
 1. **Reduced friction at the point of sale** – there is less concern about how card information is being saved and no unexpected charges.
 

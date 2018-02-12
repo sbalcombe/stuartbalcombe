@@ -39,9 +39,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-segment',
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        writeKey: 'QdongpkiColO4fpxscxlu0ytPXtZ9KGA'
+        id: "GTM-WFNHNHQ",
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
       },
     },
     `gatsby-plugin-offline`,

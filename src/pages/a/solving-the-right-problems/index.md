@@ -21,8 +21,6 @@ Using my experience [building Sail](/a/designing-one-to-one-payment-experiences)
 
 2. Reducing fees incurred as a percentage of the transaction amount from payment tools.
 
-Since writing my last post I've had less time than expected to work heads down on my challenge for a couple of reasons. First, I started a new job at [Association of Young Americans](https://www.joinaya.com) and second I moved into the new house I mentioned in my [review of 2017](/a/what-i-learned-in-2017/). These events got me thinking about whether my original idea was the best option for my challenge and planted the seed of a new idea.
-
 #### Understanding your self-employment income
 
 While I was looking for the next opportunity after Sail I took on a few independent consulting projects. One problem that I ran into was understanding how much of my client's payment was mine to keep after taxes and expenses.

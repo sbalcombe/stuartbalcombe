@@ -53,7 +53,7 @@ class Articles extends React.Component {
 		              </Link>  
 		              </strong> – {excerpt}
 		             </p>
-		             <Tags list={node.frontmatter.tags || []} />
+		             <Tags list={node.frontmatter.tags || []} date={node.frontmatter.date} />
 		            </div>
 		          )
 		        })}
@@ -90,6 +90,7 @@ export const pageQuery = graphql`
             title
             excerpt
             tags
+            date(formatString: "DD MMMM, YYYY")
           }
         }
       }

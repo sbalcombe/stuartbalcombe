@@ -37,7 +37,7 @@ const createTagPages = (createPage, edges) => {
   Object.keys(posts).forEach(tagName => {
     const post = posts[tagName];
     createPage({
-      path: `/tags/${tagName}`,
+      path: `/tags/${_.kebabCase(tagName)}/`,
       component: tagTemplate,
       context: {
         posts,
@@ -54,7 +54,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
               fields {
@@ -64,7 +64,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 tags
                 title
                 excerpt
-                date
+                date(formatString: "DD MMMM, YYYY")
               }
             }
           }

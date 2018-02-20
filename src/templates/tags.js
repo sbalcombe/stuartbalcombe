@@ -1,5 +1,6 @@
 import React from "react";
 import GatsbyLink from "gatsby-link";
+const _ = require('lodash');
 
 export default function Tags({ pathContext }) {
   const { posts, post, tag } = pathContext;
@@ -13,15 +14,16 @@ export default function Tags({ pathContext }) {
           {post.map(({ id, frontmatter, excerpt, fields }) => {
             return (
               <li key={id}>
-                <p>
+                <p style={{ marginBottom: 0}}>
                 <strong>
                   <GatsbyLink to={fields.slug}>{frontmatter.title}</GatsbyLink>
                 </strong> – {excerpt}{frontmatter.excerpt}</p>
+                <span style={{ color: '#000', opacity: 0.59, textTransform: 'uppercase', fontSize: '12px'}}>{frontmatter.date}</span>
               </li>
             );
           })}
         </ul>
-        <GatsbyLink to="/tags">All tags</GatsbyLink>
+        <GatsbyLink to="/a">All Posts</GatsbyLink> | <GatsbyLink to="/tags">More tags</GatsbyLink>
       </div>
     );
   }
@@ -33,7 +35,7 @@ export default function Tags({ pathContext }) {
           const tags = posts[tagName];
           return (
             <li key={tagName}>
-              <GatsbyLink to={`/tags/${tagName}`} style={{ textTransform: 'capitalize'}}>{tagName}</GatsbyLink>
+              <GatsbyLink to={`/tags/${_.kebabCase(tagName)}/`} style={{ textTransform: 'capitalize'}}>{tagName}</GatsbyLink>
             </li>
           );
         })}

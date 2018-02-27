@@ -1,6 +1,7 @@
 import React from "react";
 import GatsbyLink from "gatsby-link";
 const _ = require('lodash');
+import SEO from '../components/SEO'
 
 export default function Tags({ pathContext }) {
   const { posts, post, tag } = pathContext;
@@ -29,6 +30,10 @@ export default function Tags({ pathContext }) {
   }
   return (
     <div>
+      <SEO 
+        title='Stuart Balcombe | Find articles by tag'
+        description='Stuart Balcombe writing about products. I publish articles about my experience and learnings from building customer-focused products.'
+      />
       <h1>Tags</h1>
       <ul className="tags">
         {Object.keys(posts).map(tagName => {

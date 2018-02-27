@@ -39,7 +39,7 @@ class Articles extends React.Component {
 	    }
 	    return (
 			<div>
-				<SEO description='Stuart Balcombe writing about products. I publish articles about my experience and learnings from building customer-focused products.' />
+				<SEO title="Stuart Balcombe writing: articles about building customer focused products." description='Stuart Balcombe writing about products. I publish articles about my experience and learnings from building customer-focused products.' />
 				<h1>Articles about building customer-driven products.</h1>
 				{posts.map(({ node }) => {
 		          const title = get(node, 'frontmatter.title') || node.fields.slug

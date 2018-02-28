@@ -28,7 +28,7 @@ export default function UserExperienceReview (props) {
 				<li>We complete an initial consultation (90-120 minutes) where we'll walk through your product. Come prepared to share your screen and "pitch" your product.</li>
 				<li>I provide your Custom UX Report within 1 week of our initial consultation. You'll get answers to any clarifying questions you have.</li>
 			</ol>
-			<p>The primary deliverable is an actionable teardown of your products core user experience. You'll receive a 15-20 page report with a screen-by-screen run through of your product. I'll provide recommendations based on my experience and your current product goals. For example:</p>
+			<p>The primary deliverable is an actionable teardown of your products core user experience. You'll receive a 10-15 page report with a screen-by-screen run through of your product. I'll provide recommendations based on my experience and your current product goals. For example:</p>
 			<ul>
 				<li>Optimization ideas to improve task completion.</li>
 				<li>Suggestion to improve onboarding communication.</li>
@@ -36,7 +36,7 @@ export default function UserExperienceReview (props) {
 				<li>General thoughts on improving usability on different devices.</li>
 				<li>Recommendations for keeping your product simple to use as you add new features.</li>
 			</ul>
-  			<p>The <strong>Custom UX Review</strong> currently costs $995. You’ll receive your actionable teardown report as described above (15-20 pages) within 1 week of our initial consultation.</p>
+  			<p>The <strong>Custom UX Review</strong> currently costs $495. You’ll receive your actionable teardown report as described above (10-15 pages) within 1 week of our initial consultation.</p>
   			<p>To get started complete the application by clicking the button below. If you're a good fit for the review I'll respond with a scheduling link for our initial consultation within 48-hours.</p>
   			<Button buttonText='Get your Custom UX Review' buttonLink='https://stuartbalcombe.typeform.com/to/hENgsy' />
 			<p style={{ marginTop: '0.75rem'}}>All your information will be kept strictly confidential.</p>

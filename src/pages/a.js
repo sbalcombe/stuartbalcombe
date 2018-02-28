@@ -53,7 +53,8 @@ class Articles extends React.Component {
 		              </Link>  
 		              </strong> – {excerpt}
 		             </p>
-		             <Tags list={node.frontmatter.tags || []} date={node.frontmatter.date} />
+		             <Tags list={node.frontmatter.tags || []} />
+		             <span style={{ color: '#000', opacity: 0.59, textTransform: 'uppercase', fontSize: '12px'}}>| {node.frontmatter.date}</span>
 		            </div>
 		          )
 		        })}

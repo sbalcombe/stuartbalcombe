@@ -11,7 +11,7 @@ export default function WorkWithMe (props) {
 		<span>
 			<SEO />
 			<h1>Let's work together.</h1>
-			<p>For your convenience, I offer my consulting services as fixed-price packages. I love working with creative people trying to solve customer problems. If you have any questions, shoot me an email at <a style={{ boxShadow: 'none'}}href='mailto:stuartbalcombe@gmail.com'>stuartbalcombe@gmail.com</a>.</p>
+			<p>I help people understand their customers and build better products. I love working with creative people trying to solve challenging problems. If you have any questions about my offerings below, shoot me an email at <a style={{ boxShadow: 'none'}}href='mailto:stuartbalcombe@gmail.com'>stuartbalcombe@gmail.com</a>.</p>
 			<Offerings />
 			<hr style={{ marginBottom: rhythm(1) }} />
 			<Bio />

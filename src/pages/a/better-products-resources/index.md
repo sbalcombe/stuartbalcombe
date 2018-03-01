@@ -35,13 +35,13 @@ Like many people I didn't begin my career as a product manager. I started out as
 
 ### Books
 
-- <a href="http://www.whencoffeeandkalecompete.com/" target="_blank">When Coffee and Kale compete</a>
+- <a href="http://www.whencoffeeandkalecompete.com/" target="_blank">When Coffee and Kale compete</a> by Alan Clement
 
-- <a href="https://www.nirandfar.com/hooked" target="_blank">Hooked</a>
+- <a href="https://www.nirandfar.com/hooked" target="_blank">Hooked</a> by Nir Eyal
 
-- <a href="https://www.sensible.com/dmmt.html" target="_blank">Don't Make me Think</a>
+- <a href="https://www.sensible.com/dmmt.html" target="_blank">Don't Make me Think</a> by Steve Krug
 
-- <a href="http://theleanstartup.com/book" target="_blank">The Lean Startup</a>
+- <a href="http://theleanstartup.com/book" target="_blank">The Lean Startup</a> by Eric Ries
 
 - <a href="http://danariely.com/books/predictably-irrational/" target="_blank">Predictably Irrational</a> by Dan Ariely
 

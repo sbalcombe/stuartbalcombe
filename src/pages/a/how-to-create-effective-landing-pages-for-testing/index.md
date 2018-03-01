@@ -1,10 +1,10 @@
 ---
 
-title: Building landing pages to test assumptions
+title: How to create effective landing pages for testing
 
 date: "2018-02-21T22:12:03.284Z"
 
-path: "/building-landing-pages-to-test-assumptions/"
+path: "/how-to-create-effective-landing-pages-for-testing/"
 
 category: "post"
 
@@ -97,7 +97,52 @@ At this point you should have a landing page that looks professional and clearly
 
 [View the live page](https://www.myincomepilot.com/calculate-self-employment-tax-guide/)
 
-Once your landing page has been successfully deployed, all that remains is to start telling people about it and gathering feedback. If you're not convinced about the power of landing pages as a testing tool, I recommend taking a look at [this video](https://www.youtube.com/watch?v=YaHXZT6RNs8) from Justin Jackson.
+Once your landing page has been successfully deployed, all that remains is to start telling people about it and start gathering feedback. 
+
+
+#### 5. Get traffic
+
+Once your landing page has been successfully deployed, all that remains is to tell people about it and start gathering feedback. But how do you do that?
+
+> If a tree falls in a forest and no one is around to hear it, does it make a sound?
+
+**Here are a few ideas to drive traffic to your new page.**
+
+1. **Leverage your existing network** – Tell people you know to visit your landing page in-person, on social media or via email and ask them to share it with people in their network who might find it relevant.
+
+2. **Post to niche forums** – The more specific the better here. If you're building a product for freelancers think about where they already hang out. It's likely you know about these places from your [customer research](/a/understanding-customer-problems/). My favorites are Reddit and Slack communities.
+
+3. **Consider beta services** – Sites like BetaList and BetaPage can provide a great source of early traffic to help you get feedback. It's important to think about how qualified this traffic is though as BetaList features companies in many categories.
+
+4. **Add a link from your personal profiles** – Don't forget to add a link to your new page in your bio on social media and in your email signature. People like to do business with people, some will click through to see what else you are up to.
+
+
+#### 6. Encourage conversations
+
+The most important thing you can do for your new product is to talk to people. The best part about creating a landing page before building your product is that it provides an anchor point for conversations.
+
+The goal of your interactions with visitors to your landing page should be to **identify how they are looking to make progress in their lives and how they believe your product will help them do that**.
+
+If you are collecting email signups on your landing page I recommend creating an automated welcome email using Mailchimp or a similar tool to help encourage conversations. Here's the welcome email I send to new signups to [PaymentLink](https://www.paymentlink.me).
+
+![PaymentLink welcome email](./welcome_email.png)
+
+Another way to learn more about your new visitors is to include a live chat tool like Drift or Intercom so that you can start conversations in real-time.
+
+Once you've started the conversation try asking questions like:
+
+- What's the most frustrating thing about how you currently do X?
+- When did you first realize you [needed something to solve your problem]?
+- How would solving [your problem] help you make progress and improve your life?
+- Tell me about how you went about looking for a product to solve your problem. How did you end up here?
+- What kind of solutions have you tried? Or not tried? What did you like/dislike about them
+- Did you have any anxiety about the purchase [of your current solution]? What made you nervous?
+
+It's important to remember that developing a solution to a problem is a process that continues to evolve based on the feedback you receive from customers. Many visitors will make direct feature requests but always try to understand the why behind their request. 
+
+**Why will this feature improve your life? How will being able to do X help you make progress with Y.**
+
+Using landing pages is just one way to test and validate you product assumptions. If you're not convinced about their power as a testing tool, I recommend taking a look at [this video](https://www.youtube.com/watch?v=YaHXZT6RNs8) from Justin Jackson.
 
 ### Week Summary
 

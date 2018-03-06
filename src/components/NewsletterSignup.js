@@ -10,21 +10,7 @@ export default function NewsletterSignUp (props) {
         sending: "Sending...",
 	    success: "Success! Your email address has been added to the list.",
 	    error: "Oops, something went wrong please try again."
-	  },
-	  styles: {
-	    sending: {
-	      fontSize: 18,
-	      color: "auto"
-	    },
-	    success: {
-	      fontSize: 18,
-	      color: "green"
-	    },
-	    error: {
-	      fontSize: 18,
-	      color: "red"
-	    }
-      }
+	  }
     }
 	return (
 		<div style={{ marginTop: '2rem' }}>

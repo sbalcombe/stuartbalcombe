@@ -66,41 +66,19 @@ class SubscribeForm extends React.Component {
             name="EMAIL"
             required={true}
             placeholder={messages.inputPlaceholder}
-            style={{
-              height: '52px',
-              padding: '0px 17px',
-              border: '2px solid #000',
-              borderRadius: '5px',
-              minWidth: '300px',
-              marginBottom: '16px',
-              marginRight: '8px'
-            }}
+            style={styles.input}
           />
           <button
             disabled={this.state.status === "sending" || this.state.status === "success"}
             onClick={this.onSubmit}
             type="submit"
-            style={{
-              background: 'none',
-              color: '#000',
-              padding: '16px 40px',
-              height: '52px',
-              lineHeight: '0.8em',
-              borderRadius: '5px',
-              border: 'solid 2px #000',
-              outline: 'none',
-              resize: 'none',
-              cursor: 'pointer',
-              fontSize: '18px',
-              marginBottom: '16px',
-              fontFamily: 'Montserrat, sans-serif',
-            }}
+            style={styles.button}
           >
             {messages.btnLabel}
           </button>
-          {status === "sending" && <p style={styles.sending} dangerouslySetInnerHTML={{ __html: messages.sending }} />}
-          {status === "success" && <p style={styles.success} dangerouslySetInnerHTML={{ __html: messages.success }} />}
-          {status === "error" && <p style={styles.error} dangerouslySetInnerHTML={{ __html: messages.error }} />}
+          {status === "sending" && <p style={{ fontSize: 18, color: 'auto' }} dangerouslySetInnerHTML={{ __html: messages.sending }} />}
+          {status === "success" && <p style={{ fontSize: 18, color: 'green' }} dangerouslySetInnerHTML={{ __html: messages.success }} />}
+          {status === "error" && <p style={{ fontSize: 18, color: 'red' }} dangerouslySetInnerHTML={{ __html: messages.error }} />}
         </form>
       </div>
     )
@@ -116,17 +94,27 @@ SubscribeForm.defaultProps = {
     error: "Oops, something went wrong please try again."
   },
   styles: {
-    sending: {
-      fontSize: 18,
-      color: "auto"
+    button: {
+      background: '#000',
+      color: '#fff',
+      padding: '12px',
+      border: 'solid 2px #000',
+      outline: 'none',
+      resize: 'none',
+      cursor: 'pointer',
+      marginBottom: '16px',
+      width: '35%',
+      fontFamily: 'Montserrat, sans-serif',
+      borderBottomRightRadius: '5px',
+      borderTopRightRadius: '5px'
     },
-    success: {
-      fontSize: 18,
-      color: "green"
-    },
-    error: {
-      fontSize: 18,
-      color: "red"
+    input: {
+      padding: '12px',
+      border: '2px solid #000',
+      width: '65%',
+      marginBottom: '16px',
+      borderBottomLeftRadius: '5px',
+      borderTopLeftRadius: '5px'
     }
   }
 }

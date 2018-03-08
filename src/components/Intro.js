@@ -9,10 +9,10 @@ class Intro extends React.Component {
     	  <div>
 	        <h1>I’m Stuart Balcombe. I help people build better products.</h1>
 	        <p style={{ textAlign: 'justify' }}>
-            Want to better understand your customers and create a product they love? For the past 3 years I’ve been building customer-focused products at companies like <Link to='/a/designing-one-to-one-payment-experiences'>Sail</Link>, Compass and Betaspring.
+            Want to better understand your customers and create a product they love? For the past 3 years, I’ve been helping companies like <Link to='/a/designing-one-to-one-payment-experiences'>Sail</Link>, Compass, and <a href="https://www.revupfund.com/" target="_blank" rel="nofollow">Betaspring</a> build customer-focused products.
           </p>
           <p>
-            I help people with Product Strategy, UX Design and Customer Research while <Link to='/a'>writing</Link> about everything I learn.
+            Get access to my occasional newsletter where I share everything I know about product strategy, UX design and customer research.
           </p>
       	</div>
     )

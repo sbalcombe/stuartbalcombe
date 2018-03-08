@@ -21,7 +21,7 @@ const theme: OptionsType = {
   headerFontFamily: ['Montserrat', 'sans-serif'],
   bodyFontFamily: ['Varela Round', 'sans-serif'],
   bodyColor: 'hsla(0,0%,0%,0.9)',
-  headerWeight: 700,
+  headerWeight: 500,
   bodyWeight: 400,
   boldWeight: 700,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({

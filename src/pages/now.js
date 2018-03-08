@@ -19,7 +19,7 @@ export default function Now (props) {
 		<div>
 			<h1>What I'm doing right now.</h1>
 
-			<p>You've reached <Link to='/'>Stuart Balcombe's</Link> <a href="https://nownownow.com/" target="_blank">now</a> page</p>
+			<p>You've reached <Link to='/'>Stuart Balcombe's</Link> <a href="https://nownownow.com/" target="_blank">now</a> page.</p>
 
 			<ul>
 				<li>The day job. Director of Product at <a href="https://joinaya.com" target="_blank" rel="nofollow">Association of Young Americans</a>.</li>

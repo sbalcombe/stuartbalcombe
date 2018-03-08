@@ -8,10 +8,21 @@ import QuoteBlock from "../components/QuoteBlock"
 import Bio from "../components/Bio"
 import { rhythm } from "../utils/typography"
 import Tags from '../components/Tags'
+import SubscribeForm from "../components/SubscribeForm"
 
 class Index extends React.Component {
   render() {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+     const formProps = {
+        action: '//stuartbalcombe.us16.list-manage.com/subscribe/post?u=48e1b3ba91c1e492cfb326e7a&amp;id=a649588b8b',
+        messages: {
+          inputPlaceholder: "Your email address...",
+          btnLabel: 'Subscribe Now',
+          sending: "Sending...",
+        success: "Success! Your email address has been added to the list.",
+        error: "Oops, something went wrong please try again."
+      },
+    }
     return (
       <div>
         <SEO 
@@ -19,6 +30,7 @@ class Index extends React.Component {
           description="Stuart Balcombe is a product designer from Philadelphia, PA."
         />
         <Intro />
+        <SubscribeForm {...formProps} />
         <QuoteBlock quoteText="Stuart was critical to Compass's success. His work helped the Compass team execute on more projects, with better results, without needing to hire more project managers." quoteAuthor='– Taylor Sundali, Co-Founder, Compass'/>
         <h4 style={{ marginBottom: '0.75rem'}}>Recent articles</h4>
         {posts.map(({ node }) => {

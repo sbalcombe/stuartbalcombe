@@ -5,8 +5,6 @@ import get from "lodash/get"
 import SEO from '../components/SEO'
 import Tags from '../components/Tags'
 import SubscribeForm from "../components/SubscribeForm"
-import Bio from "../components/Bio"
-import { rhythm } from "../utils/typography"
 
 
 class Articles extends React.Component {
@@ -46,13 +44,6 @@ class Articles extends React.Component {
 		        })}
 		        <h3>I send an occasional newsletter with learnings and updates from building customer-focused products.</h3>
 		        <SubscribeForm {...formProps} />
-		        <hr
-		          style={{
-		            marginTop: '1.75rem',
-		            marginBottom: rhythm(1),
-		          }}
-		        />
-		        <Bio />
 		    </div>
 	    )
 	}

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
 import NavBar from "../components/NavBar"
-import BottomBar from "../components/BottomBar"
+import Footer from "../components/Footer"
 
 import { rhythm, scale } from '../utils/typography'
 
@@ -24,13 +24,14 @@ class Template extends React.Component {
         style={{
           maxWidth: rhythm(20),
           padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-          marginBottom: 'calc(3.5rem - 4px)' 
+          // marginBottom: 'calc(3.5rem - 4px)' 
         }}
       > 
         
         {children()}
+        <Footer />
       </Container>
-      <BottomBar />
+      
       </span>
     )
   }

@@ -1,5 +1,6 @@
 import React from "react"
 import jsonp from "jsonp"
+import './SubscribeForm.css'
 
 const getAjaxUrl = url => url.replace('/post?', '/post-json?')
 
@@ -66,13 +67,13 @@ class SubscribeForm extends React.Component {
             name="EMAIL"
             required={true}
             placeholder={messages.inputPlaceholder}
-            style={styles.input}
+            className="subscribe-input"
           />
           <button
             disabled={this.state.status === "sending" || this.state.status === "success"}
             onClick={this.onSubmit}
             type="submit"
-            style={styles.button}
+            className="subscribe-button"
           >
             {messages.btnLabel}
           </button>
@@ -92,30 +93,6 @@ SubscribeForm.defaultProps = {
     sending: "...",
     success: "Almost finished!<p>To complete the subscription process, please click the link in the email I just sent you.</p>",
     error: "Oops, something went wrong please try again."
-  },
-  styles: {
-    button: {
-      background: '#000',
-      color: '#fff',
-      padding: '12px',
-      border: 'solid 2px #000',
-      outline: 'none',
-      resize: 'none',
-      cursor: 'pointer',
-      marginBottom: '16px',
-      width: '35%',
-      fontFamily: 'Montserrat, sans-serif',
-      borderBottomRightRadius: '5px',
-      borderTopRightRadius: '5px'
-    },
-    input: {
-      padding: '12px',
-      border: '2px solid #000',
-      width: '65%',
-      marginBottom: '16px',
-      borderBottomLeftRadius: '5px',
-      borderTopLeftRadius: '5px'
-    }
   }
 }
 

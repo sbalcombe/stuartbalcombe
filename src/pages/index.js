@@ -5,7 +5,6 @@ import get from "lodash/get"
 import SEO from '../components/SEO'
 import Intro from "../components/Intro"
 import QuoteBlock from "../components/QuoteBlock"
-import Bio from "../components/Bio"
 import { rhythm } from "../utils/typography"
 import Tags from '../components/Tags'
 import SubscribeForm from "../components/SubscribeForm"
@@ -51,8 +50,6 @@ class Index extends React.Component {
               )
         })}
         <Link to="/a">See all posts</Link>
-        <hr style={{ marginBottom: rhythm(1), marginTop: rhythm(1) }} />
-        <Bio />
       </div>
     )
   }

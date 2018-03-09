@@ -22,7 +22,7 @@ class Bio extends React.Component {
             borderRadius: '2px'
           }}
         />
-        <strong>Stuart Balcombe</strong> lives and works in Philadelphia, building useful things to solve complex problems.{' '}
+        I'm currently based in Philadelphia, building products to solve customers problems.{' '}
         <a target='_blank' href="mailto:stuartbalcombe@gmail.com">
           Get in touch
         </a>

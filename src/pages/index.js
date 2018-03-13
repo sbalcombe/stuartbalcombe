@@ -31,6 +31,9 @@ class Index extends React.Component {
         <Intro />
         <SubscribeForm {...formProps} />
         <QuoteBlock quoteText="Stuart was critical to Compass's success. His work helped the Compass team execute on more projects, with better results, without needing to hire more project managers." quoteAuthor='– Taylor Sundali, Co-Founder, Compass'/>
+        <h4 style={{ marginBottom: '0.75rem'}}>Prototyping software products (eBook)</h4>
+        <p style={{ marginBottom: '0.75rem'}}><strong>Want to build a product people actually buy?</strong> This concise guide will teach you how to test and validate your ideas with real customers BEFORE spending time and money writing code.</p>
+        <Link to="/prototyping-software-products">Learn more and get a free sample</Link>
         <h4 style={{ marginBottom: '0.75rem'}}>Recent articles</h4>
         {posts.map(({ node }) => {
               const title = get(node, 'frontmatter.title') || node.fields.slug

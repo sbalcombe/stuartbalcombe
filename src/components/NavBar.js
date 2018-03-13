@@ -17,7 +17,6 @@ const NavBar = () => {
             Stuart Balcombe
           </h1>
         </Link>
-        {/*
         <ul className='nav-list'>
           <li>
             <Link
@@ -36,7 +35,6 @@ const NavBar = () => {
             </Link>
           </li>
         </ul>
-      */}
       </div>
 	)
 }

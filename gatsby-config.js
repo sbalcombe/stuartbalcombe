@@ -2,10 +2,13 @@ module.exports = {
   siteMetadata: {
     title: "Stuart Balcombe | Product Design",
     author: "Stuart Balcombe",
-    description: "",
-    siteURL: "https://www.stuartbalcombe.com"
+    description: "Stuart Balcombe is a product designer who helps people build better products by focusing on their customers. He's currently writing a book called Prototyping Software Products.",
+    siteUrl: "https://www.stuartbalcombe.com"
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

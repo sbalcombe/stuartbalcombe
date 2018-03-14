@@ -26,7 +26,7 @@ class Index extends React.Component {
       <div>
         <SEO 
           title="Stuart Balcombe | Product Design"
-          description="Stuart Balcombe is a product designer from Philadelphia, PA."
+          description="Stuart Balcombe is a product designer who helps people build better products by focusing on their customers. He's currently writing a book called Prototyping Software Products."
         />
         <Intro />
         <SubscribeForm {...formProps} />

@@ -29,7 +29,6 @@ class Index extends React.Component {
           description="Stuart Balcombe is a product designer who helps people build better products by focusing on their customers. He's currently writing a book called Prototyping Software Products."
         />
         <Intro />
-        <SubscribeForm {...formProps} />
         <QuoteBlock quoteText="Stuart was critical to Compass's success. His work helped the Compass team execute on more projects, with better results, without needing to hire more project managers." quoteAuthor='– Taylor Sundali, Co-Founder, Compass'/>
         {/*
           <h4 style={{ marginBottom: '0.75rem'}}>Prototyping software products (eBook)</h4>
@@ -54,7 +53,12 @@ class Index extends React.Component {
                 </div>
               )
         })}
+        
         <Link to="/a">See all posts</Link>
+        <p style={{ marginTop: '3.5rem' }}>
+            Get access to my occasional newsletter where I share everything I know about product strategy, UX design and customer research.
+        </p>
+        <SubscribeForm {...formProps} />
       </div>
     )
   }

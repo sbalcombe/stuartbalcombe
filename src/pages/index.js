@@ -25,36 +25,11 @@ class Index extends React.Component {
     return (
       <div>
         <SEO 
-          title="Stuart Balcombe | Product Design"
-          description="Stuart Balcombe is a product designer who helps people build better products by focusing on their customers. He's currently writing a book called Prototyping Software Products."
+          title="Stuart Balcombe | UX & Product Designer | Philadelphia"
+          description="Stuart Balcombe is an independent UX designer who helps people build more profitable SaaS products by focusing on their customers."
         />
         <Intro />
-        <QuoteBlock quoteText="Stuart was critical to Compass's success. His work helped the Compass team execute on more projects, with better results, without needing to hire more project managers." quoteAuthor='– Taylor Sundali, Co-Founder, Compass'/>
-        {/*
-          <h4 style={{ marginBottom: '0.75rem'}}>Prototyping software products (eBook)</h4>
-          <p style={{ marginBottom: '0.75rem'}}><strong>Want to build a product people actually buy?</strong> This concise guide will teach you how to test and validate your ideas with real customers BEFORE spending time and money writing code.</p>
-          <Link to="/prototyping-software-products">Learn more and get a free sample</Link>
-        */}
-        <h4 style={{ marginBottom: '0.75rem'}}>Recent articles</h4>
-        {posts.map(({ node }) => {
-              const title = get(node, 'frontmatter.title') || node.fields.slug
-              const excerpt = get(node, 'frontmatter.excerpt') || ''
-              return (
-                <div style={{ margin: '1rem 0' }} key={node.fields.slug}>
-                 <p style={{ marginBottom: 0}}>
-                  <strong>
-                  <Link style={{ margin: '1rem 0' }} to={node.fields.slug}>
-                    {title}
-                  </Link>  
-                  </strong>
-                 </p>
-                 <Tags list={node.frontmatter.tags || []} />
-                 <span style={{ color: '#000', opacity: 0.59, textTransform: 'uppercase', fontSize: '12px'}}>| {node.frontmatter.date}</span>
-                </div>
-              )
-        })}
         
-        <Link to="/a">See all posts</Link>
         <p style={{ marginTop: '3.5rem' }}>
             Get access to my occasional newsletter where I share everything I know about product strategy, UX design and customer research.
         </p>

@@ -5,7 +5,7 @@ import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const theme: OptionsType = {
   title: 'Wordpress Theme 2016',
-  baseFontSize: '16px',
+  baseFontSize: '20px',
   baseLineHeight: 1.75,
   scaleRatio: 4 / 2,
   googleFonts: [

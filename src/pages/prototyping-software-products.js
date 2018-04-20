@@ -20,7 +20,7 @@ export default function PrototypingProducts (props) {
 
   	return (
   		<div>
-  			<SEO title='Prototyping Software Products | Stuart Balcombe' description='Do you want to build a software product but don’t know how to code? Prototyping Software Products will help you validate your idea BEFORE writing code saving you time and money.'/>
+  			<SEO title='Prototyping Software Products | Stuart Balcombe | Philadelphia' description='Do you want to build a software product but don’t know how to code? Prototyping Software Products will help you validate your idea BEFORE writing code saving you time and money.'/>
   			<h1 style={{marginBottom: '1rem'}}>Prototyping Software Products</h1>
 
   			<h3 style={{marginTop: '0px'}}>Do you want to build a software product but don’t know how to code?</h3>

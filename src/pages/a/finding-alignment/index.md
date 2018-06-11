@@ -30,7 +30,7 @@ In week 5 of the challenge, I decided to create a [prototype without any code](/
 
 I was back at the piece of the process where I wasn't able to leverage my existing skills. The actual development of the software itself. Even with modern day tools like Firebase and the countless tutorials available online, building software is hard.
 
-In retrospect, I could have saved myself a lot of time by following the advice of people who already build products for themselves and not tried to build a software product at all. Here’s the response I got when I shared the plan for my web app challenge plan with Alex Hillman at [Stacking the Bricks](stackingthebricks.com) back in January.
+In retrospect, I could have saved myself a lot of time by following the advice of people who already build products for themselves and not tried to build a software product at all. Here’s the response I got when I shared the plan for my web app challenge plan with Alex Hillman at [Stacking the Bricks](https://stackingthebricks.com) back in January.
 
 ![Why are you choosing software?](./alex_hillman_feedback.png)
 

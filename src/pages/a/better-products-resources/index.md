@@ -21,6 +21,8 @@ Like many people I didn't begin my career as a product manager. I started out as
 
 - <a href="https://blog.intercom.com/start-with-a-cupcake/" target="_blank">Start with a cupcake</a> by Des Traynor
 
+- <a href="https://blog.intercom.com/10-core-principles-for-starting-up/">10 core principles for starting up</a> by Des Traynor>
+
 - <a href="https://medium.com/write-like-a-human/designing-for-before-during-and-after-b693e6a6455a" target="_blank">Designing for before, during and after</a> by Amy Thibodeau
 
 - <a href="https://signalvnoise.com/posts/3423-what-is-someone-going-to-stop-doing-when-they-start-using-your-product" target="_blank">What is someone going to stop doing when they start using your product</a> by Jason Fried

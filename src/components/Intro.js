@@ -12,7 +12,7 @@ class Intro extends React.Component {
       	  <p>I’m passionate about building successful products by focusing on two things:</p>
           <ol>
             <li><strong>Getting closer to your customers.</strong></li>
-            <li><strong>Shipping fast and iterating quickly.</strong></li>
+            <li><strong>Starting small and iterating quickly.</strong></li>
           </ol>
           {/*<Link to='/work-with-me'>Learn more -></Link>*/}
 

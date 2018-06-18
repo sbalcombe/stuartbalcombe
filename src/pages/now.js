@@ -17,18 +17,16 @@ export default function Now (props) {
     }
 	return (
 		<div>
-			<h1>What I'm doing right now.</h1>
-
-			<p>You've reached <Link to='/'>Stuart Balcombe's</Link> <a href="https://nownownow.com/" target="_blank">now</a> page.</p>
+			<h1 style={{ marginBottom: '0.75rem'}}>What I'm doing right now.</h1>
+			<p style={{ marginTop: 0, color: '#000', opacity: 0.54, textTransform: 'uppercase', fontWeight: 500}}>Last updated: 06/18/2018</p>
 
 			<ul>
-				<li>The day job. Director of Product at <a href="https://joinaya.com" target="_blank" rel="nofollow">Association of Young Americans</a>.</li>
+				<li>Building a more transparent way for enterprise companies to hire independent talent at <a href="https://consultdirect.co" target="_blank" rel="nofollow">ConsultDirect</a>.</li>
 				<li>Helping SaaS founders find product-market fit through user research and <Link to="/work-with-me">UX design</Link>.</li>
-				<li>Writing an eBook about <Link to="/prototyping-software-products">prototyping software products</Link>.</li>
-				<li>Sharing everything I learn about building customer focused product with my newsletter.</li>
+				<li>Creating a simple way for creative agencies to <a href="https://www.paymentlink.me" target="_blank" rel="nofollow">automate recurring client payments</a>.</li>
 			</ul>
 
-			<h5 style={{ marginTop: 0, color: '#000', opacity: 0.54, textTransform: 'uppercase', fontWeight: 500}}>Last updated: 03/07/2018</h5>
+			<p>Inspired by Derek Sivers and the <a href="https://nownownow.com/" target="_blank">/now movement</a>.</p>
 
 			<h3 style={{ fontWeight: 500 }}>Learn how to test and validate your product idea with real users BEFORE writing any code.</h3>
 	        <SubscribeForm {...formProps} />

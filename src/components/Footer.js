@@ -12,7 +12,8 @@ const BottomBar = props => {
           */}
           <ul className="menu">
                <li><Link to='/a'>articles</Link></li>
-               <li><Link to='/work-with-me'>hire me</Link></li>
+               <li><a href="https://ux.stuartbalcombe.com">ux</a></li>
+               <li><Link to='/now'>now</Link></li>
                <li><Link to='/a/better-products-resources/'>resources</Link></li>
           </ul>
         </footer>

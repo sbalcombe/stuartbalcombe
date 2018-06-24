@@ -18,9 +18,9 @@ class Intro extends React.Component {
 
           <h3>What I offer</h3>
           <ul>
-            <li><Link to="/custom-product-design">UX Design Consulting</Link>, a customer focused design and testing service for your new SaaS product.</li>
+            <li><Link to="/custom-product-design">UX / UI Design</Link>, a customer focused design and testing service for your new SaaS product.</li>
             <li><Link to="/user-experience-review">User Experience Teardowns</Link>, a comprehensive report of your product experience.</li>
-            <li><a href="https://stuartbalcombe.typeform.com/to/kJuj6c" target="_blank">One-to-One Strategy Calls</a></li>
+            <li><Link to='/product-leadership-for-teams'>Product Leadership for Teams</Link>, a monthly service to provide you with top-notch product leadership without hiring a product owner in-house.</li>
             <li><Link to="/a">Articles</Link> with my latest thinking on building customer-focused products.</li>
           </ul>
         </div>

@@ -11,7 +11,7 @@ export default function ProductLeadership (props) {
   		<div>
   			<SEO title="Product Leadership for Teams | Philadelphia" description=''/>
   			<h1 style={{ marginBottom: '0.25rem' }}>Product Leadership for Teams</h1>
-			<h3 style={{ marginTop: 0, fontWeight: 500 }}>Build a product team that ships continuous value to customers.</h3>
+			<h3 style={{ marginTop: 0, fontWeight: 500 }}>Increase the ROI of your development team by shipping continuous value to customers.</h3>
 			<p>Unless you have a product person on the founding team, it’s not uncommon for early-stage SaaS companies to operate without a dedicated product owner. <strong>This means someone else (usually the CEO) is forced to lead product strategy and become a micromanager with time they need to be spending elsewhere.</strong></p>
 			<p>Imagine if your team had personal, direct access to an expert product owner. <strong>Imagine if your product team had the support and resources to:</strong></p>
 			<ul>

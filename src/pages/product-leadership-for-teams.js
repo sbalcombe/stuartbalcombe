@@ -34,15 +34,15 @@ If you want someone who will help you get to the right product as quickly as pos
 			<QuoteBlock quoteText="Working with Stuart is a pleasure — he is a thoughtful, proactive product leader with a breadth of skills positioning him to get his hands dirty. On the hands-dirty side, Stuart took charge of customer research, design, UX, and prototyping to great effect. As a leader, Stuart collaborated with engineering management to get buy-in and set scope, worked directly with individual engineers on implementation issues, and deftly coordinated across product and and non-product stakeholders." quoteAuthor='– Matt Fulton, CTO, Sail & Compass'/>
 
 			<h3>Ready to get started?</h3>
-  			<p>Availability is limited. To ensure you receive an excellent experience I only take on 1 Product Leadership for Teams client at a time.</p>
-  			<p>The service name currently costs $3500 a month. A minimum 3-month engagement is recommended to ensure we see results. Here’s what’s included each month.</p>
+  			<p>Availability is limited. To ensure you have an excellent experience I only take on 1 Product Leadership for Teams client at a time.</p>
+  			<p>The Product Leadership for Teams service currently costs $3500 a month. A minimum 3-month engagement is recommended to ensure we see results. Here’s what’s included each month.</p>
   			<ul>
   				<li>Weekly 1-1 strategy sessions.</li>
   				<li>Guidance on creating and implementing a repeatable product development process, tailored to your team and business goals.</li>
-  				<li>Hands on support to get out of the weeds and focus on shipping value to customers.</li>
-  				<li>Product strategy advice to sharpen your vision and build a roadmap focused on customer research.</li>
+  				<li>Hands on support to help you get out of the weeds and focused on shipping value to customers.</li>
+  				<li>Product strategy advice to sharpen your vision and build a roadmap informed by customer research.</li>
   				<li>Ongoing communication via Slack or email.</li>
-  				<li>Tools, templates, frameworks and spreadsheets that will help your team be more efficient.</li>
+  				<li>Tools, templates, frameworks and spreadsheets that will help your product team be more efficient.</li>
   				<li>Curated library of resources covering product development topics relevant to your business.</li>
   			</ul>
   			<Button buttonText='Contact Me to Get Started' buttonLink='mailto:stuartbalcombe@gmail.com' />

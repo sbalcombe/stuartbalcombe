@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 
-import SubscribeForm from '../components/NewsletterSignup'
+import NewsletterSignup from '../components/NewsletterSignup'
 import '../components/SubscribeForm.css'
 import SEO from '../components/SEO'
 import Bio from '../components/Bio'

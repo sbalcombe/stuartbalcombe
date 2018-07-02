@@ -1,21 +1,105 @@
 import React from 'react'
-import SubscribeForm from "../components/SubscribeForm"
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-export default function NewsletterSignUp (props) {
-	const formProps = {
-      action: '//stuartbalcombe.us16.list-manage.com/subscribe/post?u=48e1b3ba91c1e492cfb326e7a&amp;id=a649588b8b',
-      messages: {
-      	inputPlaceholder: "Your email...",
-      	btnLabel: 'Subscribe',
-        sending: "Sending...",
-	    success: "Success! Your email address has been added to the list.",
-	    error: "Oops, something went wrong please try again."
-	  }
+class NewsletterSignup extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      email: ``,
     }
-	return (
-		<div style={{ marginTop: '2rem' }}>
-			<h3>{props.sell}</h3>
-			<SubscribeForm {...formProps} />
-		</div>
-	)
+  }
+
+  // Update state each time user edits their email address
+  _handleEmailChange = e => {
+    this.setState({ email: e.target.value })
+  }
+
+  // Post to MC server & handle its response
+  _postEmailToMailchimp = (email, attributes) => {
+    addToMailchimp(email, attributes)
+      .then(result => {
+        // Mailchimp always returns a 200 response
+        // So we check the result for MC errors & failures
+        if (result.result !== `success`) {
+          this.setState({
+            status: `error`,
+            msg: result.msg,
+          })
+        } else {
+          // Email address succesfully subcribed to Mailchimp
+          this.setState({
+            status: `success`,
+            msg: result.msg,
+          })
+        }
+      })
+      .catch(err => {
+        // Network failures, timeouts, etc
+        this.setState({
+          status: `error`,
+          msg: err,
+        })
+      })
+  }
+
+  _handleFormSubmit = e => {
+    console.log(this.state)
+    e.preventDefault()
+    e.stopPropagation()
+
+    this.setState(
+      {
+        status: `sending`,
+        msg: null,
+      }
+    )
+
+    // setState callback (subscribe email to MC)
+    this._postEmailToMailchimp(this.state.email, {
+      pathname: document.location.pathname,
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.status === `success` ? (
+          <div style={{ color: '#50B83C' }}>Thank you! Youʼll receive your first email shortly.</div>
+        ) : (
+          <div>
+            <form
+              id="email-capture"
+              method="post"
+              noValidate
+            >
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="youremail@email.com"
+                  onChange={this._handleEmailChange}
+                  className="subscribe-input"
+                />
+                <button
+                  type="submit"
+                  onClick={this._handleFormSubmit}
+                  className="subscribe-button"
+                >
+                  Get on the List
+                </button>
+                {this.state.status === `error` && (
+                  <div
+                    dangerouslySetInnerHTML={{ __html: this.state.msg }}
+                    style={{ color: '#DE3618' }}
+                  />
+                )}
+              </div>
+            </form>
+          </div>
+        )}
+      </div>
+    )
+  }
 }
+
+export default NewsletterSignup

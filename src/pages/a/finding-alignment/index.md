@@ -5,7 +5,6 @@ path: "/finding-alignment/"
 category: "post"
 tags: ["web app challenge", "life"]
 excerpt: "Even if you're a developer, building great software products is hard. Here's how I decided to focus on what I'm good at."
-sell: "Want to follow my progress? Drop your email in the box below."
 ---
 
 *This is an update from the halfway point of my [web app challenge](/tags/web-app-challenge/). On January 15th this year I challenged myself to build a software product and generate $1000 in real revenue in 3 months.*

@@ -1,20 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import SubscribeForm from '../components/SubscribeForm'
+import SubscribeForm from '../components/NewsletterSignup'
+import '../components/SubscribeForm.css'
 import Bio from '../components/Bio'
 
 export default function Now (props) {
-	const formProps = {
-      action: '//stuartbalcombe.us16.list-manage.com/subscribe/post?u=48e1b3ba91c1e492cfb326e7a&amp;id=a649588b8b',
-      messages: {
-      	inputPlaceholder: "Your email...",
-      	btnLabel: 'Subscribe',
-        sending: "Sending...",
-	    success: "Success! Your email address has been added to the list.",
-	    error: "Oops, something went wrong please try again."
-	  },
-    }
 	return (
 		<div>
 			<h1 style={{ marginBottom: '0.75rem'}}>What I'm doing right now.</h1>
@@ -29,7 +20,7 @@ export default function Now (props) {
 			<p>Inspired by Derek Sivers and the <a href="https://nownownow.com/" target="_blank">/now movement</a>.</p>
 
 			<h3 style={{ fontWeight: 500 }}>Learn how to test and validate your product idea with real users BEFORE writing any code.</h3>
-	        <SubscribeForm {...formProps} />
+	        <NewsletterSignup />
 	        <hr
 	          style={{
 	            marginTop: '1.75rem',

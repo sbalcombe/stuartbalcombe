@@ -11,6 +11,7 @@
     "gatsby-cli": "^1.1.40",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-tagmanager": "^1.0.13",
+    "gatsby-plugin-mailchimp": "^2.2.3",
     "gatsby-plugin-manifest": "^1.0.4",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-preact": "^1.0.3",

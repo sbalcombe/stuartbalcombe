@@ -11,10 +11,9 @@ const BottomBar = props => {
           <Bio />
           */}
           <ul className="menu">
+               <li><Link to='/now'>about</Link></li>
                <li><Link to='/a'>articles</Link></li>
-               <li><a href="https://ux.stuartbalcombe.com">ux</a></li>
-               <li><Link to='/now'>now</Link></li>
-               <li><Link to='/a/better-products-resources/'>resources</Link></li>
+               <li><Link to='/newsletter'>newsletter</Link></li>
           </ul>
         </footer>
 	)

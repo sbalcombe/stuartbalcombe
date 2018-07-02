@@ -5,7 +5,6 @@ path: "/what-i-learned-in-2017/"
 category: "post"
 tags: ["life"]
 excerpt: "I did a lot of different things in 2017 and learned from a lot of amazing people. Here’s my year in review and some goals for 2018."
-sell: "Want to follow my progress? Drop your email in the box below to get updates."
 ---
 
 2017 was a roller coaster year. This is the first time I’ve done a retrospective publically, but binging on the great reviews from people I look up to it seemed like the thing to do. So without further ado, here’s my year in review and some goals for 2018.

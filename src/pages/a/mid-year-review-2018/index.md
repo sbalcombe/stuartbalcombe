@@ -3,9 +3,8 @@ title: Mid Year Review 2018
 date: "2018-06-30T22:12:03.284Z"
 path: "/mid-year-review-2018/"
 category: "post"
-tags: ["web app challenge", “life”]
+tags: ["web app challenge", "life"]
 excerpt: "A retrospective of the first 6 months of 2018 using the stop-start-continue framework."
-sell: "Want to follow my progress? Drop your email in the box below."
 ---
 
 Prior to this year I had spent a lot of time [building products](/a/designing-one-to-one-payment-experiences) for independent freelancers, but very little time actually making independent income myself. The acquisition of [Sail](https://www.letssail.co) in January provided the opportunity to change that. I decided to [challenge myself to build a web app](/a/my-web-app-challenge) and generate $1000 in revenue. Here’s my retrospective on the last 6 months.

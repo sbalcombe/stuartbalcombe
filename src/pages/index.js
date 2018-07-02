@@ -7,21 +7,12 @@ import Intro from "../components/Intro"
 import QuoteBlock from "../components/QuoteBlock"
 import { rhythm } from "../utils/typography"
 import Tags from '../components/Tags'
-import SubscribeForm from "../components/SubscribeForm"
+import NewsletterSignup from "../components/NewsletterSignup"
+import '../components/SubscribeForm.css'
 
 class Index extends React.Component {
   render() {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-     const formProps = {
-        action: '//stuartbalcombe.us16.list-manage.com/subscribe/post?u=48e1b3ba91c1e492cfb326e7a&amp;id=a649588b8b',
-        messages: {
-          inputPlaceholder: "Your email address...",
-          btnLabel: 'Subscribe Now',
-          sending: "Sending...",
-        success: "Success! Your email address has been added to the list.",
-        error: "Oops, something went wrong please try again."
-      },
-    }
     return (
       <div>
         <SEO 
@@ -33,7 +24,7 @@ class Index extends React.Component {
         <p style={{ marginTop: '3.5rem' }}>
             Get access to my occasional newsletter where I share everything I know about product strategy, UX design and customer research.
         </p>
-        <SubscribeForm {...formProps} />
+        <NewsletterSignup />
       </div>
     )
   }

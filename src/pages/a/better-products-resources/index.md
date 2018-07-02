@@ -5,7 +5,6 @@ path: "/resources-to-build-better-products/"
 category: "post"
 tags: ["resources"]
 excerpt: "A curated list of the resources I’ve found most useful in shaping my approach to building better products."
-sell: "P.S. Can I send you an email? Once a week or so I send an email with my latest content."
 ---
 
 

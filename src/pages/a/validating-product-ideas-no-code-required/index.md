@@ -5,7 +5,6 @@ path: "/validating-product-ideas-no-code-required/"
 category: "post"
 tags: ["web app challenge"]
 excerpt: "Validating your solution concept BEFORE you build software, means you can ship earlier and learn faster. Step-by-step screencast inside."
-sell: "Want to follow my progress? Drop your email in the box below."
 ---
 *This is an update from Week 5 of my web app challenge. I challenged myself to build a software product and generate $1000 in real revenue in 3 months.*
 

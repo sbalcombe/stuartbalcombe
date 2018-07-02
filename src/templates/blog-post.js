@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import Link from 'gatsby-link'
 
 import SEO from '../components/SEO'
-import NewsletterSignUp from '../components/NewsletterSignup'
 import './BlogPost.css'
 
 class BlogPostTemplate extends React.Component {
@@ -35,7 +35,7 @@ class BlogPostTemplate extends React.Component {
         <p><small>{post.frontmatter.date}</small></p>
         {workMeta}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <NewsletterSignUp sell={post.frontmatter.sell} />
+        <p style={{ color: 'rgba(0,0,0,0.54)', fontSize: '16px', fontWeight: 300}}>Enjoyed this post? Join my <Link to='/newsletter'>occasional newsletter</Link>.</p>
       </div>
     )
   }
@@ -59,7 +59,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         category
         excerpt
-        sell
       }
     }
   }

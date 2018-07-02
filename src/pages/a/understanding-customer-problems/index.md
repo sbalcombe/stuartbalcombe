@@ -5,7 +5,6 @@ path: "/understanding-customer-problems/"
 category: "post"
 tags: ["web app challenge"]
 excerpt: "It's easy to start by designing solutions or writing code. But the best products start with a clear understanding of customer problems."
-sell: "If you want to follow along, drop your info in the box below and I’ll send all the updates right to your inbox."
 ---
 
 The easy way to start a new project is to dive right in, open Sketch or Sublime Text and start creating. We’ve all been there, but starting with solutions can be a very costly mistake. 

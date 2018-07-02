@@ -5,7 +5,6 @@ path: "/solving-the-right-problems"
 category: "post"
 tags: ["web app challenge"]
 excerpt: "Sprinting in the wrong direction can be catestrophic for a product. Here's how I chose a new direction for my web app challenge based on a simple checklist."
-sell: "If you want to follow along, drop your info in the box below and I’ll send all the updates right to your inbox."
 ---
 
 *This is an update from Week 4 of my [web app challenge](/a/my-web-app-challenge). I challenged myself to build a software product and generate $1000 in real revenue in 3 months.*

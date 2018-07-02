@@ -1,23 +1,13 @@
 import React from "react"
 import Link from "gatsby-link"
 
-import SubscribeForm from '../components/SubscribeForm'
+import SubscribeForm from '../components/NewsletterSignup'
+import '../components/SubscribeForm.css'
 import SEO from '../components/SEO'
 import Bio from '../components/Bio'
 
 
 export default function PrototypingProducts (props) {
-	const formProps = {
-      action: 'https://stuartbalcombe.us16.list-manage.com/subscribe/post?u=48e1b3ba91c1e492cfb326e7a&amp;id=a649588b8b&amp;&group[4843][4]=true',
-      messages: {
-      	inputPlaceholder: "Your email...",
-      	btnLabel: 'Get the outline',
-        sending: "Sending...",
-	    success: "Success! Your email address has been added to the list.",
-	    error: "Oops, something went wrong please try again."
-	  },
-    }
-
   	return (
   		<div>
   			<SEO title='Prototyping Software Products | Stuart Balcombe | Philadelphia' description='Do you want to build a software product but don’t know how to code? Prototyping Software Products will help you validate your idea BEFORE writing code saving you time and money.'/>
@@ -66,7 +56,7 @@ export default function PrototypingProducts (props) {
 			
 			<p>Sign up and you'll receive the outline of the book, plus my occasional newsletter about building better products. I’ll be sharing some of the ideas that I’ve collected for the book with my mailing list.</p>
   			
-  			<SubscribeForm {...formProps} />
+        <NewsletterSignup />
   			<hr style={{ marginTop: '1.75rem', marginBottom: '1.75rem' }} />
   			<Bio />
   		</div>

@@ -12,8 +12,6 @@ tags: ["web app challenge"]
 
 excerpt: "A simple landing page can help validate that people actually want your product. Before you build anything."
 
-sell: "If you want to follow along, drop your info in the box below and I’ll send all the updates right to your inbox."
-
 ---
 
 *This is an update from Week 6 of my [web app challenge](/tags/web-app-challenge/). I challenged myself to build a software product and generate $1000 in real revenue in 3 months.*

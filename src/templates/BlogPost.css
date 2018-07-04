@@ -5,3 +5,7 @@
 .gatsby-resp-image-link {
 	box-shadow: none;
 }
+
+h3 {
+	margin-top: 0px;
+}

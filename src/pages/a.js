@@ -15,8 +15,7 @@ class Articles extends React.Component {
 	    return (
 			<div>
 				<SEO title="Stuart Balcombe writing: articles about building customer focused products." description='Stuart Balcombe writing about products. I publish articles about my experience and learnings from building customer-focused products.' />
-				<h1>Articles about building customer-focused products.</h1>
-				<p>A collection of <Link to='/'>Stuart Balcombe</Link> writing. I publish articles about everything I learn building customer-focused products here:</p>
+				<h1>Learnings from building customer-focused products.</h1>
 				<h4>Articles by category</h4>
 				<ul className="tags">
 			        <li><strong><Link to='/tags/product-management/'>Product Management</Link></strong></li>
@@ -25,7 +24,7 @@ class Articles extends React.Component {
 
 			    </ul>
 				
-				<h4>All articles, ever</h4>
+				<h4>All articles</h4>
 
 				{posts.map(({ node }) => {
 		          const title = get(node, 'frontmatter.title') || node.fields.slug

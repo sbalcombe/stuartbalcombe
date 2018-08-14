@@ -31,11 +31,11 @@ Features like:
 - Subscription management.
 - User Impersonation
 
-You might be thinking, “I’m a developer I can build these things fast and exactly how I want them”.
+You might be thinking, “My developer told me they can build these things quickly and exactly how I want them”.
 
-Yes, that’s definitely true. 
+That may be true. But the question you need to ask your self is not **"Can we build this?"** but **"Should we build this?"**
 
-But, every feature you build has an opportunity cost. While customization and company convention might be a priority at scale, when you’re just starting out the focus must be on providing value to customers and learning where to iterate. Even building quickly could mean 4-6 weeks of development time.
+Every feature you build has an opportunity cost. While customization and company convention might be a priority at scale, when you’re just starting out the focus must be on providing value to customers and learning where to iterate. Even building quickly could mean 4-6 weeks of development time.
 
 I’m not arguing that your app doesn’t need these features, merely that if every other app needs them too, then they aren’t features that will win you market share or (and most importantly early on) features that will help you test your riskiest product assumptions.
 

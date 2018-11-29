@@ -1,16 +1,18 @@
----
-title: Resources to help you build better products
-date: "2018-02-28T22:12:03.284Z"
-path: "/resources-to-build-better-products/"
-category: "post"
-tags: ["resources"]
-excerpt: "A curated list of the resources I’ve found most useful in shaping my approach to building better products."
----
+import React from "react"
+import SEO from '../components/SEO'
+import Layout from '../components/layout'
+
+class Resources extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <p className="mb-8">
+          
 
 
 Like many people I didn't begin my career as a product manager. I started out as a growth marketer and found my way into product through the work and writing of others. I’ve curated a list of the content I found most useful in shaping my approach to building better products.
-
-### Blog Posts
+</p>
+<h3> Blog Posts</h3>
 
 - <a href="http://andrewchen.co/minimum-desirable-product/" target="_blank">Minimum Desirable Product</a> by Andrew Chen
 
@@ -54,3 +56,11 @@ Like many people I didn't begin my career as a product manager. I started out as
 - <a href="https://polaris.shopify.com/">Shopify Polaris</a>
 
 - <a href="https://seekingwisdom.io/how-we-build-products-at-drift-7024357d953b">Burndown by Drift</a>
+
+
+      </Layout>
+    )
+  }
+}
+
+export default Resources;

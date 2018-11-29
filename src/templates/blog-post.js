@@ -1,42 +1,57 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import get from 'lodash/get'
-import Link from 'gatsby-link'
+import React from 'react';
+import Img from 'gatsby-image';
+import Link from 'gatsby-link';
+import SEO from '../components/SEO';
+import Layout from '../components/layout';
+import styled from 'react-emotion'
+import { graphql } from 'gatsby';
 
-import SEO from '../components/SEO'
-import './BlogPost.css'
+const Title = styled.h1`
+  ${tw`text-3xl lg:text-5xl text-indigo-darker font-normal mt-6 mb-2 font-serif`};
+`
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    let workMeta
-    if (post.frontmatter.category === 'work') {
-      workMeta = (
-        <div style={{ marginBottom: '3rem' }}>
-          <div style={{ display: 'inline-block', marginRight: '3rem' }}>
-            <span style={{ display: 'block', textTransform: 'uppercase', fontSize: '0.7em', opacity: 0.54 }}>Role</span>
-            <strong>Director of Product</strong>
-          </div>
-          <div style={{ display: 'inline-block'}}>
-            <span style={{ display: 'block', textTransform: 'uppercase', fontSize: '0.7em', opacity: 0.54 }}>Company</span>
-            <strong>Sail</strong>
-          </div>
-        </div>
-      )
-    }
+    const { previous, next } = this.props.pageContext
+    // const url = 'https://blog.kylegalbraith.com' + this.props.location.pathname;
+
     return (
-      <div>
-        <SEO 
-          title={`${post.frontmatter.title} - ${siteTitle}`}
-          description={post.frontmatter.excerpt}
-        />
-        <h1 style={{ marginBottom: '0.5rem'}}>{post.frontmatter.title}</h1>
-        <p><small>{post.frontmatter.date}</small></p>
-        {workMeta}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p style={{ color: 'rgba(0,0,0,0.54)', fontSize: '16px', fontWeight: 300}}>Enjoyed this post? Join my <Link to='/newsletter'>occasional newsletter</Link>.</p>
-      </div>
+      <Layout>
+        <div>
+          <SEO data={post} />
+          {
+            post.frontmatter.cover &&
+            <Img sizes={post.frontmatter.cover.childImageSharp.sizes} alt={post.frontmatter.title} className="w-full" />
+          }
+          <Title>
+            {post.frontmatter.title}
+          </Title>
+          <p className="block mb-8 pb-4 border-b-2">
+            <span role="img" aria-label="blog post date">📅</span> {post.frontmatter.date}
+          </p>
+          <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          <ul>
+            <li>
+              {
+                previous &&
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              }
+            </li>
+            <li>
+              {
+                next &&
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+              </Link>
+              }
+            </li>
+          </ul>
+        </div>
+      </Layout>
     )
   }
 }
@@ -48,17 +63,16 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt(pruneLength: 280)
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        category
-        excerpt
+        date(formatString: "DD MMMM, YYYY")
+        
       }
     }
   }

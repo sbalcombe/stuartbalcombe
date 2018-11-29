@@ -1,8 +1,6 @@
 import React from 'react'
 import Link from "gatsby-link"
 
-import { rhythm } from '../utils/typography'
-
 class Intro extends React.Component {
   render() {
     return (

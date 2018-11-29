@@ -1,59 +1,43 @@
-import React from "react"
-import Link from "gatsby-link"
-import get from "lodash/get"
+import React from "react";
+import SEO from "../components/SEO";
+import get from 'lodash/get'
+import Link from "gatsby-link";
+import Layout from '../components/layout';
+import { graphql } from 'gatsby';
 
-import SEO from '../components/SEO'
-import Tags from '../components/Tags'
-import NewsletterSignup from "../components/NewsletterSignup"
-import '../components/SubscribeForm.css'
-
-
-class Articles extends React.Component {
-	render () {		
-		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-	    const posts = get(this, 'props.data.allMarkdownRemark.edges')
-	    return (
-			<div>
-				<SEO title="Stuart Balcombe writing: articles about building customer focused products." description='Stuart Balcombe writing about products. I publish articles about my experience and learnings from building customer-focused products.' />
-				<h1>Learnings from building customer-focused products.</h1>
-				<h4>Articles by category</h4>
-				<ul className="tags">
-			        <li><strong><Link to='/tags/product-management/'>Product Management</Link></strong></li>
-			        <li><strong><Link to='/tags/web-app-challenge/'>Web App Challenge</Link></strong></li>
-			        <li><strong><Link to='/tags/life'>Life</Link></strong></li>
-
-			    </ul>
-				
-				<h4>All articles</h4>
-
-				{posts.map(({ node }) => {
-		          const title = get(node, 'frontmatter.title') || node.fields.slug
-		          const excerpt = get(node, 'frontmatter.excerpt') || ''
-		          return (
-		            <div style={{ margin: '1rem 0' }} key={node.fields.slug}>
-		             <p style={{ marginBottom: 0}}>
-		              <strong>
-		              <Link style={{ margin: '1rem 0' }} to={node.fields.slug}>
-		                {title}
-		              </Link>  
-		              </strong> – {excerpt}
-		             </p>
-		             <Tags list={node.frontmatter.tags || []} />
-		             <span style={{ color: '#000', opacity: 0.59, textTransform: 'uppercase', fontSize: '12px'}}>| {node.frontmatter.date}</span>
-		            </div>
-		          )
-		        })}
-		        <h3>I send an occasional newsletter with learnings and updates from building customer-focused products.</h3>
-		        <NewsletterSignup />
-		    </div>
-	    )
-	}
+class BlogIndexPage extends React.Component {
+  render() {
+    const posts = get(this, 'props.data.allMarkdownRemark.edges');
+    return (
+      <Layout>
+        <div className="text-left p-4 bg-grey-lightest">
+          <SEO data="" />
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            return (
+              <div key={node.fields.slug} className="text-grey-darkest pb-4 pt-4">
+                <p className="inline-block bg-purple-darker text-purple-lightest mb-2 font-normal p-2 text-xs rounded">
+                  {node.frontmatter.date}
+                </p>
+                <h3 className="mb-2 font-normal">
+                  <Link className="text-2xl text-indigo-darker hover:text-indigo-lighter" to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </div>
+            )
+          })}
+        </div>
+      </Layout>
+    );
+  }
 }
 
-export default Articles;
+export default BlogIndexPage;
 
 export const pageQuery = graphql`
-  query ArticlesQuery {
+  query IndexQuery {
     site {
       siteMetadata {
         title
@@ -62,14 +46,13 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          excerpt(pruneLength: 200)
           fields {
             slug
           }
           frontmatter {
-            title
-            excerpt
-            tags
             date(formatString: "DD MMMM, YYYY")
+            title
           }
         }
       }

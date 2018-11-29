@@ -1,16 +1,8 @@
 ---
 
-title: How to create effective landing pages for testing
+title: The case for concierge onboarding
 
 date: "2018-02-21T22:12:03.284Z"
-
-path: "/how-to-create-effective-landing-pages-for-testing/"
-
-category: "post"
-
-tags: ["web app challenge"]
-
-excerpt: "A simple landing page can help validate that people actually want your product. Before you build anything."
 
 ---
 

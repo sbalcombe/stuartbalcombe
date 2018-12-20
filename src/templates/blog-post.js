@@ -6,8 +6,20 @@ import Layout from '../components/layout';
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
 
+const ContainerSmall = styled.div`
+  ${tw`max-w-md mx-auto`};
+`
+
 const Title = styled.h1`
   ${tw`text-3xl lg:text-5xl text-indigo-darker font-normal mt-6 mb-2 font-serif`};
+`
+
+const List = styled.ul`
+  ${tw`list-reset`};
+`
+
+const StyledLink = styled(Link)`
+  ${tw`no-underline text-indigo-light font-bold hover:underline`};
 `
 
 class BlogPostTemplate extends React.Component {
@@ -18,7 +30,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout>
-        <div>
+        <ContainerSmall>
           <SEO data={post} />
           {
             post.frontmatter.cover &&
@@ -32,25 +44,25 @@ class BlogPostTemplate extends React.Component {
           </p>
           <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-          <ul>
+          <List>
             <li>
               {
                 previous &&
-                <Link to={previous.fields.slug} rel="prev">
+                <StyledLink to={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
-                </Link>
+                </StyledLink>
               }
             </li>
             <li>
               {
                 next &&
-                <Link to={next.fields.slug} rel="next">
+                <StyledLink to={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
-              </Link>
+              </StyledLink>
               }
             </li>
-          </ul>
-        </div>
+          </List>
+        </ContainerSmall>
       </Layout>
     )
   }

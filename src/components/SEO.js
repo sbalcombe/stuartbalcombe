@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import favicon from "./favicon.ico";
+import favicon from "./../images/favicon.ico";
 
 class SEO extends Component {
 	render () {

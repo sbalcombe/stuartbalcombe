@@ -3,32 +3,53 @@ import SEO from "../components/SEO";
 import get from 'lodash/get'
 import Link from "gatsby-link";
 import Layout from '../components/layout';
+import styled from 'react-emotion'
 import { graphql } from 'gatsby';
+
+const ContainerSmall = styled.div`
+  ${tw`max-w-md mx-auto`};
+`
+
+const BlogHeading = styled.div`
+  ${tw`my-8 text-lg leading-normal text-grey-darker`};
+`
+
+const ArticleItem = styled.div`
+  ${tw`text-grey-darker pb-2 pt-2`};
+`
+
+const Heading = styled.h3`
+  ${tw`text-xl font-serif font-medium mb-2 `};
+`
+
+const HeadingLink = styled(Link)`
+  ${tw`text-indigo-light hover:text-indigo font-bold`};
+`
 
 class BlogIndexPage extends React.Component {
   render() {
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
     return (
       <Layout>
-        <div className="text-left p-4 bg-grey-lightest">
+        <ContainerSmall>
           <SEO data="" />
+          <BlogHeading>
+            This is where I write about onboarding, customer research, user experience and entrepreneurship.
+          </BlogHeading>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <div key={node.fields.slug} className="text-grey-darkest pb-4 pt-4">
-                <p className="inline-block bg-purple-darker text-purple-lightest mb-2 font-normal p-2 text-xs rounded">
-                  {node.frontmatter.date}
-                </p>
-                <h3 className="mb-2 font-normal">
-                  <Link className="text-2xl text-indigo-darker hover:text-indigo-lighter" to={node.fields.slug}>
+              <ArticleItem key={node.fields.slug}>
+                <Heading>
+                  <HeadingLink to={node.fields.slug}>
                     {title}
-                  </Link>
-                </h3>
+                  </HeadingLink>
+                </Heading>
                 <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </div>
+              </ArticleItem>
             )
           })}
-        </div>
+        </ContainerSmall>
       </Layout>
     );
   }
@@ -51,7 +72,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
             title
           }
         }

@@ -1,13 +1,12 @@
-import React from "react"
-import SEO from '../components/SEO'
-import Layout from '../components/layout'
+---
 
-class About extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <p className="mb-8">
-            ## Problem & Opportunity
+title: Designing client payment experiences
+
+date: "2018-02-21T22:12:03.284Z"
+
+---
+
+## Problem & Opportunity
 On the surface, freelancers seem to have it all. They can be their own boss, take back their independence, and only spend time doing what they love. It turns out running a freelance business is a little more involved than that.
 
 One thing that every freelancer has to figure out, is how they are going to get paid for their work. Unfortunately, leaving a full-time job means no more administrative support. We began interviewing  freelancers to learn more about how they got paid by their clients. This process helped identify their frustrations with their existing solution.
@@ -116,11 +115,3 @@ I worked on creating a simple solution to a problem that was prohibitive for mos
 > – Hicham Moutahir, Owner, Shibi Designs
 
 Running an independent business requires freelancers to be marketers, strategists, accountants, and managers. Making it easier to understand business finances will not only give freelancers more time to focus on their clients but will help them run more profitable businesses.
-</p>
-      </Layout>
-    )
-  }
-}
-
-export default About;
-

@@ -8,7 +8,7 @@ import Header from './Header'
 import './Layout.css'
 
 const Content = styled.div`
-  ${tw`px-8 md:px-32 py-8 font-mono max-w-lg mx-auto`};
+  ${tw`px-8 py-8 font-mono max-w-xl mx-auto`};
 `
 
 const Layout = ({ children }) => (

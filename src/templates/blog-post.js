@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
 import SEO from './../components/SEO';
-import Layout from './../components/layout';
+import Layout from './../components/Layout';
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
 import NewsletterForm from './../components/NewsletterForm'

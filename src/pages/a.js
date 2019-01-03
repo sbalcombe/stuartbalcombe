@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/SEO";
 import get from 'lodash/get'
 import Link from "gatsby-link";
-import Layout from '../components/layout';
+import Layout from './../components/Layout';
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
 

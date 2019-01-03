@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 import styled from 'react-emotion'
-import Layout from './../components/layout'
+import Layout from './../components/Layout'
 import SEO from './../components/SEO'
 
 const StyledButton = styled.a`

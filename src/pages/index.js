@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'react-emotion'
 import { Link } from 'gatsby'
 import SEO from './../components/SEO'
-import Layout from './../components/layout'
+import Layout from './../components/Layout'
 import NewsletterForm from './../components/NewsletterForm'
 import guide from './../images/onboarding.svg'
 require('typeface-playfair-display')

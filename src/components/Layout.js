@@ -5,7 +5,7 @@ import styled from 'react-emotion'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
-import './Layout.css'
+import './layout.css'
 
 const Content = styled.div`
   ${tw`px-8 py-8 font-mono max-w-xl mx-auto`};

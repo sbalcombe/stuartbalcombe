@@ -8,18 +8,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: 'gatsby-tailwind-emotion-starter',
-    //     short_name: 'starter',
-    //     start_url: '/',
-    //     background_color: '#663399',
-    //     theme_color: '#663399',
-    //     display: 'minimal-ui',
-    //     // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
@@ -30,8 +18,8 @@ module.exports = {
         includeInDevelopment: false,
 
         // Specify optional GTM environment details.
-        gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
-        gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       },
     },
     {
@@ -67,6 +55,20 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Stuart Balcombe`,
+        short_name: `SB`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/images/stuart.jpg`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

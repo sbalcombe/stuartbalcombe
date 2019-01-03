@@ -40,11 +40,12 @@ class About extends React.Component {
   render() {
     return (
       <Layout>
+        <SEO title="Hi, I'm Stuart Balcombe" description="I help software companies increase revenue and drive sustainable growth, without spending more on customer acquisition." />
         <ContainerSmall>
           <Welcome>My Story</Welcome>
           <p>I’ve spent the past 4 years helping companies build and grow software products. My work is centered around 3 core values:</p>
           <List>
-            <li>- Deeply understanding customer problems.</li>
+            <li>- Deeply understanding customers.</li>
             <li>- Starting small and iterating quickly.</li>
             <li>- Building sustainable systems vs short term solutions.</li>
           </List>

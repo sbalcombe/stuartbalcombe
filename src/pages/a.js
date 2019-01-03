@@ -32,7 +32,7 @@ class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <ContainerSmall>
-          <SEO data="" />
+          <SEO title="Stuart Balcombe | Onboarding optimization for Startups" description="Building software? I write about onboarding, customer research, user experience and entrepreneurship." />
           <BlogHeading>
             This is where I write about onboarding, customer research, user experience and entrepreneurship.
           </BlogHeading>

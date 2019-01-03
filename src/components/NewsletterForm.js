@@ -13,25 +13,50 @@ const Button = styled.button`
   ${tw`px-4 py-3 block rounded w-full bg-indigo-light text-white hover:bg-indigo-dark hover:cursor-pointer`};
 `
 
+const SubmitMsg = styled.p`
+  ${tw`text-xs text-grey-dark mt-4 block truncate mb-0`};
+`
+
 class NewsletterForm extends React.Component {
-  constructor(props) {
-   super(props);
-   // Don't do this!
-   this.state = { email: '' };
+  state = {
+    name: null,
+    email: null,
+    submitMsg: ''
   }
 
-  _handleSubmit = async (e) => {
-    e.preventDefault;
-    const result = await addToMailchimp(email, listFields)
-    // I recommend setting `result` to React state
-    // but you can do whatever you want
+  _handleChange = e => {
+    this.setState({
+      [`${e.target.name}`]: e.target.value,
+    })
   }
-  
+
+  _handleSubmit = e => {
+    e.preventDefault();
+    addToMailchimp(this.state.email, {
+      PATHNAME: this.props.location,
+    })
+    .then(({msg, result}) => {
+      console.log('msg', `${result}: ${msg}`);
+      if (result !== 'success') {
+        throw msg;
+      }
+      this.setState({
+        submitMsg: msg,
+        email: ''
+      });
+    })
+    .catch(err => {
+      console.log('err', err);
+      this.setState({submitMsg: err});
+    });
+  }
+
 	render () {
 		return (
-			<Form onSubmit={this._handleSubmit(this.email, {})}>
-      	<EmailInput placeholder="Your email" name="email" ref={this.email}></EmailInput>
+			<Form onSubmit={this._handleSubmit} className="NewsletterForm">
+      	<EmailInput placeholder="Your email" type="email" name="email" aria-label="Email signup" onChange={this._handleChange} ref={this.email}></EmailInput>
       	<Button type="submit">Subscribe</Button>
+        <SubmitMsg>{this.state.submitMsg}</SubmitMsg>
       </Form>
 		)
 	}

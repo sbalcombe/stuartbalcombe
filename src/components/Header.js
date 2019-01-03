@@ -25,7 +25,7 @@ const NavItem = styled.li`
 `
 
 const StyledGatsbyLink = styled(Link)`
-  ${tw`text-indigo-light no-underline hover:underline hover:font-bold`};
+  ${tw`text-indigo no-underline hover:underline hover:font-bold`};
 `
 
 const StyledLogoLink = styled(Link)`
@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
   <Container>
     <Nav>
       <StyledLogoLink to="/">
-        <NavImg src={avatar}></NavImg>
+        <NavImg src={avatar} alt="Profile image of Stuart Balcombe"></NavImg>
       </StyledLogoLink>
       <NavList>
       	<NavItem><StyledGatsbyLink to="/a">Blog</StyledGatsbyLink></NavItem>

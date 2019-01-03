@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import Layout from '../components/layout';
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
+import NewsletterForm from '../components/NewsletterForm'
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};
@@ -22,6 +23,18 @@ const StyledLink = styled(Link)`
   ${tw`no-underline text-indigo-light font-bold hover:underline`};
 `
 
+const Card = styled.div`
+  ${tw`rounded-lg shadow p-8 hover:shadow-md hover:cursor-pointer h-full`};
+`
+
+const SubHead = styled.h3`
+  ${tw`text-xl font-serif mb-3`};
+`
+
+const BodyText = styled.p`
+  ${tw`font-mono text-sm`};
+`
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -31,7 +44,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout>
         <ContainerSmall>
-          <SEO data={post} />
+          <SEO title={post.frontmatter.title} description={post.frontmatter.excerpt} />
           {
             post.frontmatter.cover &&
             <Img sizes={post.frontmatter.cover.childImageSharp.sizes} alt={post.frontmatter.title} className="w-full" />
@@ -62,6 +75,13 @@ class BlogPostTemplate extends React.Component {
               }
             </li>
           </List>
+          <Card>
+            <SubHead>Get My Newsletter</SubHead>
+            <BodyText>
+              New stories, learnings, and tips for building better onboarding straight to your inbox.
+            </BodyText>
+          <NewsletterForm location={this.props.location.pathname} />
+          </Card>
         </ContainerSmall>
       </Layout>
     )

@@ -17,7 +17,7 @@ const HeroContent = styled.div`
 `
 
 const Welcome = styled.h5`
-  ${tw`text-3xl font-serif font-medium`};
+  ${tw`text-3xl font-serif font-medium leading-normal`};
 `
 
 const Headline = styled.h1`
@@ -47,11 +47,11 @@ const OneThird = styled.div`
 const Card = styled.div`
   ${tw`rounded-lg shadow p-4 hover:shadow-md hover:cursor-pointer h-full`};
 `
-const GuideContent = styled.div`
-  ${tw`w-1/2`};
+const GuideContent = styled(Link)`
+  ${tw`w-full md:w-1/2 no-underline text-black md:mt-8 p-4`};
 `
 const GuideImg = styled.img`
-  ${tw`w-1/2 p-4 h-full mb-0 mt-4`};
+  ${tw`w-full md:w-1/2 p-4 h-full mb-0 mt-4`};
 `
 
 const BodyText = styled.p`
@@ -61,26 +61,31 @@ const BodyText = styled.p`
 const StyledLink = styled.a`
   ${tw`no-underline text-indigo-light font-bold hover:underline`};
 `
+
+const StyledIntLink = styled(Link)`
+  ${tw`no-underline text-indigo-light font-bold hover:underline`};
+`
+
 class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO data="" />
+        <SEO title="Stuart Balcombe | Onboarding optimization for Startups" description="I help software companies increase revenue and drive sustainable growth, without spending more on customer acquisition." />
         <Row>
           <HeroContent>
             <Welcome>Hello, I'm <Accent>Stuart Balcombe</Accent></Welcome>
-            <Headline>I help B2B software companies increase activation and reduce churn by <StyledLink href="https://www.onboardingops.com">improving their onboarding</StyledLink>.</Headline>
+            <Headline>I help B2B software companies increase activation and reduce churn by <StyledIntLink to="/onboarding-audit">improving their onboarding</StyledIntLink>.</Headline>
           </HeroContent>
         </Row>
         <Row>
           <TwoThirds>
             <Card>
             <Row>
-            <GuideContent>
+            <GuideContent to="/onboarding-guide/intro" alt="Read onboarding field guide">
               <SubHead>Onboarding Field Guide</SubHead>
               <BodyText>An actionable, research backed guide for taking customers from signed up to successful.</BodyText>
             </GuideContent>
-            <GuideImg src={guide}></GuideImg>
+            <GuideImg src={guide} alt="Illustration of woman completing checklist"></GuideImg>
             </Row>
             </Card>
           </TwoThirds>
@@ -90,7 +95,7 @@ class Index extends React.Component {
             <BodyText>
               New stories, learnings, and tips for building better onboarding straight to your inbox.
             </BodyText>
-            <NewsletterForm />
+            <NewsletterForm location={this.props.location.pathname} />
             </Card>
           </OneThird>
         </Row>

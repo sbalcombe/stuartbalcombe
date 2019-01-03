@@ -1,8 +1,8 @@
 import React from "react"
 import Link from "gatsby-link"
 import styled from 'react-emotion'
-import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Layout from './../components/layout'
+import SEO from './../components/SEO'
 
 const StyledButton = styled.a`
   ${tw`px-4 py-3 inline-block mb-2 rounded no-underline bg-indigo-light text-white hover:bg-indigo-dark hover:cursor-pointer`};

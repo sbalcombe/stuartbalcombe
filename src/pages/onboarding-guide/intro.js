@@ -1,10 +1,10 @@
 import React from "react"
-import SEO from '../../components/SEO'
-import Layout from '../../components/layout'
+import SEO from './../../components/SEO'
+import Layout from './../../components/layout'
 import { Link } from 'gatsby'
 import styled from 'react-emotion'
-import NewsletterForm from '../../components/NewsletterForm'
-import guide from '../../images/onboarding.svg'
+import NewsletterForm from './../../components/NewsletterForm'
+import guide from './../../images/onboarding.svg'
 
 
 const Card = styled.div`

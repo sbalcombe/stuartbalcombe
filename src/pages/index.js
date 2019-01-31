@@ -55,7 +55,7 @@ const GuideImg = styled.img`
 `
 
 const BodyText = styled.p`
-  ${tw`font-mono text-sm max-w-xs`};
+  ${tw`font-mono text-grey-dark max-w-xs`};
 `
 
 const StyledLink = styled.a`

@@ -34,7 +34,7 @@ class BlogIndexPage extends React.Component {
         <ContainerSmall>
           <SEO title="Stuart Balcombe | Onboarding optimization for Startups" description="Building software? I write about onboarding, customer research, user experience and entrepreneurship." />
           <BlogHeading>
-            This is where I write about onboarding, customer research, user experience and entrepreneurship.
+            This is where I write about building better products, customer success, and personal growth.
           </BlogHeading>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug

@@ -1,12 +1,12 @@
-/a/better-products-resources/	/resources
-/a/designing-one-to-one-payment-experiences/	/designing-client-payment-experiences
+/a/better-products-resources/	/onboarding-guide/intro
+/a/designing-one-to-one-payment-experiences/	/a/designing-client-payment-experiences
 /a/mid-year-review-2018/	/
 /a/finding-alignment/	/
 /a/what-i-learned-in-2017/	/
 /tags/product-management/	/a
 /tags/web-app-challenge/	/a
 /tags/life/	/a
-/tags/resources/ /a
+/tags/resources/ /onboarding-guide/intro
 /tags/case-studies/	/a
 /custom-product-design/	/
 /newsletter/	/
@@ -16,4 +16,7 @@
 /terms/	/
 /user-experience-review/	/
 /work-with-me/	/
-/onboarding-guide/ /onboarding-guide/intro
+/onboarding-guide/ 	/onboarding-guide/intro
+/a/understanding-customer-problems/		/onboarding-guide/intro
+/a/effective-landing-pages/		/onboarding-guide/intro
+/a/solving-the-right-problems/		/a

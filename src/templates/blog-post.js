@@ -12,7 +12,7 @@ const ContainerSmall = styled.div`
 `
 
 const Title = styled.h1`
-  ${tw`text-3xl lg:text-5xl text-indigo-darker font-normal mt-6 mb-2 font-serif`};
+  ${tw`text-3xl lg:text-4xl text-indigo-light mt-6 mb-4 font-serif leading-tight`};
 `
 
 const List = styled.ul`
@@ -32,9 +32,12 @@ const SubHead = styled.h3`
 `
 
 const BodyText = styled.p`
-  ${tw`font-mono text-sm`};
+  ${tw`font-mono text-grey-darker`};
 `
 
+const PostDate = styled.p `
+  ${tw`text-grey-dark`}
+`
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -52,10 +55,10 @@ class BlogPostTemplate extends React.Component {
           <Title>
             {post.frontmatter.title}
           </Title>
-          <p className="block mb-8 pb-4 border-b-2">
+          <PostDate>
             <span role="img" aria-label="blog post date">📅</span> {post.frontmatter.date}
-          </p>
-          <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          </PostDate>
+          <BodyText dangerouslySetInnerHTML={{ __html: post.html }} />
 
           <List>
             <li>

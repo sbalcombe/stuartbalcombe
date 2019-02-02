@@ -55,7 +55,7 @@ const GuideImg = styled.img`
 `
 
 const BodyText = styled.p`
-  ${tw`font-mono text-grey-dark max-w-xs`};
+  ${tw`font-mono text-grey-dark`};
 `
 
 const StyledLink = styled.a`
@@ -70,15 +70,15 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Stuart Balcombe | Onboarding optimization for Startups" description="I help software companies increase revenue and drive sustainable growth, without spending more on customer acquisition." />
+        <SEO title="Stuart Balcombe | Building products that make customers successful." description="Helping build better products by focusing on successful customer outcomes. Always learning." />
         <Row>
           <HeroContent>
-            <Welcome>Hello, I'm <Accent>Stuart Balcombe</Accent></Welcome>
-            <Headline>I help B2B software companies increase activation and reduce churn by <StyledIntLink to="/onboarding-audit">improving their onboarding</StyledIntLink>.</Headline>
+            <Welcome>Hi, I'm <Accent>Stuart Balcombe</Accent></Welcome>
+            <Headline>I believe the best way to build better products is to focus on helping customers achieve successful outcomes.</Headline>
           </HeroContent>
         </Row>
         <Row>
-          <TwoThirds>
+          {/*<TwoThirds>
             <Card>
             <Row>
             <GuideContent to="/onboarding-guide/intro" alt="Read onboarding field guide">
@@ -88,16 +88,16 @@ class Index extends React.Component {
             <GuideImg src={guide} alt="Illustration of woman completing checklist"></GuideImg>
             </Row>
             </Card>
-          </TwoThirds>
-          <OneThird>
+          </TwoThirds> */}
+          <TwoThirds> 
             <Card>
             <SubHead>Get My Newsletter</SubHead>
             <BodyText>
-              New stories, learnings, and tips for building better onboarding straight to your inbox.
+              I write a newsletter about product, customer research and personal growth.
             </BodyText>
             <NewsletterForm location={this.props.location.pathname} />
             </Card>
-          </OneThird>
+          </TwoThirds>
         </Row>
       </Layout>
     )

@@ -47,7 +47,7 @@ class About extends React.Component {
           <List>
             <li>- Deeply understanding customers.</li>
             <li>- Starting small and iterating quickly.</li>
-            <li>- Building sustainable systems vs short term solutions.</li>
+            <li>- Measuring success by outcomes not outputs.</li>
           </List>
 
           <SubHead>Right now</SubHead>

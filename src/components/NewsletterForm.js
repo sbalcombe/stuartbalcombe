@@ -3,14 +3,18 @@ import styled from 'react-emotion'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const Form = styled.form`
-	${tw`mb-0`}
+	${tw`mb-8 w-full max-w-md`}
+`
+
+const FormWrapper = styled.div`
+  ${tw`block md:flex items-center rounded-lg shadow-none md:shadow bg-tranparent md:bg-white`}
 `
 
 const EmailInput = styled.input`
-  ${tw`px-4 py-3 block w-full border border-solid border-grey-light mb-2 rounded appearance-none focus:outline-none focus:shadow-outline focus:shadow-none`};
+  ${tw`bg-white border-none w-full rounded-lg md:rounded-none md:rounded-l-lg text-grey-darkest py-4 px-4 leading-tight md:shadow-none shadow mb-4 md:mb-0`};
 `
 const Button = styled.button`
-  ${tw`px-4 py-3 block rounded w-full bg-indigo-light text-white hover:bg-indigo-dark hover:cursor-pointer`};
+  ${tw`w-full md:w-auto md:flex-no-shrink bg-indigo-light hover:bg-indigo border-indigo-light hover:border-indigo uppercase font-bold tracking-wide border-4 text-white py-3 px-4 md:rounded-r-lg text-base md:shadow-none shadow hover:cursor-pointer`};
 `
 
 const SubmitMsg = styled.p`
@@ -54,9 +58,11 @@ class NewsletterForm extends React.Component {
 	render () {
 		return (
 			<Form onSubmit={this._handleSubmit} className="NewsletterForm">
+        <FormWrapper>
       	<EmailInput placeholder="Your email" type="email" name="email" aria-label="Email signup" onChange={this._handleChange} ref={this.email}></EmailInput>
       	<Button type="submit">Join Now</Button>
         <SubmitMsg>{this.state.submitMsg}</SubmitMsg>
+        </FormWrapper>
       </Form>
 		)
 	}

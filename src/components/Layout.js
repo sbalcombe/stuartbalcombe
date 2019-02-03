@@ -5,6 +5,8 @@ import styled from 'react-emotion'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
+// import Footer from './Footer'
+
 import './layout.css'
 
 const Content = styled.div`
@@ -35,6 +37,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>{children}</Content>
+        {/*<Footer />*/}
       </div>
     )}
   />

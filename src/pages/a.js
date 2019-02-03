@@ -3,11 +3,16 @@ import SEO from "../components/SEO";
 import get from 'lodash/get'
 import Link from "gatsby-link";
 import Layout from './../components/Layout';
+import NewsletterForm from './../components/NewsletterForm'
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};
+`
+
+const Accent = styled.span`
+  ${tw`font-bold text-indigo-light`};
 `
 
 const BlogHeading = styled.div`
@@ -34,8 +39,9 @@ class BlogIndexPage extends React.Component {
         <ContainerSmall>
           <SEO title="Stuart Balcombe | Onboarding optimization for Startups" description="Building software? I write about onboarding, customer research, user experience and entrepreneurship." />
           <BlogHeading>
-            This is where I write about building better products, customer success, and personal growth.
+            I send a newsletter about building <Accent>better products</Accent>, <Accent>customer success</Accent>, and <Accent>personal growth</Accent>. Get articles like the ones below before they're published by signing up:
           </BlogHeading>
+          <NewsletterForm location={this.props.location.pathname} />
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (

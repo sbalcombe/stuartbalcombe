@@ -1,21 +1,27 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-import Link from 'gatsby-link'
+import styled from 'react-emotion'
 
-const BottomBar = props => {
-	return (
-        <footer>
-          {/*
-          <hr style={{ marginBottom: rhythm(1), marginTop: rhythm(1) }} />
-          <Bio />
-          */}
-          <ul className="menu">
-               <li><Link to='/now'>about</Link></li>
-               <li><Link to='/a'>articles</Link></li>
-               <li><Link to='/newsletter'>newsletter</Link></li>
-          </ul>
-        </footer>
-	)
-}
+const Container = styled.footer`
+  ${tw`px-8 md:px-32 font-mono`};
+`
 
-export default BottomBar;
+const List = styled.ul`
+  ${tw`list-reset ml-0`};
+`
+
+const FooterLink = styled.li`
+  ${tw`inline-block mr-6 text-sm uppercase`}
+`
+const Footer = ({ siteTitle }) => (
+  <Container>
+    <List>
+         <FooterLink><Link to='/about'>about</Link></FooterLink>
+         <FooterLink><Link to='/a'>articles</Link></FooterLink>
+         <FooterLink><Link to='/newsletter'>newsletter</Link></FooterLink>
+    </List>
+  </Container>
+)
+
+export default Footer;

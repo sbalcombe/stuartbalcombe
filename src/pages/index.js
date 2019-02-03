@@ -44,9 +44,6 @@ const OneThird = styled.div`
   ${tw`w-full md:w-1/3 px-2`};
 `
 
-const Card = styled.div`
-  ${tw`rounded-lg shadow p-4 hover:shadow-md hover:cursor-pointer h-full`};
-`
 const GuideContent = styled(Link)`
   ${tw`w-full md:w-1/2 no-underline text-black md:mt-8 p-4`};
 `
@@ -90,13 +87,10 @@ class Index extends React.Component {
             </Card>
           </TwoThirds> */}
           <TwoThirds> 
-            <Card>
-            <SubHead>Get My Newsletter</SubHead>
             <BodyText>
-              I write a newsletter about product, customer research and personal growth.
+              Get my bi-monthly newsletter about product, customer research and personal growth.
             </BodyText>
             <NewsletterForm location={this.props.location.pathname} />
-            </Card>
           </TwoThirds>
         </Row>
       </Layout>

@@ -88,7 +88,7 @@ class Index extends React.Component {
           </TwoThirds> */}
           <TwoThirds> 
             <BodyText>
-              Get my bi-monthly newsletter about product, customer research and personal growth.
+              I write a bi-monthly newsletter about product, customer research and personal growth. Here’s an <StyledLink href="https://us16.campaign-archive.com/?u=48e1b3ba91c1e492cfb326e7a&id=ef002747bc" target="_blank" rel="noopener">example</StyledLink> of what you’ll get.
             </BodyText>
             <NewsletterForm location={this.props.location.pathname} />
           </TwoThirds>

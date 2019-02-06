@@ -1,0 +1,88 @@
+# A basic redirect rule
+[[redirects]]
+  from = "/a/better-products-resources/"
+  to = "/onboarding-guide/intro"
+
+[[redirects]]
+  from = "/a/designing-one-to-one-payment-experiences/"
+  to = "/a/designing-client-payment-experiences"
+
+[[redirects]]
+  from = "/a/mid-year-review-2018/" 
+  to = "/"
+
+[[redirects]]
+  from = "/a/finding-alignment/"
+  to = "/"
+
+[[redirects]]
+  from = "/a/what-i-learned-in-2017/"
+  to = "/"
+
+[[redirects]]
+  from = "/tags/product-management/"
+  to = "/"
+
+[[redirects]]
+  from = "/tags/web-app-challenge/"
+  to = "/"
+
+[[redirects]]
+  from = "/tags/life/"
+  to = "/"
+
+[[redirects]]
+  from = "/tags/resources/"
+  to = "/onboarding-guide/intro"
+
+[[redirects]]
+  from = "/tags/case-studies/"
+  to = "/a"
+
+[[redirects]]
+  from = "/custom-product-design/"
+  to = "/"
+
+[[redirects]]
+  from = "/newsletter/"
+  to = "/"
+
+[[redirects]]
+  from = "/now"
+  to = "/about"
+
+[[redirects]]
+  from = "/product-leadership-for-teams/"
+  to = "/"
+
+[[redirects]]
+  from = "/prototyping-software-products/"
+  to = "/"
+
+[[redirects]]
+  from = "/terms/"
+  to = "/"
+
+[[redirects]]
+  from = "/user-experience-review/"
+  to = ""
+
+[[redirects]]
+  from = "/work-with-me/"
+  to = "/"
+
+[[redirects]]
+  from = "/onboarding-guide/"
+  to = "/onboarding-guide/intro"
+
+[[redirects]]
+  from = "/a/understanding-customer-problems/"
+  to = "/onboarding-guide/intro"
+
+[[redirects]]
+  from = "/a/effective-landing-pages/"
+  to =  "/onboarding-guide/intro"
+
+[[redirects]]
+  from = "/a/solving-the-right-problems/"
+  to =  "/a"

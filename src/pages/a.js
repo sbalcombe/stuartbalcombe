@@ -19,6 +19,10 @@ const BlogHeading = styled.div`
   ${tw`my-8 text-lg leading-normal text-grey-darker`};
 `
 
+const ArticlesList = styled.div`
+  ${tw`border-t border-grey-lighter border-solid border-l-0 border-r-0 border-b-0 py-8`}
+`
+
 const ArticleItem = styled.div`
   ${tw`text-grey-darker pb-2 pt-2`};
 `
@@ -37,11 +41,13 @@ class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <ContainerSmall>
-          <SEO title="Stuart Balcombe | Onboarding optimization for Startups" description="Building software? I write about onboarding, customer research, user experience and entrepreneurship." />
+          <SEO title="Articles by Stuart Balcombe" description="Articles about building products that make customers successful." />
           <BlogHeading>
             I send a newsletter about building <Accent>better products</Accent>, <Accent>customer success</Accent>, and <Accent>personal growth</Accent>. Get articles like the ones below before they're published by signing up:
           </BlogHeading>
           <NewsletterForm location={this.props.location.pathname} />
+
+          <ArticlesList>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
@@ -55,6 +61,7 @@ class BlogIndexPage extends React.Component {
               </ArticleItem>
             )
           })}
+          </ArticlesList>
         </ContainerSmall>
       </Layout>
     );

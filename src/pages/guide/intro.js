@@ -12,7 +12,7 @@ const Card = styled.div`
 `
 
 const SubHead = styled.h3`
-  ${tw`text-xl font-serif mb-3 pt-8`};
+  ${tw`text-xl font-serif mb-3 pt-8 leading-normal`};
 `
 
 const Quote = styled.blockquote`
@@ -20,7 +20,7 @@ const Quote = styled.blockquote`
 `
 
 const SmallHeading = styled.h5`
-  ${tw`font-bold font-mono my-4`}
+  ${tw`font-bold font-mono my-4 leading-normal`}
 `
 
 const BodyText = styled.p`
@@ -32,10 +32,14 @@ const List = styled.ul`
 `
 
 const Banner = styled.div`
-  ${tw`pt-16 pb-8 bg-indigo-lightest text-3xl font-serif font-normal mb-16 rounded text-center`};
+  ${tw`py-16 bg-indigo-lightest text-3xl font-serif font-normal mb-16 rounded text-center`};
 `
 const BannerHeading = styled.div`
-  ${tw`text-4xl font-serif font-black text-grey-darkest text-center leading-normal`};
+  ${tw`text-4xl font-serif font-black text-grey-darkest text-center leading-normal mb-2`};
+`
+
+const BannerSubheading = styled.div`
+  ${tw`text-2xl font-serif font-black text-grey-dark text-center leading-normal`};
 `
 
 const Welcome = styled.h1`
@@ -83,8 +87,8 @@ class Intro extends React.Component {
     return (
       <Layout>
       	<Banner>
-      		<BannerHeading>Onboarding Field Guide</BannerHeading>
-          <GuideImg src={guide} alt="Illustration of woman completing checklist"></GuideImg>
+      		<BannerHeading>Outcome Driven</BannerHeading>
+          <BannerSubheading>A practical guide to building products customers love.</BannerSubheading>
       	</Banner>
       	<ContainerSmall>
 
@@ -92,25 +96,29 @@ class Intro extends React.Component {
 
         <Row>
           <ThreeFifths>
-            <BodyText>The onboarding field guide will teach you how to guide new customers from signup to success.</BodyText>
+            <BodyText>This guide will teach you how to approach early product development to ensure the product you launch drives successful outcomes for both your customers and your business.</BodyText>
             <BodyText>The guide is not intended to be a series of silver bullet growth hacks (I don’t believe they exist) but instead is focused on, long-term strategies that you can use to grow your business sustainably.</BodyText>
-            <BodyText>This guide is an ongoing project that represents the synthesis of everything I've learned researching and implementing onboarding.</BodyText>
+            <BodyText>This guide is an ongoing project that represents the synthesis of everything I've learned researching and building customer-focused products.</BodyText>
           </ThreeFifths>
 
           <TwoFifths>
             <List>
-              <ContentListItem>- Why improve onboarding</ContentListItem>
+              <ContentListItem><strong>Planned Outline</strong></ContentListItem>
+              <ContentListItem>- Why focus on outcomes</ContentListItem>
               <ContentListItem>- Understanding customers</ContentListItem>
-              <ContentListItem>- Measuring onboarding</ContentListItem>
-              <ContentListItem>- Landing pages</ContentListItem>
-              <ContentListItem>- Onboarding UI patterns</ContentListItem>
-              <ContentListItem>- Email campaigns</ContentListItem>
-              <ContentListItem>- Concierge onboarding</ContentListItem>
-              <ContentListItem>- Personalization</ContentListItem>
-              <ContentListItemLast>- Resource Library</ContentListItemLast>
+              <ContentListItem>- Starting small</ContentListItem>
+              <ContentListItem>- Product-led growth</ContentListItem>
+              <ContentListItem>- Shipping to learn</ContentListItem>
+              <ContentListItem>- Onboarding for success</ContentListItem>
+              <ContentListItem>- Metrics that matter</ContentListItem>
+              <ContentListItemLast>- Resource library</ContentListItemLast>
             </List>
           </TwoFifths>
         </Row>
+
+        <SubHead>Who is this guide for?</SubHead>
+        <BodyText>This guide is perfect for early-stage founders and their employees looking for a single resource that provides both principled frameworks and tactical support to help them delight their first customers and build an engine for learning.</BodyText>
+        <BodyText>Additionally, this guide will provide useful information for product marketers, designers and engineers aiming to become more customer focused in their work. I recommend bookmarking this guide and reading chapters as they become relevant to your activities.</BodyText>
 
         <SubHead>Why I'm writing this guide</SubHead>
         <BodyText>I started my career as a "growth hacker" but in 2016 I attended a talk that changed my perspective on where growth really comes from. At the Boston leg of Intercom's World Tour, then Director of Growth Ben McRedmond shared his discomfort with the typical <StyledLink href="https://www.intercom.com/blog/videos/how-do-you-define-a-growth-team/" target="_blank">definition of growth</StyledLink>. The notion that growth should be a function of helping customers make progress in their lives instantly resonated with me.</BodyText>
@@ -119,10 +127,10 @@ class Intro extends React.Component {
           <BodyText>Growth comes from a deep understanding of who your users are, and what's happening in their lives. Growth comes from putting their experience at the center of everything.</BodyText>
           <BodyText>Claire Suellentrop – ex Director of Marketing, Calendly</BodyText>
         </Quote>*/}
-        <BodyText>To me, onboarding is simply the process of ensuring people are successful by using a product. It's about the customer not your product.</BodyText>
-        <BodyText>In reality though, onboarding is not as simple as one single feature or customer action. It’s the holistic experience that ensures as many customers as possible achieve their goals by using your product.</BodyText>
-        <BodyText>Over the past 4 years I've led both growth and product teams at growing startups and have spent hours designing and optimized onboarding experiences for numerous <StyledIntLink to="/about">B2B SaaS companies</StyledIntLink>. My goal is to make this a comprehensive guide for SaaS companies trying to grow revenue sustainably without spending more money on acquisition.</BodyText>
-        <BodyText>If there’s something you’d love to see covered in the guide, please send an email and let me know: stuart [at] stuartbalcombe.com. You can also have me help you with your own onboarding <StyledIntLink to="/onboarding-audit">here</StyledIntLink>.</BodyText>
+        <BodyText>To me, the most powerful way to think about building products is simply to ensure people are able to achieve successful outcomes by using your product. It's about the customer, not your product.</BodyText>
+        <BodyText>In reality, though, building better products is not as simple as crafting one single feature or customer action. It’s the holistic experience that ensures as many customers as possible achieve their goals by using your product.</BodyText>
+        <BodyText>Over the past 4 years I've led both growth and product teams at growing startups and have spent thousands of hours designing and building products experiences for numerous <StyledIntLink to="/about">B2B SaaS companies</StyledIntLink>. My goal is to make this a comprehensive guide for SaaS companies trying to achieve product/market fit, increase product usage and grow revenue.</BodyText>
+        <BodyText>If there’s something you’d love to see covered in the guide, please send an email and let me know: stuart [at] stuartbalcombe.com.</BodyText>
           
         <Card>
           <SubHead>Want to hear about new chapters?</SubHead>

@@ -32,7 +32,7 @@ const Heading = styled.h3`
 `
 
 const HeadingLink = styled(Link)`
-  ${tw`text-indigo-light hover:text-indigo font-bold`};
+  ${tw`text-indigo-light hover:text-indigo font-bold leading-normal`};
 `
 
 class BlogIndexPage extends React.Component {

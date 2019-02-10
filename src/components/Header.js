@@ -39,8 +39,8 @@ const Header = ({ siteTitle }) => (
         <NavImg src={avatar} alt="Profile image of Stuart Balcombe"></NavImg>
       </StyledLogoLink>
       <NavList>
-      	<NavItem><StyledGatsbyLink to="/a">Blog</StyledGatsbyLink></NavItem>
       	<NavItem><StyledGatsbyLink to="/about">About</StyledGatsbyLink></NavItem>
+        <NavItem><StyledGatsbyLink to="/a">Blog</StyledGatsbyLink></NavItem>
       </NavList>
     </Nav>
   </Container>

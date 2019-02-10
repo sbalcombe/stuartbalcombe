@@ -1,7 +1,7 @@
 # A basic redirect rule
 [[redirects]]
   from = "/a/better-products-resources/"
-  to = "/onboarding-guide/intro"
+  to = "/guide/intro"
 
 [[redirects]]
   from = "/a/designing-one-to-one-payment-experiences/"
@@ -33,7 +33,7 @@
 
 [[redirects]]
   from = "/tags/resources/"
-  to = "/onboarding-guide/intro"
+  to = "/guide/intro"
 
 [[redirects]]
   from = "/tags/case-studies/"
@@ -73,15 +73,15 @@
 
 [[redirects]]
   from = "/onboarding-guide/"
-  to = "/onboarding-guide/intro"
+  to = "/guide/intro"
 
 [[redirects]]
   from = "/a/understanding-customer-problems/"
-  to = "/onboarding-guide/intro"
+  to = "/guide/intro"
 
 [[redirects]]
   from = "/a/effective-landing-pages/"
-  to =  "/onboarding-guide/intro"
+  to =  "/guide/intro"
 
 [[redirects]]
   from = "/a/solving-the-right-problems/"

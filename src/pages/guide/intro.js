@@ -86,6 +86,7 @@ class Intro extends React.Component {
   render() {
     return (
       <Layout>
+        <SEO title="Outcome Driven | Stuart Balcombe" description="A practical guide to building products customers love." />
       	<Banner>
       		<BannerHeading>Outcome Driven</BannerHeading>
           <BannerSubheading>A practical guide to building products customers love.</BannerSubheading>

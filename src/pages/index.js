@@ -9,16 +9,21 @@ import claire from './../images/claire.jpg'
 require('typeface-playfair-display')
 require('typeface-roboto-mono')
 
+
+const ContainerSmall = styled.div`
+  ${tw`max-w-md mx-auto`};
+`
+
 const Row = styled.div`
   ${tw`flex flex-wrap -mx-2`};
 `
 
 const HeroContent = styled.div`
-  ${tw`w-full md:w-2/3 my-8 px-2 mb-12`};
+  ${tw`my-8 px-2 mb-12`};
 `
 
 const Welcome = styled.h5`
-  ${tw`text-3xl font-serif font-medium leading-normal`};
+  ${tw`text-grey-darkest text-3xl font-serif font-medium leading-normal`};
 `
 
 const Headline = styled.h1`
@@ -96,13 +101,12 @@ class Index extends React.Component {
     return (
       <Layout>
         <SEO title="Stuart Balcombe | Building products that make customers successful." description="Helping build better products by focusing on successful customer outcomes. Always learning." />
-        <Row>
+        <ContainerSmall>
           <HeroContent>
             <Welcome>Hi, I'm <Accent>Stuart Balcombe</Accent></Welcome>
             <Headline>I believe the best way to build better products is to focus on helping customers achieve successful outcomes.</Headline>
           </HeroContent>
-        </Row>
-        <Row>
+
           {/*<TwoThirds>
             <Card>
             <Row>
@@ -114,7 +118,6 @@ class Index extends React.Component {
             </Row>
             </Card>
           </TwoThirds> */}
-          <TwoThirds>
             <QuoteWrapper>
               <QuoteText>Nodding violently in agreement with Stuart Balcombe’s newsletter this morning. If you're trying to build great products that create real value in your customers' lives, but you're not on his list already, do yourself a favor & sign up.</QuoteText>
               <ItemsCenter>
@@ -129,8 +132,7 @@ class Index extends React.Component {
               I write a bi-monthly newsletter about product, customer research and personal growth. Here’s an <StyledLink href="https://us16.campaign-archive.com/?u=48e1b3ba91c1e492cfb326e7a&id=ef002747bc" target="_blank" rel="noopener">example</StyledLink> of what you’ll get.
             </BodyText>
             <NewsletterForm location={this.props.location.pathname} />
-          </TwoThirds>
-        </Row>
+        </ContainerSmall>
       </Layout>
     )
   }

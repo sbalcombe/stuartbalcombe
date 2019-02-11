@@ -97,9 +97,9 @@ class Intro extends React.Component {
 
         <Row>
           <ThreeFifths>
-            <BodyText>This guide will teach you how to approach early product development to ensure the product you launch drives successful outcomes for both your customers and your business.</BodyText>
-            <BodyText>The guide is not intended to be a series of silver bullet growth hacks (I don’t believe they exist) but instead is focused on, long-term strategies that you can use to grow your business sustainably.</BodyText>
-            <BodyText>This guide is an ongoing project that represents the synthesis of everything I've learned researching and building customer-focused products.</BodyText>
+            <BodyText>The goal of every product you launch should be to make your customer and ultimately your business successful. This guide will teach you how to approach early product development and do exactly that.</BodyText>
+            <BodyText>The guide is not focused on silver-bullet "growth hacks" because they don't exist. Instead, these strategies will help grow your business in a long-term, sustainable way.</BodyText>
+            <BodyText>This project that shares the synthesis of everything I've learned researching and building products that solve real problems for real people.</BodyText>
           </ThreeFifths>
 
           <TwoFifths>
@@ -118,20 +118,15 @@ class Intro extends React.Component {
         </Row>
 
         <SubHead>Who is this guide for?</SubHead>
-        <BodyText>This guide is perfect for early-stage founders and their employees looking for a single resource that provides both principled frameworks and tactical support to help them delight their first customers and build an engine for learning.</BodyText>
-        <BodyText>Additionally, this guide will provide useful information for product marketers, designers and engineers aiming to become more customer focused in their work. I recommend bookmarking this guide and reading chapters as they become relevant to your activities.</BodyText>
+        <BodyText>If you're looking for a single resource of frameworks and support that help delight your first customers, this is for you. Also, this guide will help product marketers, designers, and engineers focus more on solving for their customer.</BodyText>
+        <BodyText>Most people will find it helpful to bookmark this guide and come back to it as different chapters become relevant to their work.</BodyText>
 
         <SubHead>Why I'm writing this guide</SubHead>
-        <BodyText>I started my career as a "growth hacker" but in 2016 I attended a talk that changed my perspective on where growth really comes from. At the Boston leg of Intercom's World Tour, then Director of Growth Ben McRedmond shared his discomfort with the typical <StyledLink href="https://www.intercom.com/blog/videos/how-do-you-define-a-growth-team/" target="_blank">definition of growth</StyledLink>. The notion that growth should be a function of helping customers make progress in their lives instantly resonated with me.</BodyText>
-        <BodyText></BodyText>
-        {/*<Quote>
-          <BodyText>Growth comes from a deep understanding of who your users are, and what's happening in their lives. Growth comes from putting their experience at the center of everything.</BodyText>
-          <BodyText>Claire Suellentrop – ex Director of Marketing, Calendly</BodyText>
-        </Quote>*/}
-        <BodyText>To me, the most powerful way to think about building products is simply to ensure people are able to achieve successful outcomes by using your product. It's about the customer, not your product.</BodyText>
+        <BodyText>I started my career as a "growth hacker". In 2016, though, one night changed the entire way I viewed my career. At the Intercom World Tour, then-Director of Growth Ben McRedmond shared his concern with the popular <StyledLink href="https://www.intercom.com/blog/videos/how-do-you-define-a-growth-team/" target="_blank">definition of growth</StyledLink>. To him, growth should be a function of helping customers make progress in their lives. I still think about that line, even years later.</BodyText>
+        <BodyText>The most powerful way to think about building products is to make sure that above all else, people are successful using what you built. Solve for the customer, not your product. In reality, though, great products don't come down to one feature or customer action. You need a holistic experience that solves for your users to be successful in 2019 and beyond.</BodyText>
         <BodyText>In reality, though, building better products is not as simple as crafting one single feature or customer action. It’s the holistic experience that ensures as many customers as possible achieve their goals by using your product.</BodyText>
-        <BodyText>Over the past 4 years I've led both growth and product teams at growing startups and have spent thousands of hours designing and building products experiences for numerous <StyledIntLink to="/about">B2B SaaS companies</StyledIntLink>. My goal is to make this a comprehensive guide for SaaS companies trying to achieve product/market fit, increase product usage and grow revenue.</BodyText>
-        <BodyText>If there’s something you’d love to see covered in the guide, please send an email and let me know: stuart [at] stuartbalcombe.com.</BodyText>
+        <BodyText>Over the past four years, I've led both growth and product teams at scaling startups. Along the way, I've spent thousands of hours designing and building product experiences at many <StyledIntLink to="/about">B2B SaaS companies</StyledIntLink>. My goal here is to distill that experience into one guide to help SaaS companies achieve product/market fit, increase usage, and grow revenue.</BodyText>
+        <BodyText>If there’s something you want to see covered in the guide, please email and let me know: stuart [at] stuartbalcombe.com. Until then, enjoy this guide.</BodyText>
           
         <Card>
           <SubHead>Want to hear about new chapters?</SubHead>

@@ -76,6 +76,10 @@
   to = "/guide/intro"
 
 [[redirects]]
+  from = "/guide/"
+  to = "/guide/intro"
+
+[[redirects]]
   from = "/a/understanding-customer-problems/"
   to = "/guide/intro"
 

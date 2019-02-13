@@ -6,6 +6,7 @@ import Layout from './../components/Layout';
 import NewsletterForm from './../components/NewsletterForm'
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
+import headshot from "./../images/stuart.jpg";
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};
@@ -41,7 +42,7 @@ class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <ContainerSmall>
-          <SEO title="Articles by Stuart Balcombe" description="Articles about building products that make customers successful." />
+          <SEO title="Articles by Stuart Balcombe" description="Articles about building products that make customers successful." img={headshot}/>
           <BlogHeading>
             I send a newsletter about building <Accent>better products</Accent>, <Accent>customer success</Accent>, and <Accent>personal growth</Accent>. Get articles like the ones below before they're published by signing up:
           </BlogHeading>

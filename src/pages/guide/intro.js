@@ -5,6 +5,8 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import NewsletterForm from './../../components/NewsletterForm'
 import guide from './../../images/onboarding.svg'
+import bannerMeta from "./../../images/guide-banner.jpg";
+
 
 
 const Card = styled.div`
@@ -86,7 +88,7 @@ class Intro extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Outcome Driven | Stuart Balcombe" description="A practical guide to building products customers love." />
+        <SEO title="Outcome Driven: The Book" description="A practical guide to building products customers love." img={bannerMeta} />
       	<Banner>
       		<BannerHeading>Outcome Driven</BannerHeading>
           <BannerSubheading>A practical guide to building products customers love.</BannerSubheading>

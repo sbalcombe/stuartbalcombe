@@ -3,6 +3,7 @@ import SEO from './../components/SEO'
 import Layout from './../components/Layout'
 import Link from "gatsby-link";
 import styled from 'react-emotion'
+import headshot from "./../images/stuart.jpg";
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};
@@ -40,7 +41,7 @@ class About extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Hi, I'm Stuart Balcombe" description="I help software companies increase revenue and drive sustainable growth, without spending more on customer acquisition." />
+        <SEO title="Hi, I'm Stuart Balcombe" description="I help people build better products by focusing on successful customer outcomes." img={headshot}/>
         <ContainerSmall>
           <Welcome>My Story</Welcome>
           <p>I’ve spent the past 4 years helping companies build and grow software products. My work is centered around 3 core values:</p>
@@ -79,6 +80,14 @@ class About extends React.Component {
           <div>RevUp (previously Betaspring)</div>
           </li>
           </List>
+          <SubHead>Recent Press</SubHead>
+          <p></p>
+          <List>
+            <li>
+              <p><StyledLink href="" target="_blank" rel="noreferrer nofollow">Building customer focused products</StyledLink><br /><Duration>Guest on Hub of Success podcast.</Duration></p>
+            </li>
+          </List>
+
           <SubHead>Get in touch</SubHead>
           <p>Say hello on <StyledLink href="https://twitter.com/stubalcombe" target="_blank">Twitter</StyledLink>.</p>
 

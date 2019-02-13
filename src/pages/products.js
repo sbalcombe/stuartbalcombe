@@ -3,6 +3,7 @@ import SEO from './../components/SEO'
 import Layout from './../components/Layout'
 import NewsletterForm from './../components/NewsletterForm'
 import styled from 'react-emotion'
+import headshot from "./../images/stuart.jpg";
 
 const ContainerXS = styled.div`
   ${tw`max-w-sm pt-8 border-solid border-t-1 border-l-0 border-b-0 border-r-0 border-grey-lighter`};
@@ -36,7 +37,7 @@ class Products extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Hi, I'm Stuart Balcombe" description="I help software companies increase revenue and drive sustainable growth, without spending more on customer acquisition." />
+        <SEO title="Products built by Stuart Balcombe" description="A collection of products and services by Stuart Balcombe." img={headshot} />
         <ContainerSmall>
           <Welcome>Products</Welcome>
           <p>Here are a few products I’ve built & launched:</p>

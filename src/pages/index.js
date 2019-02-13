@@ -6,6 +6,7 @@ import Layout from './../components/Layout'
 import NewsletterForm from './../components/NewsletterForm'
 import guide from './../images/onboarding.svg'
 import claire from './../images/claire.jpg'
+import headshot from "./../images/stuart.jpg";
 require('typeface-playfair-display')
 require('typeface-roboto-mono')
 
@@ -100,7 +101,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Stuart Balcombe | Building products that make customers successful." description="Helping build better products by focusing on successful customer outcomes. Always learning." />
+        <SEO title="Stuart Balcombe" description="Helping people build better products by focusing on successful customer outcomes." img={headshot}/>
         <ContainerSmall>
           <HeroContent>
             <Welcome>Hi, I'm <Accent>Stuart Balcombe</Accent></Welcome>

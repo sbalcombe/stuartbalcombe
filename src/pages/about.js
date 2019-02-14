@@ -84,7 +84,7 @@ class About extends React.Component {
           <p></p>
           <List>
             <li>
-              <p><StyledLink href="" target="_blank" rel="noreferrer nofollow">Building customer focused products</StyledLink><br /><Duration>Guest on Hub of Success podcast.</Duration></p>
+              <p><StyledLink href="https://appliedsynergygroup.com/stuart-balcombe-the-customer-designed-product/" target="_blank" rel="noreferrer nofollow">Building customer focused products</StyledLink><br /><Duration>Guest on Hub of Success podcast.</Duration></p>
             </li>
           </List>
 

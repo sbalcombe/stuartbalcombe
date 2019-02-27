@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/a/designing-one-to-one-payment-experiences/"
-  to = "/a/designing-client-payment-experiences"
+  to = "/a/designing-payment-experiences"
 
 [[redirects]]
   from = "/a/mid-year-review-2018/" 
@@ -80,13 +80,13 @@
   to = "/guide/intro"
 
 [[redirects]]
-  from = "/a/understanding-customer-problems/"
-  to = "/guide/intro"
-
-[[redirects]]
   from = "/a/effective-landing-pages/"
   to =  "/guide/intro"
 
 [[redirects]]
   from = "/a/solving-the-right-problems/"
   to =  "/a"
+
+[[redirects]]
+  from = "/a/validating-product-ideas-no-code-required/"
+  to = "/a"

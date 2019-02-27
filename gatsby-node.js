@@ -19,7 +19,8 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
-                    title
+                    title,
+                    excerpt
                   }
                 }
               }

@@ -6,6 +6,7 @@ import Layout from './../components/Layout';
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
 import NewsletterForm from './../components/NewsletterForm'
+import './blog-post.css'
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};
@@ -81,7 +82,7 @@ class BlogPostTemplate extends React.Component {
           <Card>
             <SubHead>Get My Newsletter</SubHead>
             <BodyText>
-              New stories, learnings, and tips for building better onboarding straight to your inbox.
+              New stories, learnings, and tips for building better products straight to your inbox.
             </BodyText>
           <NewsletterForm location={this.props.location.pathname} />
           </Card>

@@ -58,7 +58,7 @@ class BlogIndexPage extends React.Component {
                     {title}
                   </HeadingLink>
                 </Heading>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <p dangerouslySetInnerHTML={{ __html: node.frontmatter.excerpt }} />
               </ArticleItem>
             )
           })}
@@ -81,12 +81,12 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 200)
           fields {
             slug
           }
           frontmatter {
-            title
+            title,
+            excerpt
           }
         }
       }

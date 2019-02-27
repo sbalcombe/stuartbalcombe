@@ -11,11 +11,13 @@ Do you remember when you first came up with the idea for your new SaaS product?
 
 For me this moment came in January when I started my [web app challenge](/a/my-web-app-challenge/). For the first time in years I had time to dedicate to building a product of my own. 
 
-I was excited to get started. I started by creating a [working prototype](/validating-product-ideas-no-code-required) for my idea using non-technical tools like Google Sheets and Zapier. This prototype worked well and my next step was to create a small software product that would greatly improve the user experience and provide a starting point for additional features.
+I was excited to get started. I started by creating a working prototype for my idea using non-technical tools like Google Sheets and Zapier. This prototype worked well and my next step was to create a small software product that would greatly improve the user experience and provide a starting point for additional features.
 
 But then I hit a wall. Even building a basic SaaS app requires a lot of functionality to get off the ground.
 
-![Skills to create something valuable are less than to create something professional](./andrew_culver_tweet.png)
+https://twitter.com/andrewculver/status/1012126294329315330
+
+---
 
 When you start out, building **any part of your product** feels great, you’re seeing the pieces come together. You likely have an app live on a development URL that you can actually use and interact with. It feels real.
 

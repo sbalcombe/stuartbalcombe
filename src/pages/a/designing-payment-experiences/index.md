@@ -4,6 +4,8 @@ title: Designing client payment experiences
 
 date: "2018-02-21T22:12:03.284Z"
 
+excerpt: "What makes a great payment experience for clients? I outline the UX design process we used to inform the initial version of the Sail product."
+
 ---
 
 ## Problem & Opportunity

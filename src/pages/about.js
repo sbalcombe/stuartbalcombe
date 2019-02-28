@@ -44,7 +44,7 @@ class About extends React.Component {
         <SEO title="Hi, I'm Stuart Balcombe" description="I help people build better products by focusing on successful customer outcomes." img={headshot}/>
         <ContainerSmall>
           <Welcome>My Story</Welcome>
-          <p>I’ve spent the past 4 years helping companies build and grow software products. My work is centered around 3 core values:</p>
+          <p>I’ve spent the past 4 years helping early-stage companies build and grow software products. My work is centered around 3 core values:</p>
           <List>
             <li>- Deeply understanding customers.</li>
             <li>- Starting small and iterating quickly.</li>
@@ -53,8 +53,8 @@ class About extends React.Component {
 
           <SubHead>Right now</SubHead>
           <p>Today, I lead product at <StyledLink href="https://www.consultdirect.co" target="_blank">ConsultDirect</StyledLink> and help build tools and systems for the future of work.</p>
-          <p>I also focus my independent work on teaching and advising companies about how to improve their product onboarding experiences.</p>
-          <p>In 2018, I launched <StyledLink href="https://paymentlink.me" target="_blank">PaymentLink</StyledLink>, a simple way for those providing client services to onboard new clients and get paid for their recurring work. This product originally started as part of my <InternalLink to="/a/my-web-app-challenge">Web App Challenge</InternalLink>.</p>
+          <p>I also focus my independent work on teaching and advising B2B software companies on product strategy and building customer focused products.</p>
+          <p>In 2018, I launched <StyledLink href="https://paymentlink.me" target="_blank">PaymentLink</StyledLink>, a simple way for busy service providers to onboard new clients and get paid for their recurring work without code. This product originally started as part of my <InternalLink to="/a/my-web-app-challenge">Web App Challenge</InternalLink>.</p>
           
           <SubHead>Previously</SubHead>
           <p>I’ve been working with SaaS companies since 2014 in both growth marketing and product management roles.</p>

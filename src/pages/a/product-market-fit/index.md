@@ -1,6 +1,6 @@
 ---
 
-title: Why you don't want product/market fit
+title: Let's define what Product/Market fit really means
 
 date: "2019-02-28T22:12:03.284Z"
 

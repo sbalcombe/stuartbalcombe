@@ -54,13 +54,6 @@ module.exports = {
           },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          {
-            resolve: `@weknow/gatsby-remark-twitter`,
-            options: {
-              align: 'center',
-              hideThread: true
-            }
-          }
         ],
       },
     },

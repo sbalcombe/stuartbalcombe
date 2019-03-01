@@ -15,9 +15,7 @@ I was excited to get started. I started by creating a working prototype for my i
 
 But then I hit a wall. Even building a basic SaaS app requires a lot of functionality to get off the ground.
 
-https://twitter.com/andrewculver/status/1012126294329315330
-
----
+![Tweet by Andrew Culver](./andrew-culver-tweet.png)
 
 When you start out, building **any part of your product** feels great, you’re seeing the pieces come together. You likely have an app live on a development URL that you can actually use and interact with. It feels real.
 

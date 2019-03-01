@@ -11,9 +11,8 @@ excerpt: "Markets don’t buy products. People with specific desires and goals b
 
 This week, I saw a tweet from positioning and market strategy expert April Dunford. It resonated with me and lined up with some observations I’ve made recently while working with early-stage startups.
 
-https://twitter.com/aprildunford/status/1100528647725871106
+![Tweet by April Dunford](./april-dunford-tweet.png)
 
----
 Product/Market fit is often seen as the holy grail for new tech companies. The “we’ve made it” moment that is promptly followed by a big round of funding and increased ad spend.
 
 The problem April argues is, “If you don’t have a clear grasp on what your value is, who it resonates with and why - product market isn’t a helpful concept to get you there.”

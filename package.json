@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Stuart Balcombe <stuartbalcombe@gmail.com>",
   "dependencies": {
-    "@weknow/gatsby-remark-twitter": "^0.2.0",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
     "gatsby": "^2.0.0",

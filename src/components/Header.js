@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import avatar from './../images/stuart.jpg'
+import avatar from '../../content/assets/stuart.jpg'
 import styled from 'react-emotion'
 
 const Container = styled.div`

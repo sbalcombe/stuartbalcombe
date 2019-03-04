@@ -4,8 +4,8 @@ import Layout from './../../components/Layout'
 import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import NewsletterForm from './../../components/NewsletterForm'
-import guide from './../../images/onboarding.svg'
-import bannerMeta from "./../../images/guide-banner.jpg";
+import guide from '../../../content/assets/onboarding.svg'
+import bannerMeta from "../../../content/assets/guide-banner.jpg";
 
 
 

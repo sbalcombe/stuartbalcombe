@@ -6,7 +6,7 @@ import Layout from './../components/Layout';
 import NewsletterForm from './../components/NewsletterForm'
 import styled from 'react-emotion'
 import { graphql } from 'gatsby';
-import headshot from "./../images/stuart.jpg";
+import headshot from "../../content/assets/stuart.jpg";
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};

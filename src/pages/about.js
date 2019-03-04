@@ -3,7 +3,7 @@ import SEO from './../components/SEO'
 import Layout from './../components/Layout'
 import Link from "gatsby-link";
 import styled from 'react-emotion'
-import headshot from "./../images/stuart.jpg";
+import headshot from "../../content/assets/stuart.jpg";
 
 const ContainerSmall = styled.div`
   ${tw`max-w-md mx-auto`};

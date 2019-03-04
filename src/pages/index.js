@@ -4,9 +4,9 @@ import { Link } from 'gatsby'
 import SEO from './../components/SEO'
 import Layout from './../components/Layout'
 import NewsletterForm from './../components/NewsletterForm'
-import guide from './../images/onboarding.svg'
-import claire from './../images/claire.jpg'
-import headshot from "./../images/stuart.jpg";
+import guide from '../../content/assets/onboarding.svg'
+import claire from '../../content/assets/claire.jpg'
+import headshot from "../../content/assets/stuart.jpg";
 require('typeface-playfair-display')
 require('typeface-roboto-mono')
 

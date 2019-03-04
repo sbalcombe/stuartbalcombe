@@ -3,7 +3,7 @@ import SEO from './../components/SEO'
 import Layout from './../components/Layout'
 import NewsletterForm from './../components/NewsletterForm'
 import styled from 'react-emotion'
-import headshot from "./../images/stuart.jpg";
+import headshot from "../../content/assets/stuart.jpg";
 
 const ContainerXS = styled.div`
   ${tw`max-w-sm pt-8 border-solid border-t-1 border-l-0 border-b-0 border-r-0 border-grey-lighter`};

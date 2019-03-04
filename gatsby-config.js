@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: 'Stuart Balcombe',
+    author: `Stuart Balcombe`,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://www.stuartbalcombe.com`,
+    social: {
+      twitter: `stubalcombe`,
+    },
   },
   plugins: [
     'gatsby-plugin-tailwindcss',
@@ -29,11 +35,17 @@ module.exports = {
       },
     },
     {
-      // location of your blog posts
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/content/a`,
+        name: `a`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -42,9 +54,6 @@ module.exports = {
         plugins: [
           {
             resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1140,
-            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -52,8 +61,9 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
@@ -68,7 +78,7 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/stuart.jpg`, // This path is relative to the root of the site.
+        icon: `content/assets/stuart.jpg`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

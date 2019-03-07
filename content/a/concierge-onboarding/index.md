@@ -2,7 +2,7 @@
 
 title: Supercharge your product insights with concierge onboarding
 date: "2018-11-14T22:12:03.284Z"
-description: "Concierge onboarding can not only guide each new user to success with your product, but also provides the feedback you need to improve how future users interact with your product."
+excerpt: "Concierge onboarding can not only guide each new user to success with your product, but also provides the feedback you need to improve how future users interact with your product."
 
 ---
 

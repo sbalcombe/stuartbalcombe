@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/a/designing-one-to-one-payment-experiences/"
-  to = "/a/designing-payment-experiences"
+  to = "/designing-payment-experiences"
 
 [[redirects]]
   from = "/a/mid-year-review-2018/" 
@@ -90,3 +90,43 @@
 [[redirects]]
   from = "/a/validating-product-ideas-no-code-required/"
   to = "/a"
+
+[[redirects]]
+  from = "/a/concierge-onboarding/"
+  to = "/concierge-onboarding"
+
+[[redirects]]
+  from = "/a/designing-payment-experiences/"
+  to = "/designing-payment-experiences"
+
+[[redirects]]
+  from = "/a/product-market-fit/"
+  to = "/product-market-fit"
+
+[[redirects]]
+  from = "/a/ship-today/"
+  to = "/ship-today"
+
+[[redirects]]
+  from = "/a/outcomes/"
+  to = "/outcomes"
+
+[[redirects]]
+  from = "/a/shipping-value/"
+  to = "/shipping-value"
+
+[[redirects]]
+  from = "/a/watch-vs-show/"
+  to = "/watch-vs-show"
+
+[[redirects]]
+  from = "/a/watch-vs-show/"
+  to = "/watch-vs-show"
+
+[[redirects]]
+  from = "/a/understanding-customer-problems/"
+  to = "/understanding-customer-problems"
+  
+[[redirects]]
+  from = "/a/web-app-challenge/"
+  to = "/web-app-challenge"

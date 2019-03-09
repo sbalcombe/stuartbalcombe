@@ -37,7 +37,7 @@
 
 [[redirects]]
   from = "/tags/case-studies/"
-  to = "/a"
+  to = "/articles"
 
 [[redirects]]
   from = "/custom-product-design/"
@@ -85,11 +85,11 @@
 
 [[redirects]]
   from = "/a/solving-the-right-problems/"
-  to =  "/a"
+  to =  "/articles"
 
 [[redirects]]
   from = "/a/validating-product-ideas-no-code-required/"
-  to = "/a"
+  to = "/articles"
 
 [[redirects]]
   from = "/a/concierge-onboarding/"
@@ -130,3 +130,7 @@
 [[redirects]]
   from = "/a/web-app-challenge/"
   to = "/web-app-challenge"
+
+[[redirects]]
+  from = "/a"
+  to = "/articles"

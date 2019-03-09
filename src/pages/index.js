@@ -28,7 +28,7 @@ const Welcome = styled.h5`
 `
 
 const Headline = styled.h1`
-  ${tw`text-lg text-grey-darkest leading-normal font-mono font-normal mb-0`};
+  ${tw`text-lg text-grey-darkest leading-normal font-mono font-normal mb-4 font-bold`};
 `
 
 const SubHead = styled.h3`
@@ -37,6 +37,9 @@ const SubHead = styled.h3`
 
 const Accent = styled.span`
   ${tw`font-bold text-indigo-light`};
+`
+const Bold = styled.strong`
+  ${tw`font-medium text-grey-darkest`};
 `
 
 const GuideBanner = styled.div`
@@ -67,7 +70,7 @@ const ItemsCenter = styled.div`
 `
 
 const QuoteText = styled.p`
-  ${tw`text-grey-darker text-base`};
+  ${tw`text-grey-darker text-lg`};
 `
 
 const QuoteAuthorWrapper = styled.div`
@@ -86,7 +89,7 @@ const QuoteImg = styled.img`
 `
 
 const BodyText = styled.p`
-  ${tw`font-mono text-grey-darkest`};
+  ${tw`text-lg text-grey-darkest leading-normal font-mono font-normal`};
 `
 
 const StyledLink = styled.a`
@@ -104,8 +107,11 @@ class Index extends React.Component {
         <SEO title="Stuart Balcombe" description="Helping people build better products by focusing on successful customer outcomes." img={headshot}/>
         <ContainerSmall>
           <HeroContent>
-            <Welcome>Hi, I'm <Accent>Stuart Balcombe</Accent></Welcome>
-            <Headline>I believe the best way to build better products is to focus on helping customers achieve successful outcomes.</Headline>
+            <BodyText>Hi, I'm <Accent>Stuart Balcombe</Accent></BodyText>
+            <Headline>I help people build better products by focusing on creating successful outcomes for their customers.</Headline>
+            <BodyText>Right now, I’m leading product at <StyledLink href="https://consultdirect.co" target="_blank" rel="noreferrer noopener">ConsultDirect</StyledLink>.</BodyText>
+            <BodyText>I also advise early-stage startups on how to prioritize their roadmap, research their customers and ship value faster.</BodyText>
+            <BodyText>Finally, I write about building products, customer research and personal growth in my newsletter, <StyledIntLink to="/articles">blog posts</StyledIntLink> and <StyledIntLink to="/guide/intro">guides</StyledIntLink> (WIP).</BodyText>
           </HeroContent>
 
           {/*<TwoThirds>
@@ -130,7 +136,7 @@ class Index extends React.Component {
               </ItemsCenter>
             </QuoteWrapper> 
             <BodyText>
-              I write a bi-monthly newsletter about product, customer research and personal growth. Here’s an <StyledLink href="https://us16.campaign-archive.com/?u=48e1b3ba91c1e492cfb326e7a&id=ef002747bc" target="_blank" rel="noopener">example</StyledLink> of what you’ll get.
+              Join product people from <Bold>Hubspot</Bold>, <Bold>Google</Bold> and <Bold>Amazon</Bold> and get my bi-monthly newsletter. Here’s an <StyledLink href="https://us16.campaign-archive.com/?u=48e1b3ba91c1e492cfb326e7a&id=ef002747bc" target="_blank" rel="noopener">example</StyledLink> of what you’ll get.
             </BodyText>
             <NewsletterForm location={this.props.location.pathname} />
         </ContainerSmall>

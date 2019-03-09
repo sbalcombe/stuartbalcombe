@@ -21,10 +21,14 @@ const NavList = styled.ul`
 `
 
 const NavItem = styled.li`
-  ${tw`ml-6 mb-0 font-mono`};
+  ${tw`ml-3 md:ml-6 mb-0 font-mono`};
 `
 
 const StyledGatsbyLink = styled(Link)`
+  ${tw`text-indigo no-underline hover:underline hover:font-bold`};
+`
+
+const StyledExternalLink = styled.a`
   ${tw`text-indigo no-underline hover:underline hover:font-bold`};
 `
 
@@ -40,7 +44,8 @@ const Header = ({ siteTitle }) => (
       </StyledLogoLink>
       <NavList>
       	<NavItem><StyledGatsbyLink to="/about">About</StyledGatsbyLink></NavItem>
-        <NavItem><StyledGatsbyLink to="/a">Blog</StyledGatsbyLink></NavItem>
+        <NavItem><StyledGatsbyLink to="/articles">Blog</StyledGatsbyLink></NavItem>
+        <NavItem><StyledExternalLink href="https://twitter.com/stubalcombe" target="_blank" rel="noreferrer noopener">Twitter</StyledExternalLink></NavItem>
       </NavList>
     </Nav>
   </Container>

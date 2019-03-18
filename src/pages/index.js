@@ -20,7 +20,7 @@ const Row = styled.div`
 `
 
 const HeroContent = styled.div`
-  ${tw`my-8 px-2 mb-12`};
+  ${tw`my-8 px-2 mb-12 pb-4 border-solid border-l-0 border-t-0 border-b-1 border-r-0 border-grey-lighter`};
 `
 
 const Welcome = styled.h5`
@@ -109,9 +109,8 @@ class Index extends React.Component {
           <HeroContent>
             <BodyText>Hi, I'm <Accent>Stuart Balcombe</Accent></BodyText>
             <Headline>I help people build better products by focusing on creating successful outcomes for their customers.</Headline>
-            <BodyText>Right now, I’m leading product at <StyledLink href="https://consultdirect.co" target="_blank" rel="noreferrer noopener">ConsultDirect</StyledLink>.</BodyText>
-            <BodyText>I also advise early-stage startups on how to prioritize their roadmap, research their customers and ship value faster.</BodyText>
-            <BodyText>Finally, I write about building products, customer research and personal growth in my newsletter, <StyledIntLink to="/articles">blog posts</StyledIntLink> and <StyledIntLink to="/guide/intro">guides</StyledIntLink> (WIP).</BodyText>
+            <BodyText>Right now, I’m leading product at <StyledLink href="https://consultdirect.co" target="_blank" rel="noreferrer noopener">ConsultDirect</StyledLink>. I also advise early-stage startups on how to research their customers, prioritize their roadmap, and ship value faster.</BodyText>
+            <BodyText>Finally, I write about building products, customer research and personal growth in my newsletter, <StyledIntLink to="/articles">blog posts</StyledIntLink> and <StyledIntLink to="/guide/intro">guides</StyledIntLink>.</BodyText>
           </HeroContent>
 
           {/*<TwoThirds>

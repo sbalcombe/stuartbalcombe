@@ -60,13 +60,17 @@ class NewsletterForm extends React.Component {
 			<Form onSubmit={this._handleSubmit} className="NewsletterForm">
         <FormWrapper>
       	<EmailInput placeholder="Your email" type="email" name="email" aria-label="Email signup" onChange={this._handleChange} ref={this.email}></EmailInput>
-      	<Button type="submit">Join Now</Button>
+      	<Button type="submit">{this.props.btnText}</Button>
         <SubmitMsg>{this.state.submitMsg}</SubmitMsg>
         </FormWrapper>
       </Form>
 		)
 	}
 }
+
+NewsletterForm.defaultProps = {
+  btnText: "Join Now",
+};
 
 
 export default NewsletterForm

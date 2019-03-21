@@ -44,10 +44,6 @@
   to = "/"
 
 [[redirects]]
-  from = "/newsletter/"
-  to = "/"
-
-[[redirects]]
   from = "/now"
   to = "/about"
 

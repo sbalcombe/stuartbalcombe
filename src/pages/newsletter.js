@@ -105,7 +105,7 @@ class Newsletter extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Subscribe to my Newsletter - Stuart Balcombe" description="Join the people from Google, Amazon, and Drift who subscribe for learnings, observations, and opinions from building customer driven products. Sign up here." img={meta}/>
+        <SEO title="Subscribe to my Newsletter - Stuart Balcombe" description="Join the people from Google, Amazon, and Drift who subscribe for learnings, observations, and opinions from building customer driven products. Sign up here." img={meta} />
         <Container>
           <HeroRow>
           <TwoThirds>

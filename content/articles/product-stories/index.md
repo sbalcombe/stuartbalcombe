@@ -14,7 +14,7 @@ Stories depict journeys and events that can evoke our emotions, challenge our be
 
 Here’s how we can use stories as a framework for building products that help change our customer’s lives.
 
-It's easy to focus on the features we want to build and rationalize them with data that generalizes customer goals. But this omits the context we need to ensure what we build actually ensures customers achieve their desired outcome.
+It's easy to focus on the features we want to build and rationalize them with data that generalizes customer goals. But this omits the context we need to ensure what we build actually ensures customers achieve their [desired outcome](/outcomes).
 
 Creating an effective product narrative can help us focus on our customer and avoid this problem. We can use the Story Spine, created by playwright Kenn Adams, to structure our narrative.
  
@@ -42,7 +42,7 @@ Let’s break down each of the 5 steps:
 **Line 5)** Finally we can describe what our hero's new existence looks like. Our goal is to make this directly opposite of the previous state described on line 2.
 
 
-Thinking about our product as a conversational narrative helps remove any feature related assumptions from our thought process and makes a specific (real) customer the hero of our story.
+Thinking about our product as a conversational narrative helps remove any feature related assumptions from our thought process and makes a [specific (real) customer](product-market-fit) the hero of our story.
 
 
 Here’s a practical example:

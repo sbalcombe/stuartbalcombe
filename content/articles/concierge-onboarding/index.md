@@ -15,7 +15,7 @@ There are lots of questions to answer when working on an infant product.
 
 I believe the best way to answer all these questions is to talk to users.
 
-https://twitter.com/stubalcombe/status/1059804278091587585
+![Tweet about concierge onboarding](./concierge-tweet.png)
 
 ___
 
@@ -28,7 +28,7 @@ I like to define onboarding as:
 Onboarding is often thought of as a way to increase conversion of new users. It often takes the form of signup flow design and drip email campaigns. But how do you know what problems your early users are running into, or more importantly how their own context is influencing their experience.
 
 Concierge onboarding is a one-to-one, personalized approach that can not only guide each user to achieve success but also provide the feedback you need to improve how future users interact with your product.
-Spending time talking to each new customer is a great way to understand the problem they are trying to solve and tailor the experience based on their context. **For the most part, users don't care about your product, only the progress it helps them achieve in their own situation.** 
+Spending time talking to each new customer is a great way to [understand the problem](/understanding-customer-problems) they are trying to solve and tailor the experience based on their context. **For the most part, users don't care about your product, only the progress it helps them achieve in their own situation.** 
 
 It's important to remember that making a new user successful will likely require integration with their existing workflows and environment. Product adoption can't happen in a vacuum which is why it's so important to understands new user's own context as deeply as possible.
 
@@ -36,7 +36,7 @@ ___
 
 ### How can you do concierge onboarding in practice?
 
-The first step to getting started with concierge onboarding is to create an open dialogue with each new user.
+The first step to getting started with concierge onboarding is to [create an open dialogue](/watch-vs-show) with each new user.
 
 1. **Identify your users goals.** Try sending a personal plain text email that asks a question to start a conversation about the user (people generally like talking about themselves). Some examples of questions to do this include: 
 
@@ -65,7 +65,7 @@ The first step to getting started with concierge onboarding is to create an open
 
 ### You are now ready to start increasing adoption of your product
 
-Your customers will appreciate you taking the time to understand what really matters to them and help them level up in their business. Your product team will love the high fidelity feedback they can use to improve the product for future customers and your sales team will you for the new case studies they can leverage to close deals in their pipeline.
+Your customers will appreciate you taking the time to understand what really matters to them and help them level up in their business. Your product team will love the high fidelity feedback they can use to improve the product for future customers and your sales team will love you for the new case studies they can leverage to close deals in their pipeline.
 
 And YOU will have a direct line to your customers that moves the needle for the business. Your activation rate will jump up, your churn will drop and you can spend more time marketing to the people who are a great fit for your product. 
 

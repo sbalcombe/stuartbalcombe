@@ -27,7 +27,7 @@ What if, before we ever opened our code editor, we asked a different question.
 
 ### What can we ship today that enables an outcome our customers want?
 
-Focusing on what you can ship in a day may seem limiting if you want to build a big business, but the insights you’ll gain by shortening your customer feedback loop will help you iterate faster and ensure you build a better product.
+Focusing on what you can ship in a day may seem limiting if you want to build a big business, but the insights you’ll gain by [shortening your customer feedback loop](/concierge-onboarding) will help you iterate faster and ensure you build a better product.
 
 Here are some ideas to get you shipping successful outcomes today:
 

@@ -11,7 +11,7 @@ Do you remember when you first came up with the idea for your new SaaS product?
 
 For me this moment came in January when I started my [web app challenge](/a/my-web-app-challenge/). For the first time in years I had time to dedicate to building a product of my own. 
 
-I was excited to get started. I started by creating a working prototype for my idea using non-technical tools like Google Sheets and Zapier. This prototype worked well and my next step was to create a small software product that would greatly improve the user experience and provide a starting point for additional features.
+I was excited to get started. I started by creating a working prototype for my idea using [no code tools](/ship-today) like Google Sheets and Zapier. This prototype worked well and my next step was to create a small software product that would greatly improve the user experience and provide a starting point for additional features.
 
 But then I hit a wall. Even building a basic SaaS app requires a lot of functionality to get off the ground.
 
@@ -35,9 +35,9 @@ You might be thinking, “My developer told me they can build these things quick
 
 That may be true. But the question you need to ask your self is not **"Can we build this?"** but **"Should we build this?"**
 
-Every feature you build has an opportunity cost. While customization and company convention might be a priority at scale, when you’re just starting out the focus must be on providing value to customers and learning where to iterate. Even building quickly could mean 4-6 weeks of development time.
+Every feature you build has an opportunity cost. While customization and company convention might be a priority at scale, when you’re just starting out the focus must be on providing value to customers and [learning where to iterate](concierge-onboarding). Even building quickly could mean 4-6 weeks of development time.
 
-I’m not arguing that your app doesn’t need these features, merely that if every other app needs them too, then they aren’t features that will win you market share or (and most importantly early on) features that will help you test your riskiest product assumptions.
+I’m not arguing that your app doesn’t need these features, merely that if every other app needs them too, then they aren’t features that will win you market share or (and most importantly early on) features that will help you test your [riskiest product assumptions](/product-market-fit).
 
 If you’re not convinced, try this quick exercise. 
 
@@ -62,7 +62,7 @@ What if you could spend all of your development time building the features that 
 
 Here are 3 reasons to use existing tools for table-stakes features in your product instead of leveraging your own development resources.. 
 
-1. **Speed** - Developing the table stakes features your app needs to function like authentication and billing will likely take weeks of your developers time. Time you simply don’t have. Using a pre-build framework will provide you with the same features in a matter of minutes. I’ve personally bootstrapped a functional SaaS app with authentication, billing, notifications, user impersonation and invoicing in less than 30 minutes using Laravel Spark. This speed is a competitive advantage when it comes to providing value to your customers. 
+1. **Speed** - Developing the table stakes features your app needs to function like authentication and billing will likely take weeks of your developers time. Time you simply don’t have. Using a pre-build framework will provide you with the same features in a matter of minutes. I’ve personally bootstrapped a functional SaaS app with authentication, billing, notifications, user impersonation and invoicing in less than 30 minutes using Laravel Spark. This [speed is a competitive advantage](/ship-today) when it comes to providing value to your customers. 
 
 2. **Cost** - The most expensive framework outlined above is BulletTrain which still only costs a one-time fee of $950. Now compare that to the last quote you got from a development agency. That pays for roughly 1 day of work for an experienced US based developer. The greatest cost of building a software product is human capital (especially if you are not writing the code yourself). Development resources aren’t cheap and the more effectively you can allocate their time to building the features your customers want to pay for the lower your total cost of development will be.
 

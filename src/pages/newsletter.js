@@ -111,7 +111,7 @@ class Newsletter extends React.Component {
           <TwoThirds>
           <HeroContent>
             <BodyText>Hey 👋 I'm Stuart Balcombe. I lead product at ConsultDirect and advise early-stage startups on how to understand their customers and ship value faster.</BodyText>
-            <BodyText>Every two weeks I share a newsletter with my thoughts about building customer-centric products and personal growth. Here’s an <StyledLink href="https://us16.campaign-archive.com/?u=48e1b3ba91c1e492cfb326e7a&id=ef002747bc" target="_blank" rel="noopener">example</StyledLink> of what you’ll get.</BodyText>
+            <BodyText>Every two weeks I share a newsletter with my thoughts about building customer-centric products and personal growth. Here are some <StyledIntLink to="/articles">examples</StyledIntLink> of what you’ll get.</BodyText>
             <NewsletterForm location={this.props.location.pathname} btnText="Sign Me Up" />
             <QuoteWrapper>
               <QuoteText>If you're trying to build great products that create real value in your customers' lives, but you're not on his list already, do yourself a favor & sign up.</QuoteText>

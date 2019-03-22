@@ -32,8 +32,8 @@ People like Sarah, John, Mike, Ashley choose to spend their money (or their comp
 
 Fortunately, you actually already know who some of these people are. They might be in your inbox, in your CRM, or best of all in a product analytics tool like Mixpanel or Amplitude that lets you see not just each person but how they are using your product.
 
-A tangible step to improve your product is to talk to these people and ask them about the outcome your product helps them achieve.
+A tangible step to improve your product is to [talk to these people](/understanding-customer-problems) and ask them about the outcome your product helps them achieve.
 
-Instead of projecting your own bias about the solution, ask for a specific story about how achieving their desired outcome is changing their life and listen intently.
+Instead of projecting your own bias about the solution, ask for a specific story about how achieving their [desired outcome](/outcomes) is changing their life and listen intently.
  
 Give it a try. Think less about the abstract “market” and more about the specific people you are building your product for. What are their names? What do they use your product to do that they couldn’t do before? Why do they love using your product?

@@ -7,7 +7,7 @@ import NewsletterForm from './../components/NewsletterForm'
 import guide from '../../content/assets/onboarding.svg'
 import claire from '../../content/assets/claire.jpg'
 import stuart from '../../content/assets/stuart-standing.png'
-import headshot from "../../content/assets/stuart.jpg";
+import meta from "../../content/assets/twitter-meta.jpg";
 require('typeface-playfair-display')
 require('typeface-roboto-mono')
 
@@ -105,7 +105,7 @@ class Newsletter extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Stuart Balcombe" description="Every two weeks Stuart Balcombe sends tips, learnings and observations from building customer focused products. Sign up to receive the newsletter here." img={headshot}/>
+        <SEO title="Subscribe to my Newsletter - Stuart Balcombe" description="Join the people from Google, Amazon, and Drift who subscribe for learnings, observations, and opinions from building customer driven products. Sign up here." img={meta}/>
         <Container>
           <HeroRow>
           <TwoThirds>

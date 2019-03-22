@@ -17,7 +17,7 @@ class SEO extends Component {
 			  <meta itemprop="image" content={this.props.img} />
 
 			  {/* Twitter Card Data */}
-			  <meta name="twitter:card" content="summary" />
+			  <meta name="twitter:card" content="summary_large_image" />
 			  <meta name="twitter:site" content="@stubalcombe" />
 			  <meta name="twitter:title" content={this.props.title} />
 			  <meta name="twitter:description" content={this.props.description} />

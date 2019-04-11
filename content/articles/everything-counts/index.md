@@ -4,7 +4,7 @@ title: Everything counts
 
 date: "2019-04-21T22:12:03.284Z"
 
-excerpt: ""
+excerpt: "Building a product people love requires going beyond functional features and crafting holistic experiences for our customers."
 
 ---
 

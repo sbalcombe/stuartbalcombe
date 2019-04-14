@@ -28,7 +28,7 @@ const Welcome = styled.h5`
 `
 
 const Headline = styled.h1`
-  ${tw`text-lg text-grey-darkest leading-normal font-mono font-normal mb-4 font-bold`};
+  ${tw`text-3xl text-grey-darkest leading-normal font-serif font-normal mb-4 font-bold`};
 `
 
 const SubHead = styled.h3`
@@ -108,7 +108,7 @@ class Index extends React.Component {
         <ContainerSmall>
           <HeroContent>
             <BodyText>Hi, I'm <Accent>Stuart Balcombe</Accent></BodyText>
-            <Headline>I help people build products that create successful outcomes for their customers.</Headline>
+            <Headline>I help people create experiences that drive successful outcomes for their customers.</Headline>
             <BodyText>Right now, I’m leading product at <StyledLink href="https://consultdirect.co" target="_blank" rel="noreferrer noopener">ConsultDirect</StyledLink>. I also advise early-stage startups on how to research their customers, prioritize their roadmap, and ship value faster.</BodyText>
             <BodyText>Finally, I write about building products, customer research and personal growth in my <StyledIntLink to="/newsletter">newsletter</StyledIntLink>, <StyledIntLink to="/articles">blog posts</StyledIntLink> and <StyledIntLink to="/guide/intro">guides</StyledIntLink>.</BodyText>
           </HeroContent>

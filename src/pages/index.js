@@ -108,9 +108,9 @@ class Index extends React.Component {
         <ContainerSmall>
           <HeroContent>
             <BodyText>Hi, I'm <Accent>Stuart Balcombe</Accent></BodyText>
-            <Headline>I help people create experiences that drive successful outcomes for their customers.</Headline>
-            <BodyText>Right now, I’m leading product at <StyledLink href="https://consultdirect.co" target="_blank" rel="noreferrer noopener">ConsultDirect</StyledLink>. I also advise early-stage startups on how to research their customers, prioritize their roadmap, and ship value faster.</BodyText>
-            <BodyText>Finally, I write about building products, customer research and personal growth in my <StyledIntLink to="/newsletter">newsletter</StyledIntLink>, <StyledIntLink to="/articles">blog posts</StyledIntLink> and <StyledIntLink to="/guide/intro">guides</StyledIntLink>.</BodyText>
+            <Headline>I help founders create experiences that drive successful outcomes for their customers.</Headline>
+            <BodyText>I do that by helping founders research their customers, improve their product experience, and ship value faster.</BodyText>
+            <BodyText>I also write about product design, customer research and personal growth in my <StyledIntLink to="/newsletter">newsletter</StyledIntLink>, <StyledIntLink to="/articles">blog posts</StyledIntLink> and <StyledIntLink to="/guide/intro">guides</StyledIntLink>.</BodyText>
           </HeroContent>
 
           {/*<TwoThirds>

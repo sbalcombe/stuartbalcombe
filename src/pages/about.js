@@ -52,15 +52,14 @@ class About extends React.Component {
           </List>
 
           <SubHead>Right now</SubHead>
-          <p>Today, I lead product at <StyledLink href="https://www.consultdirect.co" target="_blank">ConsultDirect</StyledLink> and help build tools and systems for the future of work.</p>
-          <p>I also focus my independent work on teaching and advising B2B software companies on product strategy and building customer focused products.</p>
+          <p>As of August 2019, I'm an independent consultant advising early-stage software companies on product strategy and building customer focused products.</p>
           <p>In 2018, I launched <StyledLink href="https://paymentlink.me" target="_blank">PaymentLink</StyledLink>, a simple way for busy service providers to onboard new clients and get paid for their recurring work without code. This product originally started as part of my <InternalLink to="/a/my-web-app-challenge">Web App Challenge</InternalLink>.</p>
           
           <SubHead>Previously</SubHead>
           <p>I’ve been working with SaaS companies since 2014 in both growth marketing and product management roles.</p>
           <List>
           <li>
-          <Duration>May 2018 - Current</Duration>
+          <Duration>May 2018 - August 2019</Duration>
           <Accent>VP Product Management</Accent>
           <div>ConsultDirect</div>
           </li>

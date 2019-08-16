@@ -30,14 +30,16 @@ class NewsletterForm extends React.Component {
 
   _handleChange = e => {
     this.setState({
-      [`${e.target.name}`]: e.target.value,
+      email: e.target.value,
     })
   }
 
   _handleSubmit = e => {
     e.preventDefault();
+    // console.log(this.props.group, this.props.groupVal, this.state.email);
     addToMailchimp(this.state.email, {
       PATHNAME: this.props.location,
+      [this.props.group]: this.props.groupVal
     })
     .then(({msg, result}) => {
       console.log('msg', `${result}: ${msg}`);
@@ -60,9 +62,11 @@ class NewsletterForm extends React.Component {
 			<Form onSubmit={this._handleSubmit} className="NewsletterForm">
         <FormWrapper>
       	<EmailInput placeholder="Your email" type="email" name="email" aria-label="Email signup" onChange={this._handleChange} ref={this.email}></EmailInput>
+        <input type="hidden" value={this.props.groupVal} name={this.props.group} />
       	<Button type="submit">{this.props.btnText}</Button>
-        <SubmitMsg>{this.state.submitMsg}</SubmitMsg>
+        
         </FormWrapper>
+        <SubmitMsg>{this.state.submitMsg}</SubmitMsg>
       </Form>
 		)
 	}

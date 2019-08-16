@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'react-emotion'
 
 const QuoteWrapper = styled.div`
   ${tw`border-solid border-l-4 border-t-0 border-b-0 border-r-0 border-indigo-light bg-white px-4 flex flex-col justify-between leading-normal mb-12`};
@@ -25,7 +26,7 @@ const QuoteAuthorTitle = styled.p`
 `
 
 const QuoteImg = styled.img`
-  ${tw`w-10 h-10 rounded-full mr-4 mb-0`}
+  ${tw`w-16 h-16 rounded-full mr-4 mb-0`}
 `
 
 const StyledLink = styled.a`
@@ -34,12 +35,12 @@ const StyledLink = styled.a`
 
 const Quote = (props) => (
 	<QuoteWrapper>
-      <QuoteText>Nodding violently in agreement with Stuart Balcombe’s newsletter this morning. If you're trying to build great products that create real value in your customers' lives, but you're not on his list already, do yourself a favor & sign up.</QuoteText>
+      <QuoteText>"{props.text}"</QuoteText>
       <ItemsCenter>
-        <QuoteImg src={claire} alt="Avatar of Claire Suellentrop"></QuoteImg>
+        <QuoteImg src={props.img} alt={"Avatar of"}></QuoteImg>
         <QuoteAuthorWrapper>
-          <QuoteAuthorName>Claire Suellentrop</QuoteAuthorName>
-          <QuoteAuthorTitle>Founder, <StyledLink href="">Forget the Funnel</StyledLink></QuoteAuthorTitle>
+          <QuoteAuthorName>{props.name}</QuoteAuthorName>
+          <QuoteAuthorTitle>{props.title}, <StyledLink href={props.link}>{props.company}</StyledLink></QuoteAuthorTitle>
         </QuoteAuthorWrapper>
       </ItemsCenter>
     </QuoteWrapper> 

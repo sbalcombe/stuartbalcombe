@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Link } from 'gatsby'
 import avatar from '../../content/assets/stuart.jpg'
@@ -43,9 +42,8 @@ const Header = ({ siteTitle }) => (
         <NavImg src={avatar} alt="Profile image of Stuart Balcombe"></NavImg>
       </StyledLogoLink>
       <NavList>
-      	<NavItem><StyledGatsbyLink to="/about">About</StyledGatsbyLink></NavItem>
-        <NavItem><StyledGatsbyLink to="/articles">Blog</StyledGatsbyLink></NavItem>
-        <NavItem><StyledExternalLink href="https://twitter.com/stubalcombe" target="_blank" rel="noreferrer noopener">Twitter</StyledExternalLink></NavItem>
+      	<NavItem><StyledGatsbyLink to="/articles">Blog</StyledGatsbyLink></NavItem>
+        <NavItem><StyledGatsbyLink to="/free-course">Free Course</StyledGatsbyLink></NavItem>
       </NavList>
     </Nav>
   </Container>

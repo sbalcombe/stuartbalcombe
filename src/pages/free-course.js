@@ -12,7 +12,7 @@ const Headline = styled.h1`
 `
 
 const Subheading = styled.p`
-  ${tw`text-xl font-serif font-medium text-grey-darkest text-center leading-normal mb-0`};
+  ${tw`text-xl font-serif font-medium text-grey-darkest text-center leading-normal mb-0 mt-2`};
 `
 
 const CTA = styled.h3`
@@ -55,7 +55,7 @@ class FreeCourse extends React.Component {
 	        <Container>
 	        	<Banner>
 	        		<Headline>1-Hour Customer Interviews</Headline>
-	        		<Subheading>Businesses that invest in ongoing customer research grow 2-3x faster.</Subheading>
+	        		<Subheading>Businesses that invest in ongoing customer research <strong>grow 2-3x faster</strong>.</Subheading>
 	        		<Subheading>Now you can learn how to get the insights you need to grow yours.</Subheading>
 	        	</Banner>
 	       	</Container>

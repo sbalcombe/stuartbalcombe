@@ -174,7 +174,7 @@ class DiscoverySprint extends React.Component {
             <BodyText>It’s time you got back to focusing your invaluable time and energy on what matters the most and what you do best: growing your business and empowering your team.</BodyText>
             
             <SectionHeading>A battle-tested process.</SectionHeading>
-            <BodyText>I began doing intentional customer discovery more than 5 years ago and whole heartedly belive that the most defensible competitive advantage a business can have is a deeper understanding of it's customers.</BodyText>
+            <BodyText>I began doing intentional customer discovery more than 5 years ago and whole heartedly believe that the most defensible competitive advantage a business can have is a deeper understanding of it's customers.</BodyText>
             <BodyText>My battle-tested system, streamlined process and supporting resources have your customer discovery journey covered from start to finish. From customer interviews, to online discovery, rapid prototyping and user testing. I'll uncover the insights and provide the support you need to make better product decisions before you write a single line of code and waste your engineers valuable time.</BodyText>
             <BodyText>Imagine looking forward to your next product release and knowing - not hoping or guessing but knowing that the time and money you invested in building new features will yield a positive return on your investment.</BodyText>
          </ContainerSmall>
@@ -190,7 +190,8 @@ class DiscoverySprint extends React.Component {
                     <Li>I identify where your target customers hangout online, and the words they use to describe their goals and challenges.</Li>
                     <Li>I organize, analyze and prioritize insights from online customer discovery and customer interviews.</Li>
                   </List>
-                  <ProductBtn href="https://stuartbalcombe.paymentlink.me/customer-discovery-sprint-basic" target="_blank" rel="noreferrer noopener">Purchase - $2495</ProductBtn>
+                  <BodyText>The research package costs: <strong>$2495</strong></BodyText>
+                  <ProductBtn href="https://stuartbalcombe.typeform.com/to/SpW3sp" target="_blank" rel="noreferrer noopener">Apply Now</ProductBtn>
                 </ProductCard>
               </OneHalf>
               <OneHalf>

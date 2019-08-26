@@ -201,7 +201,7 @@ class DiscoverySprint extends React.Component {
                   <List>
                     <Li>I research and interview customers to understand what drives their behavior.</Li>
                     <Li>I organize, analyze and prioritize insights from online customer discovery and customer interviews.</Li>
-                    <Li>I designing and test rapid prototypes without code to shorten feedback loops and learn faster.</Li>
+                    <Li>I design and test rapid prototypes without code to shorten feedback loops and learn faster.</Li>
                     <Li>I provide tools, templates, and frameworks to help your product team do more effective product discovery.</Li>
                   </List>
                   <ProductBtn href="https://stuartbalcombe.typeform.com/to/hJEaE7" target="_blank" rel="noreferrer noopener">Learn More</ProductBtn>

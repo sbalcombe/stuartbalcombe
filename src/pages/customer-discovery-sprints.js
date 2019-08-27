@@ -53,6 +53,18 @@ const TwoThirds = styled.div`
   ${tw`w-full md:w-2/3 px-2`};
 `
 
+const HiwNumber = styled.h4`
+  ${tw`text-2xl font-bold mx-auto text-indigo leading-normal text-center font-serif mb-2 border-2 border-solid h-12 w-12 rounded-full border-grey-light`};
+`
+
+const HiwHeading = styled.h3`
+  ${tw`text-lg font-bold text-grey-darkest leading-normal text-center font-serif mb-2`};
+`
+
+const HiwText = styled.p`
+  ${tw`font-mono text-base text-center mb-6`};
+`
+
 const HeroImg = styled.img`
   ${tw`mb-0 hidden md:flex items-end`}
 `
@@ -170,7 +182,7 @@ class DiscoverySprint extends React.Component {
           </Container>
           <ContainerSmall>
             <SectionHeading>Free yourself to grow your business.</SectionHeading>
-            <BodyText>When you work with me on a Customer Discovery Sprint, you don't just invest in high-quality research to discover new product opportunities and build a library of insights that compounds over time. You also buy your time back and become free to invest it into growing your company to the level it deserves.</BodyText>
+            <BodyText>When you work with me on a Customer Discovery Sprint, you don't just invest in high-quality Jobs-To-Be-Done research to discover new product opportunities and build a library of insights that compounds over time. You also buy your time back and become free to invest it into growing your company to the level it deserves.</BodyText>
             <BodyText>It’s time you got back to focusing your invaluable time and energy on what matters the most and what you do best: growing your business and empowering your team.</BodyText>
             
             <SectionHeading>A battle-tested process.</SectionHeading>
@@ -178,6 +190,26 @@ class DiscoverySprint extends React.Component {
             <BodyText>My battle-tested system, streamlined process and supporting resources have your customer discovery journey covered from start to finish. From customer interviews, to online discovery, rapid prototyping and user testing. I'll uncover the insights and provide the support you need to make better product decisions before you write a single line of code and waste your engineers valuable time.</BodyText>
             <BodyText>Imagine looking forward to your next product release and knowing - not hoping or guessing but knowing that the time and money you invested in building new features will yield a positive return on your investment.</BodyText>
          </ContainerSmall>
+         <Container>
+            <ProductHeadline>How it Works</ProductHeadline>
+            <Row>
+              <OneThird>
+                <HiwNumber>1</HiwNumber>
+                <HiwHeading>Research Strategy</HiwHeading>
+                <HiwText>I'll take time to understand your business and the open questions you have about your customers.</HiwText>
+              </OneThird>
+              <OneThird>
+                <HiwNumber>2</HiwNumber>
+                <HiwHeading>Customer Interviews</HiwHeading>
+                <HiwText>I'll schedule phone calls to conduct Jobs-To-Be-Done interviews at convenient times for  your customers.</HiwText>
+              </OneThird>
+              <OneThird>
+                <HiwNumber>3</HiwNumber>
+                <HiwHeading>Actionable Insights</HiwHeading>
+                <HiwText>You'll get actionable research summaries so you can make faster, evidence backed decisions.</HiwText>
+              </OneThird>
+            </Row>
+          </Container>
           <Container>
             <ProductHeadline>What I Offer</ProductHeadline>
             <Row>

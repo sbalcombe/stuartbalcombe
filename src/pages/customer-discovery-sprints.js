@@ -206,7 +206,7 @@ class DiscoverySprint extends React.Component {
               <OneThird>
                 <HiwNumber>3</HiwNumber>
                 <HiwHeading>Actionable Insights</HiwHeading>
-                <HiwText>You'll get actionable research summaries so you can make faster, evidence backed decisions.</HiwText>
+                <HiwText>You'll get concise research summaries and recommendations so you can make faster, evidence backed decisions.</HiwText>
               </OneThird>
             </Row>
           </Container>

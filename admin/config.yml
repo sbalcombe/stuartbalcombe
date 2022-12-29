@@ -1,0 +1,4625 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: offerings
+    label: Offerings
+    folder: cms/offerings
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: About
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_capacity
+        label: Capacity
+        widget: string
+        required: false
+      - hint: ''
+        name: f_time-commitment-deliverables
+        label: Time commitment + deliverables
+        widget: markdown
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: offerings
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[offerings].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: checklist_items
+    label: Checklist Items
+    folder: cms/checklist-items
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_itemid
+        label: itemId
+        widget: string
+        required: false
+      - hint: ''
+        name: f_description
+        label: Description
+        widget: text
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: checklist-items
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[checklist-items].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: a
+    label: Articles
+    folder: cms/a
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Post Body
+        name: body
+        widget: markdown
+        required: false
+      - hint: A summary of the blog post that appears on blog post grid
+        name: f_post-summary
+        label: Post Summary
+        widget: text
+        required: false
+      - hint: ''
+        name: f_main-image
+        label: Main Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: Smaller version of main image that is used on blog post grid
+        name: f_thumbnail-image
+        label: Thumbnail image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_featured
+        label: Featured?
+        widget: boolean
+        required: false
+      - hint: ''
+        name: f_color
+        label: Color
+        widget: color
+        required: false
+        enableAlpha: true
+        allowInput: true
+      - hint: ''
+        name: f_category
+        label: Category
+        widget: select
+        required: true
+        options:
+          - label: Product
+            value: Product
+          - label: Independence
+            value: Independence
+      - hint: ''
+        name: f_published-date
+        label: Published Date
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: a
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[a].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: Writing, key: -3d3b6f44'
+            label: Text
+            name: '-3d3b6f44'
+            widget: string
+          - hint: 'Original text: About, key: 3c2336d'
+            label: Text
+            name: 3c2336d
+            widget: string
+          - hint: 'Original text: Your , key: 51a662d'
+            label: Text
+            name: 51a662d
+            widget: string
+          - hint: 'Original text: customers hold the key, key: 37fb71ba'
+            label: Text
+            name: 37fb71ba
+            widget: string
+          - hint: 'Original text:  to unlocking sustainable growth., key: 184605d'
+            label: Text
+            name: 184605d
+            widget: string
+          - hint: >-
+              Original text: I'm Stuart Balcombe. Early-stage growth nerd
+              originally from England, now based near Philadelphia. Currently
+              I'm a Product Marketer at , key: 2d55a3e3
+            label: Text
+            name: 2d55a3e3
+            widget: text
+          - hint: 'Original text: Arrows.to, key: 3a58693f'
+            label: Text
+            name: 3a58693f
+            widget: string
+          - hint: 'Original text: , building , key: -32fadf08'
+            label: Text
+            name: '-32fadf08'
+            widget: string
+          - hint: 'Original text: Procket, key: 50c5cb24'
+            label: Text
+            name: 50c5cb24
+            widget: string
+          - hint: >-
+              Original text: , and advising early-stage startups., key:
+              -39991012
+            label: Text
+            name: '-39991012'
+            widget: string
+          - hint: "Original text: Essays:\_Most popular, key: -660858c8"
+            label: Text
+            name: '-660858c8'
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: 'Original text: Newsletter, key: -47761f27'
+            label: Text
+            name: '-47761f27'
+            widget: string
+          - hint: >-
+              Original text: Get my writing in your inbox. Here’s an , key:
+              -631999ab
+            label: Text
+            name: '-631999ab'
+            widget: string
+          - hint: 'Original text: example, key: -4edaee96'
+            label: Text
+            name: '-4edaee96'
+            widget: string
+          - hint: 'Original text:  of what you’ll get., key: -17ca7335'
+            label: Text
+            name: '-17ca7335'
+            widget: string
+          - hint: 'Original text: Thank you!, key: 33b7d778'
+            label: Text
+            name: 33b7d778
+            widget: string
+          - hint: >-
+              Original text: Check your inbox to confirm your subscription.,
+              key: 38eede5a
+            label: Text
+            name: 38eede5a
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form :(, key: 437fe647
+            label: Text
+            name: 437fe647
+            widget: string
+          - hint: >-
+              Original text: "If you're trying to build great products that
+              create real value in your customers' lives, but you're not on his
+              list already, do yourself a favor & sign up.", key: 5d79ef87
+            label: Text
+            name: 5d79ef87
+            widget: text
+          - hint: 'Original text: Claire Suellentrop, key: -4cc61811'
+            label: Text
+            name: '-4cc61811'
+            widget: string
+          - hint: 'Original text: Co-Founder, , key: 7886d42'
+            label: Text
+            name: 7886d42
+            widget: string
+          - hint: 'Original text: Forget the Funnel, key: -8cbb5a8'
+            label: Text
+            name: '-8cbb5a8'
+            widget: string
+          - hint: 'Original text: Intro, key: 438764c'
+            label: Text
+            name: 438764c
+            widget: string
+          - hint: >-
+              Original text: The 3×3 framework constrains you to three questions
+              with only three-word answers per question., key: -3f71e4bc
+            label: Text
+            name: '-3f71e4bc'
+            widget: text
+          - hint: 'Original text: What, key: 291ee4'
+            label: Text
+            name: 291ee4
+            widget: string
+          - hint: 'Original text: Why, key: 153a8'
+            label: Text
+            name: 153a8
+            widget: string
+          - hint: 'Original text: How, key: 11c30'
+            label: Text
+            name: 11c30
+            widget: string
+          - hint: 'Original text: Iterate, key: -1ea25fa6'
+            label: Text
+            name: '-1ea25fa6'
+            widget: string
+          - hint: 'Original text: Share, key: 4c25fbf'
+            label: Text
+            name: 4c25fbf
+            widget: string
+          - hint: 'Original text: Check, key: 3e0f4e8'
+            label: Text
+            name: 3e0f4e8
+            widget: string
+          - hint: 'Original text: Password Required, key: -1a034c7c'
+            label: Text
+            name: '-1a034c7c'
+            widget: string
+          - hint: >-
+              Original text: If Stuart has not provided you with a password this
+              page is for invited visitors only., key: 10ee8b81
+            label: Text
+            name: 10ee8b81
+            widget: string
+          - hint: >-
+              Original text: Incorrect password. Please try again., key:
+              -f5c4b5f
+            label: Text
+            name: '-f5c4b5f'
+            widget: string
+          - hint: 'Original text: Page Not Found, key: -40b0787c'
+            label: Text
+            name: '-40b0787c'
+            widget: string
+          - hint: >-
+              Original text: The page you are looking for doesn't exist or has
+              been moved., key: 583f3656
+            label: Text
+            name: 583f3656
+            widget: string
+          - hint: 'Original text: Who is Stuart Balcombe, key: -77d3b04c'
+            label: Text
+            name: '-77d3b04c'
+            widget: string
+          - hint: >-
+              Original text: I’ve spent the past 7 years helping early-stage
+              companies build and grow software products. My work is centered
+              around 3 core values:, key: -7c7b6206
+            label: Text
+            name: '-7c7b6206'
+            widget: text
+          - hint: 'Original text: - Deeply understanding customers., key: 6efd6ba9'
+            label: Text
+            name: 6efd6ba9
+            widget: string
+          - hint: 'Original text: ‍, key: 200d'
+            label: Text
+            name: 200d
+            widget: string
+          - hint: >-
+              Original text: - Starting small and iterating quickly., key:
+              -34181f54
+            label: Text
+            name: '-34181f54'
+            widget: string
+          - hint: >-
+              Original text: - Measuring success by outcomes not outputs., key:
+              2f3df534
+            label: Text
+            name: 2f3df534
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: 'Original text: Hey! Feel free to tweet me: , key: -4a957ec3'
+            label: Text
+            name: '-4a957ec3'
+            widget: string
+          - hint: 'Original text: @stubalcombe, key: -2eea2875'
+            label: Text
+            name: '-2eea2875'
+            widget: string
+          - hint: 'Original text: , connect on , key: 5b63f7f7'
+            label: Text
+            name: 5b63f7f7
+            widget: string
+          - hint: 'Original text: LinkedIn,, key: 16ee36ae'
+            label: Text
+            name: 16ee36ae
+            widget: string
+          - hint: 'Original text:  or send me an email: , key: -67b9f304'
+            label: Text
+            name: '-67b9f304'
+            widget: string
+          - hint: 'Original text: stuart@stuartbalcombe.com, key: 15e08a0a'
+            label: Text
+            name: 15e08a0a
+            widget: string
+          - hint: 'Original text: ., key: 2e'
+            label: Text
+            name: 2e
+            widget: string
+          - hint: 'Original text: Right Now, key: 19d33292'
+            label: Text
+            name: 19d33292
+            widget: string
+          - hint: >-
+              Original text: As of November 2021, I'm leading marketing at ,
+              key: -249623fc
+            label: Text
+            name: '-249623fc'
+            widget: string
+          - hint: >-
+              Original text:  and running my own independent business advising
+              early-stage software companies on go-to-market strategy and
+              building customer focused products., key: 4270e898
+            label: Text
+            name: '4270e898'
+            widget: text
+          - hint: 'Original text: Previously, key: 74e2c2e4'
+            label: Text
+            name: 74e2c2e4
+            widget: string
+          - hint: >-
+              Original text: I’ve been working with SaaS companies since 2014 in
+              growth marketing and product management roles. In 2018, I launched
+              , key: 4437c013
+            label: Text
+            name: 4437c013
+            widget: text
+          - hint: 'Original text: PaymentLink, key: 7958b00'
+            label: Text
+            name: 7958b00
+            widget: string
+          - hint: >-
+              Original text: , a simple way for busy service providers to
+              onboard new clients and get paid for their recurring work without
+              code. This product originally started as part of my , key:
+              6cdbaf86
+            label: Text
+            name: 6cdbaf86
+            widget: text
+          - hint: 'Original text: Web App Challenge, key: 6f44d0f8'
+            label: Text
+            name: 6f44d0f8
+            widget: string
+          - hint: 'Original text: Selected blog posts, key: -4cbdf3a6'
+            label: Text
+            name: '-4cbdf3a6'
+            widget: string
+          - hint: >-
+              Original text: Tactical Insights For Getting Closer To Your
+              Customers, key: -6f4e5efe
+            label: Text
+            name: '-6f4e5efe'
+            widget: string
+          - hint: >-
+              Original text: How much time are you leaving on the table? Find
+              out., key: 5fb4d97f
+            label: Text
+            name: 5fb4d97f
+            widget: string
+          - hint: 'Original text: Total Investors, key: -3e35df41'
+            label: Text
+            name: '-3e35df41'
+            widget: string
+          - hint: >-
+              Original text: How many people do you communicate with?, key:
+              -4649e96a
+            label: Text
+            name: '-4649e96a'
+            widget: string
+          - hint: 'Original text: Investor Updates Per Year, key: 12d22ebe'
+            label: Text
+            name: 12d22ebe
+            widget: string
+          - hint: >-
+              Original text: How often do you send reports to investors?, key:
+              3a51587c
+            label: Text
+            name: 3a51587c
+            widget: string
+          - hint: 'Original text: Inquiries From Investors Per Month, key: -741c53c3'
+            label: Text
+            name: '-741c53c3'
+            widget: string
+          - hint: >-
+              Original text: How many ad hoc emails and calls do you get a
+              month?, key: 232bb5d1
+            label: Text
+            name: 232bb5d1
+            widget: string
+          - hint: 'Original text: Your Annual Missing Time without X*, key: 49d967af'
+            label: Text
+            name: 49d967af
+            widget: string
+          - hint: 'Original text: Time Increase / Month, key: 73173444'
+            label: Text
+            name: '73173444'
+            widget: string
+          - hint: 'Original text: XXX, key: 15558'
+            label: Text
+            name: '15558'
+            widget: string
+          - hint: 'Original text: Time Increase / Year, key: 3d8a2df9'
+            label: Text
+            name: 3d8a2df9
+            widget: string
+          - hint: 'Original text: Cost Savings / Year, key: 2d1113a8'
+            label: Text
+            name: 2d1113a8
+            widget: string
+          - hint: >-
+              Original text: *Calculations are based on the average xuz, key:
+              -6230f671
+            label: Text
+            name: '-6230f671'
+            widget: string
+          - hint: >-
+              Original text: Thank you! Your submission has been received!, key:
+              5a0ea5a1
+            label: Text
+            name: 5a0ea5a1
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
+            widget: string
+          - hint: 'Original text: Cash Summary, key: 5795c7b9'
+            label: Text
+            name: 5795c7b9
+            widget: string
+          - hint: 'Original text: Cash on Hand, key: 10847263'
+            label: Text
+            name: '10847263'
+            widget: string
+          - hint: 'Original text: $, key: 24'
+            label: Text
+            name: '24'
+            widget: string
+          - hint: 'Original text: Monthly Income, key: 2434795c'
+            label: Text
+            name: 2434795c
+            widget: string
+          - hint: 'Original text: Monthly Cash Sales, key: -213fc40e'
+            label: Text
+            name: '-213fc40e'
+            widget: string
+          - hint: 'Original text: --, key: 5a0'
+            label: Text
+            name: 5a0
+            widget: string
+          - hint: >-
+              Original text: Amount of cash being burned or (Cash Surplus) being
+              generated each month., key: 7579f617
+            label: Text
+            name: 7579f617
+            widget: string
+          - hint: >-
+              Original text: Months until cash balance is exhausted., key:
+              2f4921b9
+            label: Text
+            name: 2f4921b9
+            widget: string
+          - hint: 'Original text: Monthly Expenses, key: 7017fa0e'
+            label: Text
+            name: 7017fa0e
+            widget: string
+          - hint: 'Original text: Personnel Expenses, key: -4ed02aa5'
+            label: Text
+            name: '-4ed02aa5'
+            widget: string
+          - hint: 'Original text: Rent & Utilities, key: 2bc3c129'
+            label: Text
+            name: 2bc3c129
+            widget: string
+          - hint: 'Original text: Office Supplies & Equipment, key: -3b2398fb'
+            label: Text
+            name: '-3b2398fb'
+            widget: string
+          - hint: 'Original text: Marketing Expenses, key: 66828415'
+            label: Text
+            name: '66828415'
+            widget: string
+          - hint: 'Original text: Travel, key: -6a3494c6'
+            label: Text
+            name: '-6a3494c6'
+            widget: string
+          - hint: 'Original text: Other Expenses, key: -79093995'
+            label: Text
+            name: '-79093995'
+            widget: string
+          - hint: 'Original text: Total Expenses:, key: 41d7b263'
+            label: Text
+            name: 41d7b263
+            widget: string
+          - hint: 'Original text: Cash Burn Rate Calculator, key: 70fa4be'
+            label: Text
+            name: 70fa4be
+            widget: string
+          - hint: >-
+              Original text: Calculate your burn rate and zero in on the date
+              you’ll run out of cash — and the date you’ll start making a
+              profit., key: 331db0ed
+            label: Text
+            name: 331db0ed
+            widget: text
+          - hint: 'Original text: What is Cash Burn Rate?, key: 4deeec81'
+            label: Text
+            name: 4deeec81
+            widget: string
+          - hint: 'Original text: What’s a Rich Text element?, key: -3c0dda4d'
+            label: Text
+            name: '-3c0dda4d'
+            widget: string
+          - hint: >-
+              Original text: The rich text element allows you to create and
+              format headings, paragraphs, blockquotes, images, and video all in
+              one place instead of having to add and format them individually.
+              Just double-click and easily create content., key: 2e633c6a
+            label: Text
+            name: 2e633c6a
+            widget: text
+          - hint: 'Original text: Static and dynamic content editing, key: 57fa6135'
+            label: Text
+            name: 57fa6135
+            widget: string
+          - hint: >-
+              Original text: A rich text element can be used with static or
+              dynamic content. For static content, just drop it into any page
+              and begin editing. For dynamic content, add a rich text field to
+              any collection and then connect a rich text element to that field
+              in the settings panel. Voila!, key: -a016b40
+            label: Text
+            name: '-a016b40'
+            widget: text
+          - hint: >-
+              Original text: How to customize formatting for each rich text,
+              key: -4bffb26e
+            label: Text
+            name: '-4bffb26e'
+            widget: string
+          - hint: >-
+              Original text: Headings, paragraphs, blockquotes, figures, images,
+              and figure captions can all be styled after a class is added to
+              the rich text element using the "When inside of" nested selector
+              system., key: -43ba1153
+            label: Text
+            name: '-43ba1153'
+            widget: text
+          - hint: 'Original text: Stuart Balcombe, key: 7fbdc6e8'
+            label: Text
+            name: 7fbdc6e8
+            widget: string
+          - hint: 'Original text: Discovery Sprints, key: 22a38ae9'
+            label: Text
+            name: 22a38ae9
+            widget: string
+          - hint: 'Original text: Articles, key: -4564c9a3'
+            label: Text
+            name: '-4564c9a3'
+            widget: string
+          - hint: 'Original text: Customer Discovery Checklist, key: 3caacbd4'
+            label: Text
+            name: 3caacbd4
+            widget: string
+          - hint: >-
+              Original text: Smart founders know learning fast is their greatest
+              competitive advantage. Before you start your next project, ensure
+              you can answer “, key: -3e74324f
+            label: Text
+            name: '-3e74324f'
+            widget: text
+          - hint: 'Original text: hell yeah, key: 430ba736'
+            label: Text
+            name: 430ba736
+            widget: string
+          - hint: >-
+              Original text: ” to the following gut-check questions., key:
+              5d5f200
+            label: Text
+            name: 5d5f200
+            widget: string
+          - hint: 'Original text: Checklist, key: -70c10e7a'
+            label: Text
+            name: '-70c10e7a'
+            widget: string
+          - hint: 'Original text: X out of Y, key: -7e6ea356'
+            label: Text
+            name: '-7e6ea356'
+            widget: string
+          - hint: 'Original text: Uncheck All, key: 7f27a3d0'
+            label: Text
+            name: 7f27a3d0
+            widget: string
+          - hint: 'Original text: Learn how to , key: -18b30c7'
+            label: Text
+            name: '-18b30c7'
+            widget: string
+          - hint: >-
+              Original text: understand why your customers really buy, key:
+              26e8180f
+            label: Text
+            name: 26e8180f
+            widget: string
+          - hint: >-
+              Original text: A complete playbook to master Jobs to Be Done
+              interviews and unlock new growth for your business., key: 5778101c
+            label: Text
+            name: 5778101c
+            widget: text
+          - hint: 'Original text: PRe-Order Now, key: eff781a'
+            label: Text
+            name: eff781a
+            widget: string
+          - hint: 'Original text: What to expect from this course, key: -4a0bda9b'
+            label: Text
+            name: '-4a0bda9b'
+            widget: string
+          - hint: >-
+              Original text: Over the past 3 years, I've conducted hundreds of
+              customer interviews for companies and clients I've worked with.,
+              key: 27682a4e
+            label: Text
+            name: 27682a4e
+            widget: text
+          - hint: >-
+              Original text: They started as a way to understand how customers
+              used our product and how we could improve their experience, but
+              the impact of effective customer interviews is more far reaching
+              than I ever could have imagined. Insights gathered during 1-1
+              conversations with customers can:, key: 5091400d
+            label: Text
+            name: 5091400d
+            widget: text
+          - hint: >-
+              Original text: ...save you wasting time building a feature no one
+              uses., key: -5a9160f6
+            label: Text
+            name: '-5a9160f6'
+            widget: string
+          - hint: >-
+              Original text: ...unlock the key to rapid product adoption., key:
+              -7fc26646
+            label: Text
+            name: '-7fc26646'
+            widget: string
+          - hint: >-
+              Original text: ...drive your next killer marketing campaign., key:
+              bc533b3
+            label: Text
+            name: bc533b3
+            widget: string
+          - hint: >-
+              Original text: ...become your highest converting landing page
+              copy., key: -72154ebc
+            label: Text
+            name: '-72154ebc'
+            widget: string
+          - hint: 'Original text: ...and so much more., key: 7cd26eb3'
+            label: Text
+            name: 7cd26eb3
+            widget: string
+          - hint: 'Original text: The data speaks for itself, , key: -6244b586'
+            label: Text
+            name: '-6244b586'
+            widget: string
+          - hint: >-
+              Original text: successful businesses are 242% more likely to
+              conduct customer research, key: eb609e0
+            label: Text
+            name: eb609e0
+            widget: string
+          - hint: >-
+              Original text:  at least once every quarter, and investing in
+              ongoing customer research helps businesses , key: -2c5b9be3
+            label: Text
+            name: '-2c5b9be3'
+            widget: string
+          - hint: 'Original text: grow 2-3x faster, key: 1ad24b7c'
+            label: Text
+            name: 1ad24b7c
+            widget: string
+          - hint: >-
+              Original text: Every time I conduct customer interviews I've been
+              refining my process for unlocking the key insights that drive
+              great product decisions and marketing campaigns. Now I'm releasing
+              an , key: 3aff5147
+            label: Text
+            name: 3aff5147
+            widget: text
+          - hint: >-
+              Original text: in-depth series walking you step-by-step through
+              how you can conduct effective jobs to be done customer interviews
+              yourself., key: 79c70a83
+            label: Text
+            name: 79c70a83
+            widget: text
+          - hint: >-
+              Original text: I’m going to cover everything you need to know:,
+              key: 54ab7acb
+            label: Text
+            name: 54ab7acb
+            widget: string
+          - hint: 'Original text: Identifying your target audience., key: -1ea22c42'
+            label: Text
+            name: '-1ea22c42'
+            widget: string
+          - hint: >-
+              Original text: Planning and scheduling your first interview., key:
+              -2dad1f16
+            label: Text
+            name: '-2dad1f16'
+            widget: string
+          - hint: 'Original text: Asking the right questions., key: 7ff25ab'
+            label: Text
+            name: 7ff25ab
+            widget: string
+          - hint: >-
+              Original text: Organizing and leveraging insights for growth.,
+              key: 29e25430
+            label: Text
+            name: '29e25430'
+            widget: string
+          - hint: 'Original text: And much more…, key: 208fa3a7'
+            label: Text
+            name: 208fa3a7
+            widget: string
+          - hint: >-
+              Original text: There is a lot to cover so I’ll be breaking this up
+              into easy to follow modules you can complete in just 20 minutes
+              each day., key: -344987f9
+            label: Text
+            name: '-344987f9'
+            widget: text
+          - hint: >-
+              Original text: Whether you’re building your first business or your
+              fifth, , key: -5ef4586c
+            label: Text
+            name: '-5ef4586c'
+            widget: string
+          - hint: >-
+              Original text: the more deeply you understand your customers the
+              more successful you’ll be., key: 2dfad351
+            label: Text
+            name: 2dfad351
+            widget: string
+          - hint: >-
+              Original text:  Anyone who wants to build a product customers love
+              to pay for will find something valuable in this series., key:
+              7fc8a250
+            label: Text
+            name: 7fc8a250
+            widget: text
+          - hint: >-
+              Original text: Thank you! Check your inbox for your confirmation
+              email!, key: -59dad1f
+            label: Text
+            name: '-59dad1f'
+            widget: string
+          - hint: >-
+              Original text: Ready to get closer to your customers?, key:
+              -5901e2da
+            label: Text
+            name: '-5901e2da'
+            widget: string
+          - hint: 'Original text: The Interviews Playbook, key: 7f734f1c'
+            label: Text
+            name: 7f734f1c
+            widget: string
+          - hint: >-
+              Original text: A tactical playbook to uncover the deep customer
+              insights that drive growth., key: -20914c82
+            label: Text
+            name: '-20914c82'
+            widget: string
+          - hint: 'Original text: $249, key: 111f93'
+            label: Text
+            name: 111f93
+            widget: string
+          - hint: 'Original text: 149, key: be76'
+            label: Text
+            name: be76
+            widget: string
+          - hint: 'Original text: /episode, key: -49b70514'
+            label: Text
+            name: '-49b70514'
+            widget: string
+          - hint: 'Original text: 7 Lessons + Video Walkthroughs, key: 3be9691f'
+            label: Text
+            name: 3be9691f
+            widget: string
+          - hint: 'Original text: Customer Outreach Templates, key: -24f024e0'
+            label: Text
+            name: '-24f024e0'
+            widget: string
+          - hint: >-
+              Original text: Voice of Customer Swipe File Template, key:
+              -3c608c6f
+            label: Text
+            name: '-3c608c6f'
+            widget: string
+          - hint: 'Original text: Team Insight Presentation Template, key: -5eb5124b'
+            label: Text
+            name: '-5eb5124b'
+            widget: string
+          - hint: 'Original text: Interview Question Cheatsheet, key: c8c3ba7'
+            label: Text
+            name: c8c3ba7
+            widget: string
+          - hint: 'Original text: Pre-Order Now, key: 53423fa'
+            label: Text
+            name: 53423fa
+            widget: string
+          - hint: "Original text: PLAYBOOKS +\_COACHING, key: -6097eb99"
+            label: Text
+            name: '-6097eb99'
+            widget: string
+          - hint: >-
+              Original text: Expert research services combined with tactical
+              advice to help you make more confident customer insight driven
+              decisions., key: -113fb992
+            label: Text
+            name: '-113fb992'
+            widget: text
+          - hint: 'Original text: 749, key: d4fc'
+            label: Text
+            name: d4fc
+            widget: string
+          - hint: >-
+              Original text: Interviews Playbook Lessons & Videos, key:
+              -4cc5b4d4
+            label: Text
+            name: '-4cc5b4d4'
+            widget: string
+          - hint: >-
+              Original text: 1-Hour Customer Discovery Strategy Call, key:
+              6e35e039
+            label: Text
+            name: 6e35e039
+            widget: string
+          - hint: 'Original text: Outreach Templates & Cheatsheets, key: -5dca2875'
+            label: Text
+            name: '-5dca2875'
+            widget: string
+          - hint: >-
+              Original text: Interview Technique Analysis and Coaching, key:
+              -16283cba
+            label: Text
+            name: '-16283cba'
+            widget: string
+          - hint: 'Original text: ", key: 22'
+            label: Text
+            name: '22'
+            widget: string
+          - hint: >-
+              Original text: Stuart created a visual experience for a product
+              that was still in the conceptual stage, so I could encounter any
+              unexpected implementation issues and have something tangible to
+              demo to customers. He delivered a rapid prototype that was great
+              for idea validation.", key: 23916fb2
+            label: Text
+            name: 23916fb2
+            widget: text
+          - hint: 'Original text: Bob Moore, key: -4089f46b'
+            label: Text
+            name: '-4089f46b'
+            widget: string
+          - hint: 'Original text: CEO of , key: 52695eb6'
+            label: Text
+            name: 52695eb6
+            widget: string
+          - hint: 'Original text: Crossbeam, key: -353d5431'
+            label: Text
+            name: '-353d5431'
+            widget: string
+          - hint: 'Original text: Resources, key: 13ede05'
+            label: Text
+            name: 13ede05
+            widget: string
+          - hint: 'Original text: Blog, key: 1fa3c2'
+            label: Text
+            name: 1fa3c2
+            widget: string
+          - hint: 'Original text: Podcast, key: 4b0c1ae4'
+            label: Text
+            name: 4b0c1ae4
+            widget: string
+          - hint: 'Original text: Free Guide, key: -180b2fb8'
+            label: Text
+            name: '-180b2fb8'
+            widget: string
+          - hint: 'Original text: Company, key: -64202ba3'
+            label: Text
+            name: '-64202ba3'
+            widget: string
+          - hint: 'Original text: Terms, key: 4cf5967'
+            label: Text
+            name: 4cf5967
+            widget: string
+          - hint: 'Original text: Privacy, key: 5079bb68'
+            label: Text
+            name: 5079bb68
+            widget: string
+          - hint: >-
+              Original text: © 2022 Balsm Labs LLC. All rights reserved., key:
+              -105ab0a5
+            label: Text
+            name: '-105ab0a5'
+            widget: string
+          - hint: >-
+              Original text: Subscribe to Short Loops - A newsletter by Stuart
+              Balcombe, key: 4b5b3630
+            label: Text
+            name: 4b5b3630
+            widget: string
+          - hint: >-
+              Original text: Insights for early-stage growth and product
+              development that puts customer outcomes at the center., key:
+              7364d10d
+            label: Text
+            name: 7364d10d
+            widget: text
+          - hint: >-
+              Original text: Prototype and launch your startup idea in , key:
+              -2fc01e24
+            label: Text
+            name: '-2fc01e24'
+            widget: string
+          - hint: 'Original text: one week, key: 73e3f16e'
+            label: Text
+            name: 73e3f16e
+            widget: string
+          - hint: 'Original text:  without code., key: -fe05d97'
+            label: Text
+            name: '-fe05d97'
+            widget: string
+          - hint: >-
+              Original text: I help founders test their riskiest product
+              assumptions, before wasting time and money building software no
+              one uses., key: 641c787f
+            label: Text
+            name: 641c787f
+            widget: text
+          - hint: 'Original text: Schedule your free strategy session, key: 2007a0f9'
+            label: Text
+            name: 2007a0f9
+            widget: string
+          - hint: 'Original text: Or learn how I do it (Free Video), key: -75d09b86'
+            label: Text
+            name: '-75d09b86'
+            widget: string
+          - hint: 'Original text: Are you , key: -62f821b3'
+            label: Text
+            name: '-62f821b3'
+            widget: string
+          - hint: 'Original text: confident, key: -2ff436b4'
+            label: Text
+            name: '-2ff436b4'
+            widget: string
+          - hint: 'Original text:  you’re building the right product? , key: 685a7264'
+            label: Text
+            name: 685a7264
+            widget: string
+          - hint: >-
+              Original text: If not, why are you spending thousands of dollars
+              and months of your valuable time building your MVP?, key:
+              -531e93d2
+            label: Text
+            name: '-531e93d2'
+            widget: text
+          - hint: >-
+              Original text: As great as your idea might be, the chances are
+              you’ll need multiple iterations and customer feedback to find
+              product-market fit., key: 5725241c
+            label: Text
+            name: 5725241c
+            widget: text
+          - hint: >-
+              Original text: How much will your MVP actually cost?, key:
+              -49c6c338
+            label: Text
+            name: '-49c6c338'
+            widget: string
+          - hint: >-
+              Original text: Let's face it... you’ve probably been quoted tens
+              of thousands of dollars and a 3-month timeline to build your MVP.
+              But the problem isn’t just the expensive price tag. The longer you
+              wait to test your product idea with customers the greater the
+              opportunity cost of building the wrong thing as well., key:
+              -426dc11a
+            label: Text
+            name: '-426dc11a'
+            widget: text
+          - hint: >-
+              Original text: The real cost of building expensive software before
+              testing your idea with real customers is equal to:, key: -60f59744
+            label: Text
+            name: '-60f59744'
+            widget: text
+          - hint: >-
+              Original text: The time and materials expense of building the
+              wrong thing., key: -32ffb5f2
+            label: Text
+            name: '-32ffb5f2'
+            widget: string
+          - hint: 'Original text: AND..., key: 7355c557'
+            label: Text
+            name: 7355c557
+            widget: string
+          - hint: >-
+              Original text: The chances, advantages, or momentum you lose by
+              not building the right thing., key: -49e17998
+            label: Text
+            name: '-49e17998'
+            widget: string
+          - hint: >-
+              Original text: Imagine if you could prototype your idea without
+              code and get real customer feedback in days not months. You could
+              save thousands of dollars, weeks of your valuable time AND have
+              confidence you're building a product your customers want to buy.,
+              key: -5fb738df
+            label: Text
+            name: '-5fb738df'
+            widget: text
+          - hint: >-
+              Original text: "Stuart created a visual experience for a product
+              that was still in the conceptual stage, so I could encounter any
+              unexpected implementation issues and have something tangible to
+              demo to customers. He delivered a rapid prototype that was great
+              for idea validation.", key: 619fedd4
+            label: Text
+            name: 619fedd4
+            widget: text
+          - hint: 'Original text: CEO, , key: 3d0b261'
+            label: Text
+            name: 3d0b261
+            widget: string
+          - hint: >-
+              Original text: What if you could launch and test your MVP with
+              real customers , key: 279b4bda
+            label: Text
+            name: 279b4bda
+            widget: string
+          - hint: 'Original text: this week, key: -24dd4bca'
+            label: Text
+            name: '-24dd4bca'
+            widget: string
+          - hint: 'Original text: ?, key: 3f'
+            label: Text
+            name: 3f
+            widget: string
+          - hint: >-
+              Original text: Validate your riskiest product assumptions, raise
+              capital, get your first customers, or increase adoption of an
+              existing product with a clear process for researching, designing
+              and testing without wasting money building a product no one uses
+              (like 90% of people I talk to)., key: -68376e9f
+            label: Text
+            name: '-68376e9f'
+            widget: text
+          - hint: >-
+              Original text: You need a clear process to quickly prototype and
+              test your ideas., key: -7e8c1269
+            label: Text
+            name: '-7e8c1269'
+            widget: string
+          - hint: >-
+              Original text: What if I can guide your team through a proven
+              prototyping process so you can save months of USELESS iterations?,
+              key: -55905e5f
+            label: Text
+            name: '-55905e5f'
+            widget: text
+          - hint: >-
+              Original text: You could short circuit the learning loop and make
+              rapid progress to:, key: e31e675
+            label: Text
+            name: e31e675
+            widget: string
+          - hint: 'Original text: Quickly prototype your idea, key: -394cd3c0'
+            label: Text
+            name: '-394cd3c0'
+            widget: string
+          - hint: 'Original text: Get feedback from customers, key: -1eaae190'
+            label: Text
+            name: '-1eaae190'
+            widget: string
+          - hint: >-
+              Original text: Prioritize the right next steps for growth, key:
+              720b5ab0
+            label: Text
+            name: 720b5ab0
+            widget: string
+          - hint: >-
+              Original text: You’ll be armed with a clear process for quickly
+              testing your idea without spending money building a product no one
+              uses (like 90% of people I talk to)., key: -42db6d3b
+            label: Text
+            name: '-42db6d3b'
+            widget: text
+          - hint: 'Original text: Hey 👋 I’m , key: 1b25b651'
+            label: Text
+            name: 1b25b651
+            widget: string
+          - hint: >-
+              Original text:  a product designer, and no-code nerd who's spent
+              the past 5 years helping early-stage startups understand their
+              customers and ship value faster. , key: 737b29dd
+            label: Text
+            name: 737b29dd
+            widget: text
+          - hint: >-
+              Original text: Want to learn more? Schedule a free strategy
+              session below and I'll help you identify your riskiest assumptions
+              and create a plan to test them without code., key: 320f57c4
+            label: Text
+            name: 320f57c4
+            widget: text
+          - hint: >-
+              Original text: "There are very few people I know in the industry
+              that have the unique combination of skills, research-focused
+              product knowledge mixed with the ability to execute on UI/UX.",
+              key: -790c0fe5
+            label: Text
+            name: '-790c0fe5'
+            widget: text
+          - hint: 'Original text: Ben Kochavy, key: -4801d95a'
+            label: Text
+            name: '-4801d95a'
+            widget: string
+          - hint: 'Original text: Founder, , key: -7c083ebd'
+            label: Text
+            name: '-7c083ebd'
+            widget: string
+          - hint: 'Original text: ColdBru Digital, key: -3a751aa7'
+            label: Text
+            name: '-3a751aa7'
+            widget: string
+          - hint: 'Original text: Brand Personality Sliders, key: -7b257679'
+            label: Text
+            name: '-7b257679'
+            widget: string
+          - hint: >-
+              Original text: Shape how you want your brand, voice, tone, and
+              story to be perceived., key: 3924d9ed
+            label: Text
+            name: 3924d9ed
+            widget: string
+          - hint: 'Original text: Elite, key: 3ff0673'
+            label: Text
+            name: 3ff0673
+            widget: string
+          - hint: 'Original text: Mass Appeal, key: -506c37c5'
+            label: Text
+            name: '-506c37c5'
+            widget: string
+          - hint: "Original text: Instructions:\_select point on range, key: 5ad034a5"
+            label: Text
+            name: 5ad034a5
+            widget: string
+          - hint: "Original text: Result:\_A,B,C, key: -58e3bd55"
+            label: Text
+            name: '-58e3bd55'
+            widget: string
+          - hint: "Original text: Recommendation:\_X,Y,Z, key: -2dec296c"
+            label: Text
+            name: '-2dec296c'
+            widget: string
+          - hint: 'Original text: Serious, key: -2689717c'
+            label: Text
+            name: '-2689717c'
+            widget: string
+          - hint: 'Original text: Playful, key: 45cd5da9'
+            label: Text
+            name: 45cd5da9
+            widget: string
+          - hint: 'Original text: Conventional, key: 6473a37c'
+            label: Text
+            name: 6473a37c
+            widget: string
+          - hint: 'Original text: Rebel, key: 4b2ed56'
+            label: Text
+            name: 4b2ed56
+            widget: string
+          - hint: "Original text: Mature\_&\_Classic, key: -62607880"
+            label: Text
+            name: '-62607880'
+            widget: string
+          - hint: 'Original text: Young & Innovative, key: 35b9c3b7'
+            label: Text
+            name: 35b9c3b7
+            widget: string
+          - hint: 'Original text: Episode 01, key: -2862699a'
+            label: Text
+            name: '-2862699a'
+            widget: string
+          - hint: 'Original text: This is the title of the episode, key: 5bfa5f6e'
+            label: Text
+            name: 5bfa5f6e
+            widget: string
+          - hint: 'Original text: I want to..., key: 6295283a'
+            label: Text
+            name: 6295283a
+            widget: string
+          - hint: 'Original text: Build a rapid prototype, key: -2cf04413'
+            label: Text
+            name: '-2cf04413'
+            widget: string
+          - hint: 'Original text: Understand my customers, key: -218eec5d'
+            label: Text
+            name: '-218eec5d'
+            widget: string
+          - hint: 'Original text: Create a brand that resonates, key: -d74f47d'
+            label: Text
+            name: '-d74f47d'
+            widget: string
+          - hint: 'Original text: Learn to make progress. Faster., key: 749c903d'
+            label: Text
+            name: 749c903d
+            widget: string
+          - hint: 'Original text: Get Started, key: -364d0a89'
+            label: Text
+            name: '-364d0a89'
+            widget: string
+          - hint: 'Original text: Heading 1, key: 6af22973'
+            label: Text
+            name: 6af22973
+            widget: string
+          - hint: 'Original text: Heading 2, key: 6af22974'
+            label: Text
+            name: 6af22974
+            widget: string
+          - hint: 'Original text: Heading 3, key: 6af22975'
+            label: Text
+            name: 6af22975
+            widget: string
+          - hint: 'Original text: 🚧, key: 1b0e0a'
+            label: Text
+            name: 1b0e0a
+            widget: string
+          - hint: 'Original text: jhjhjhjhjhk, key: 1b2b4ff5'
+            label: Text
+            name: 1b2b4ff5
+            widget: string
+          - hint: 'Original text: kkjjkjk, key: -272727b4'
+            label: Text
+            name: '-272727b4'
+            widget: string
+          - hint: 'Original text: Headings, paragraphs, , key: -47935682'
+            label: Text
+            name: '-47935682'
+            widget: string
+          - hint: 'Original text: blockquotes, key: 67fbf844'
+            label: Text
+            name: 67fbf844
+            widget: string
+          - hint: >-
+              Original text: , figures, images, and figure captions can all be
+              styled after a class is added to the rich text element using the
+              "When inside of" nested selector system., key: 2194f673
+            label: Text
+            name: 2194f673
+            widget: text
+          - hint: 'Original text: Who are you sprinting with?, key: -514a26ae'
+            label: Text
+            name: '-514a26ae'
+            widget: string
+          - hint: 'Original text: By myself, key: -4f469d3f'
+            label: Text
+            name: '-4f469d3f'
+            widget: string
+          - hint: 'Original text: With my company, key: 4a13c183'
+            label: Text
+            name: 4a13c183
+            widget: string
+          - hint: 'Original text: With my client, key: -60e149fb'
+            label: Text
+            name: '-60e149fb'
+            widget: string
+          - hint: 'Original text: With my non-profit, key: -66663d82'
+            label: Text
+            name: '-66663d82'
+            widget: string
+          - hint: >-
+              Original text: Want us to help you keep track of your progress?,
+              key: 7d6f5b0b
+            label: Text
+            name: 7d6f5b0b
+            widget: string
+          - hint: 'Original text: Email, key: 3ff5b7c'
+            label: Text
+            name: 3ff5b7c
+            widget: string
+          - hint: 'Original text: Password, key: 4c641ebb'
+            label: Text
+            name: 4c641ebb
+            widget: string
+          - hint: 'Original text: Not Now, key: -1dfda037'
+            label: Text
+            name: '-1dfda037'
+            widget: string
+          - hint: 'Original text: Choose your path, key: -4ecbc6b7'
+            label: Text
+            name: '-4ecbc6b7'
+            widget: string
+          - hint: 'Original text: Sprinting for the first time, key: 67774d3b'
+            label: Text
+            name: 67774d3b
+            widget: string
+          - hint: 'Original text: Already run sprints, key: 36e13d1c'
+            label: Text
+            name: 36e13d1c
+            widget: string
+          - hint: >-
+              Original text: What if you knew exactly why your customers buy?,
+              key: 10b9f442
+            label: Text
+            name: 10b9f442
+            widget: string
+          - hint: >-
+              Original text: Discovery Sprints provides done-for-you customer
+              interviews so you can get closer to your customers and make more
+              confident strategic decisions., key: 1685b50c
+            label: Text
+            name: 1685b50c
+            widget: text
+          - hint: 'Original text: Contact US, key: 7f2746be'
+            label: Text
+            name: 7f2746be
+            widget: string
+          - hint: 'Original text: Do you know , key: -5391d581'
+            label: Text
+            name: '-5391d581'
+            widget: string
+          - hint: 'Original text: why, key: 1cbc8'
+            label: Text
+            name: 1cbc8
+            widget: string
+          - hint: 'Original text:  your best customers buy?, key: 74f665d3'
+            label: Text
+            name: 74f665d3
+            widget: string
+          - hint: >-
+              Original text: Answering this question with the voice of your
+              customers is rocket fuel for sustainable growth and we're here to
+              help 🚀, key: 18c9a693
+            label: Text
+            name: 18c9a693
+            widget: text
+          - hint: >-
+              Original text: The harsh reality: Growing a software business is
+              harder than ever., key: -5f16671
+            label: Text
+            name: '-5f16671'
+            widget: string
+          - hint: >-
+              Original text: The cost of acquisition continues to rise, key:
+              349f68e2
+            label: Text
+            name: 349f68e2
+            widget: string
+          - hint: >-
+              Original text: Today’s buyers are inundated with choices and
+              standing out from the noise is harder than ever., key: 6386842a
+            label: Text
+            name: 6386842a
+            widget: text
+          - hint: >-
+              Original text: Even if you are able to acquire customers, you need
+              to make sure they are successfully activated and retained to build
+              a sustainable flywheel., key: 1360b6f1
+            label: Text
+            name: 1360b6f1
+            widget: text
+          - hint: >-
+              Original text: Creating a flywheel for sustainable growth today
+              requires a deeper understanding of customers needs, behaviors and
+              motivations than ever before., key: 1f1d7ce6
+            label: Text
+            name: 1f1d7ce6
+            widget: text
+          - hint: 'Original text: Companies that choose to adopt a , key: -11310281'
+            label: Text
+            name: '-11310281'
+            widget: string
+          - hint: 'Original text: product-led growth approach, key: 480ebbee'
+            label: Text
+            name: 480ebbee
+            widget: string
+          - hint: >-
+              Original text:  have over 2x valuation, 1.5x higher revenue, and
+              9% higher revenue growth compared to companies where internal
+              processes for leveraging customer insights are lagging. Some food
+              for thought:, key: -237e2c74
+            label: Text
+            name: '-237e2c74'
+            widget: text
+          - hint: >-
+              Original text: 7 out of 10 companies speak to less than 10
+              customers a month , key: 3782fef4
+            label: Text
+            name: 3782fef4
+            widget: string
+          - hint: >-
+              Original text: Only 12% of customers believe in “customer first”
+              messaging, key: -6030667e
+            label: Text
+            name: '-6030667e'
+            widget: string
+          - hint: "Original text: 81% of brands had stagnant scores for customer experience in 2019.\_, key: 76944a35"
+            label: Text
+            name: 76944a35
+            widget: string
+          - hint: >-
+              Original text: In other words, the answer to sparking success
+              often lies in channeling customer voices and values and placing
+              them at the heart of your product and company., key: -6cd114af
+            label: Text
+            name: '-6cd114af'
+            widget: text
+          - hint: >-
+              Original text: What stops most companies from doing regular
+              customer research? , key: 5b0f5cf2
+            label: Text
+            name: 5b0f5cf2
+            widget: string
+          - hint: 'Original text: One word: , key: -7dee1536'
+            label: Text
+            name: '-7dee1536'
+            widget: string
+          - hint: 'Original text: Time, key: 27c6ed'
+            label: Text
+            name: 27c6ed
+            widget: string
+          - hint: >-
+              Original text: Your time is already consumed by the day-to-day
+              business of acquiring customers and managing your team. You don't
+              have the additional hours or experience to dedicate effort to
+              things like , key: -158e0359
+            label: Text
+            name: '-158e0359'
+            widget: text
+          - hint: >-
+              Original text: conducting in depth customer interviews, key:
+              -5f3496c2
+            label: Text
+            name: '-5f3496c2'
+            widget: string
+          - hint: 'Original text: , , key: 574'
+            label: Text
+            name: '574'
+            widget: string
+          - hint: 'Original text: analyzing unstructured responses, key: -28c0d8ad'
+            label: Text
+            name: '-28c0d8ad'
+            widget: string
+          - hint: 'Original text: , and , key: 4d05ec9d'
+            label: Text
+            name: 4d05ec9d
+            widget: string
+          - hint: >-
+              Original text: extracting the actionable voice of customer
+              insights, key: -5ed727c
+            label: Text
+            name: '-5ed727c'
+            widget: string
+          - hint: >-
+              Original text:  with your already overflowing to-do list., key:
+              -4bbb0dae
+            label: Text
+            name: '-4bbb0dae'
+            widget: string
+          - hint: >-
+              Original text: Imagine having a system in place to continuously
+              learn from and get closer to customers., key: -580c386d
+            label: Text
+            name: '-580c386d'
+            widget: string
+          - hint: >-
+              Original text: You'd have focus. You'd know exactly where to focus
+              your team and resources, and prioritize projects your customers
+              really care about., key: 155d8bf0
+            label: Text
+            name: 155d8bf0
+            widget: text
+          - hint: >-
+              Original text: You'd have confidence. Instead of making strategic
+              decisions based on what you "think" you know, you'd be armed with
+              the voice of your actual customers., key: -73b87eec
+            label: Text
+            name: '-73b87eec'
+            widget: text
+          - hint: >-
+              Original text: You'd have clarity. Instead of the endless maze of
+              directions to explore, you'd know the path that matters most to
+              your customers., key: 366d6da4
+            label: Text
+            name: 366d6da4
+            widget: text
+          - hint: >-
+              Original text: You need a proven way to learn from your customers
+              — we call this a “discovery sprint.”, key: -108cc2c4
+            label: Text
+            name: '-108cc2c4'
+            widget: string
+          - hint: >-
+              Original text: A Discovery Sprint combines in-depth customer
+              interviews with qualitative data analysis to identify
+              high-leverage new growth opportunities based on your best fit
+              customer's experience., key: 321b3de8
+            label: Text
+            name: 321b3de8
+            widget: text
+          - hint: 'Original text: How A Discovery Sprint Works, key: -397028c5'
+            label: Text
+            name: '-397028c5'
+            widget: string
+          - hint: 'Original text: 1. Research Strategy, key: -3e251eeb'
+            label: Text
+            name: '-3e251eeb'
+            widget: string
+          - hint: >-
+              Original text: We'll start by understanding your current goals and
+              challenges and identifying the right customer segments to learn
+              from. We'll design surveys to collect a baseline of insights and
+              qualify participants for interviews. You'll get access to all our
+              templates and playbooks for kicking off a discovery project., key:
+              -61cc7dfe
+            label: Text
+            name: '-61cc7dfe'
+            widget: text
+          - hint: 'Original text: 2. Customer Interviews, key: -81abf50'
+            label: Text
+            name: '-81abf50'
+            widget: string
+          - hint: >-
+              Original text: We'll schedule and conduct 45-60 minute
+              Jobs-To-Be-Done interviews to understand your customers buying
+              timeline. We'll dig deep into your customer's experience to
+              understand their:, key: 52203f29
+            label: Text
+            name: 52203f29
+            widget: text
+          - hint: >-
+              Original text: First Thought - When did people first consider
+              needing a solution?, key: 4c7aa590
+            label: Text
+            name: 4c7aa590
+            widget: string
+          - hint: >-
+              Original text: Struggling Moments - The current or previous events
+              and situations that caused pain and frustration., key: 6bb7c465
+            label: Text
+            name: 6bb7c465
+            widget: text
+          - hint: >-
+              Original text: Driving Forces - Emotions they want to feel or want
+              to avoid feeling by seeking to change their current status quo.,
+              key: -43601608
+            label: Text
+            name: '-43601608'
+            widget: text
+          - hint: >-
+              Original text: Alternative Solutions -The current behaviors and
+              solutions that they are in the consideration set., key: 5b3b1097
+            label: Text
+            name: 5b3b1097
+            widget: text
+          - hint: >-
+              Original text: Job to Be Done - How they believe their life will
+              be better by solving their problem with a new solution?., key:
+              -1512bdf2
+            label: Text
+            name: '-1512bdf2'
+            widget: text
+          - hint: >-
+              Original text: Listen in on a Jobs To Be Done interview, key:
+              3e4477a7
+            label: Text
+            name: 3e4477a7
+            widget: string
+          - hint: 'Original text: 3. Qualitative Data Analysis, key: -27932d28'
+            label: Text
+            name: '-27932d28'
+            widget: string
+          - hint: >-
+              Original text: We'll dig through the hours of interview
+              transcripts and survey responses to extract the golden insights
+              that lead to growth. , key: -6d10938e
+            label: Text
+            name: '-6d10938e'
+            widget: text
+          - hint: >-
+              Original text: Instead of pages of dense transcripts we'll map the
+              buying journey uncovered in each interview across the Jobs To Be
+              Done timeline and identify common themes and personas., key:
+              -3fe8da91
+            label: Text
+            name: '-3fe8da91'
+            widget: text
+          - hint: 'Original text: 4. Tactical Insight Reports, key: 36628140'
+            label: Text
+            name: '36628140'
+            widget: string
+          - hint: >-
+              Original text: Our reports help you see immediate customer driven
+              opportunities, we're focused on getting you to share and implement
+              your new learnings — not just read about them. , key: 70c98339
+            label: Text
+            name: 70c98339
+            widget: text
+          - hint: >-
+              Original text: You’ll get ready to share insight presentations for
+              your team, interview highlights, a private podcast feed and the
+              full interview transcripts., key: -66b2fcf0
+            label: Text
+            name: '-66b2fcf0'
+            widget: text
+          - hint: >-
+              Original text: My team's successful when they know both what our
+              customers say and how to act on their feedback. As CX becomes the
+              differentiator in a go-to-market strategy, customer insights
+              matter now more than ever", key: 45231933
+            label: Text
+            name: '45231933'
+            widget: text
+          - hint: 'Original text: Connor Cirillo, key: 50d2bba1'
+            label: Text
+            name: 50d2bba1
+            widget: string
+          - hint: 'Original text: Head of Conversational Marketing, , key: -22d2814f'
+            label: Text
+            name: '-22d2814f'
+            widget: string
+          - hint: 'Original text: HubSpot, key: -520be889'
+            label: Text
+            name: '-520be889'
+            widget: string
+          - hint: >-
+              Original text: I wish I could do research and I know it would help
+              but the time it would take me to get only 80% as good as an expert
+              is not worth the bandwidth taken away from things I’m actually an
+              expert in.", key: -85fb39b
+            label: Text
+            name: '-85fb39b'
+            widget: text
+          - hint: 'Original text: Head of Growth, , key: 2a2557a4'
+            label: Text
+            name: 2a2557a4
+            widget: string
+          - hint: 'Original text: ColdBru, key: -64342b7f'
+            label: Text
+            name: '-64342b7f'
+            widget: string
+          - hint: >-
+              Original text: Here's how you'll be able to use customer insights
+              to fuel sustainable growth, key: -428e2b9d
+            label: Text
+            name: '-428e2b9d'
+            widget: string
+          - hint: 'Original text: 1. Nail your positioning, key: 4d522493'
+            label: Text
+            name: 4d522493
+            widget: string
+          - hint: >-
+              Original text: We'll identify the real reasons why customers
+              choose to buy your product. You'll have a clear picture of your
+              true competitors, your differentiating features and the decision
+              criteria buyers use to evaluate you against the competition., key:
+              60bc10ca
+            label: Text
+            name: 60bc10ca
+            widget: text
+          - hint: >-
+              Original text: 2. Increase the ROI of your marketing campaigns,
+              key: -576e78d8
+            label: Text
+            name: '-576e78d8'
+            widget: string
+          - hint: >-
+              Original text: The most effective marketers are able to reach
+              their customers as close to when they first think about needing a
+              solution to their problem as possible. Identifying the events that
+              lead up to a buying trigger can be jet fuel for your marketing
+              campaigns, enabling you to , key: -39dc66a
+            label: Text
+            name: '-39dc66a'
+            widget: text
+          - hint: 'Original text: spend up to 80% less, key: -d5cfd52'
+            label: Text
+            name: '-d5cfd52'
+            widget: string
+          - hint: >-
+              Original text:  on direct marketing costs to acquire customers.,
+              key: -3f2fb602
+            label: Text
+            name: '-3f2fb602'
+            widget: string
+          - hint: >-
+              Original text: 3. Convert more customers with copy that resonates,
+              key: 1f293e5c
+            label: Text
+            name: 1f293e5c
+            widget: string
+          - hint: >-
+              Original text: With access to the real voice of your customers
+              you'll be able to confidently invest in your next ad campaign,
+              landing page design, or onboarding optimization confident that
+              your message resonates with your target customers., key: -58f2cdd6
+            label: Text
+            name: '-58f2cdd6'
+            widget: text
+          - hint: >-
+              Original text: Empower your team with all the information they
+              need to target the right people at the right time with copy that
+              converts., key: 1a5a1478
+            label: Text
+            name: 1a5a1478
+            widget: text
+          - hint: >-
+              Original text: 4. Prioritize features that unlock growth, key:
+              67b023d2
+            label: Text
+            name: 67b023d2
+            widget: string
+          - hint: "Original text: Understanding why your best customers \"really\" buy your product and how the \"Aha\"\_moments they experienced will provide the insight you need to prioritize the features and projects that align with what they really need instead of building a roadmap based on internal assumptions., key: -4f4ece3a"
+            label: Text
+            name: '-4f4ece3a'
+            widget: text
+          - hint: >-
+              Original text: Need to make a business case for customer
+              discovery?, key: 376efd14
+            label: Text
+            name: 376efd14
+            widget: string
+          - hint: >-
+              Original text: We wrote this guide to help founders, marketers,
+              and product managers understand how customer insights can help
+              them increase conversions, reduce CAC, and generate more revenue.,
+              key: 4a63056a
+            label: Text
+            name: 4a63056a
+            widget: text
+          - hint: >-
+              Original text: This guide is based on my own experience helping
+              companies grow through customer discovery and best practices from
+              the worlds top companies., key: -3c1e30c7
+            label: Text
+            name: '-3c1e30c7'
+            widget: text
+          - hint: 'Original text: Get the free guide, key: 1f4c9981'
+            label: Text
+            name: 1f4c9981
+            widget: string
+          - hint: "Original text: LEARN\_FOR\_YOURSELF, key: 85df112"
+            label: Text
+            name: 85df112
+            widget: string
+          - hint: 'Original text: Learn More + Pre-Order, key: -6abb5c00'
+            label: Text
+            name: '-6abb5c00'
+            widget: string
+          - hint: 'Original text: Done-FOR-YOU, key: 55d919b0'
+            label: Text
+            name: 55d919b0
+            widget: string
+          - hint: 'Original text: 6,500+, key: 5eaa8d8c'
+            label: Text
+            name: 5eaa8d8c
+            widget: string
+          - hint: 'Original text: Research Strategy, key: -1af8fba8'
+            label: Text
+            name: '-1af8fba8'
+            widget: string
+          - hint: 'Original text: Customer interviews, key: 33e0874'
+            label: Text
+            name: '33e0874'
+            widget: string
+          - hint: "Original text: Transcription\_+ Analysis, key: 7d30283f"
+            label: Text
+            name: 7d30283f
+            widget: string
+          - hint: 'Original text: Tactical Insight Reports, key: -492b75a6'
+            label: Text
+            name: '-492b75a6'
+            widget: string
+          - hint: 'Original text: Contact Us, key: 7f2746de'
+            label: Text
+            name: 7f2746de
+            widget: string
+          - hint: 'Original text: Access Free Content Right Now, key: 3ff01d13'
+            label: Text
+            name: 3ff01d13
+            widget: string
+          - hint: >-
+              Original text: Enjoy our free content and get closer to your
+              customers., key: 500ccd02
+            label: Text
+            name: 500ccd02
+            widget: string
+          - hint: 'Original text: Discovery Playbooks, key: 42f2ad46'
+            label: Text
+            name: 42f2ad46
+            widget: string
+          - hint: >-
+              Original text: Tactical field guides to help you get closer to
+              customers., key: -409dcb5d
+            label: Text
+            name: '-409dcb5d'
+            widget: string
+          - hint: 'Original text: Short Loops Podcast, key: 5f6a2d2f'
+            label: Text
+            name: 5f6a2d2f
+            widget: string
+          - hint: >-
+              Original text: Interviews with product and marketing leaders
+              exploring what they do everyday to get closer to their customers.,
+              key: d5a4d41
+            label: Text
+            name: d5a4d41
+            widget: text
+          - hint: 'Original text: Want to chat with us first?, key: 496b790a'
+            label: Text
+            name: 496b790a
+            widget: string
+          - hint: >-
+              Original text: Schedule a call. Let's think through your cutomer
+              discovery strategy., key: -257b6f5b
+            label: Text
+            name: '-257b6f5b'
+            widget: string
+          - hint: >-
+              Original text: © 2021 Balsm Labs LLC. All rights reserved., key:
+              -71ad4d44
+            label: Text
+            name: '-71ad4d44'
+            widget: string
+          - hint: 'Original text: Customer Discovery Guide [2021], key: -43ab0bc5'
+            label: Text
+            name: '-43ab0bc5'
+            widget: string
+          - hint: >-
+              Original text: Understand the impact effective customer discovery
+              can have on revenue and make a compelling case for
+              operationalizing customer insights at your company., key: 44057f27
+            label: Text
+            name: 44057f27
+            widget: text
+          - hint: >-
+              Original text: Thank you! We'll send a copy of this guide straight
+              to your inbox!, key: 3b2a55e9
+            label: Text
+            name: 3b2a55e9
+            widget: string
+          - hint: 'Original text: No spam ever, guaranteed , key: 3f4b8e7a'
+            label: Text
+            name: 3f4b8e7a
+            widget: string
+          - hint: 'Original text: 😁 , key: 3469f3c'
+            label: Text
+            name: 3469f3c
+            widget: string
+          - hint: 'Original text: Unsubscribe anytime, key: 7983244a'
+            label: Text
+            name: 7983244a
+            widget: string
+          - hint: 'Original text: 01, key: 601'
+            label: Text
+            name: '601'
+            widget: string
+          - hint: 'Original text: Text Link, key: 3610230d'
+            label: Text
+            name: 3610230d
+            widget: string
+          - hint: 'Original text: 02, key: 602'
+            label: Text
+            name: '602'
+            widget: string
+          - hint: 'Original text: 03, key: 603'
+            label: Text
+            name: '603'
+            widget: string
+          - hint: 'Original text: 04, key: 604'
+            label: Text
+            name: '604'
+            widget: string
+          - hint: >-
+              Original text: "Every company in the world will tell you they are
+              customer-driven...But after spending 20 years in my career
+              building and leading SaaS companies, I’ve learned that none of
+              that means anything unless you actually make the structural
+              decisions to ensure it.”, key: 938c67e
+            label: Text
+            name: 938c67e
+            widget: text
+          - hint: 'Original text: —David Cancel, key: -74940006'
+            label: Text
+            name: '-74940006'
+            widget: string
+          - hint: "Original text: Welcome to Getting Started with Customer Discovery. In this guide, you’ll learn about the gap between valuing customers and prioritizing them within a company. More importantly, you’ll learn the approachable ways you can close this gap by leveraging the interactions your company is already having. In closing, we highlight real examples of companies who have applied customer insights to make notable marketing, sales, and product gains.\_Here is an overview of what you’ll find in this guide:\_, key: -645bab44"
+            label: Text
+            name: '-645bab44'
+            widget: text
+          - hint: >-
+              Original text: 7 out of 10 companies speak to less than 10
+              customers a month, key: -48882954
+            label: Text
+            name: '-48882954'
+            widget: string
+          - hint: "Original text: While companies know the customer matters and many strive toward a Product-Led Growth approach, internal processes are lagging. And it shows. Only 12% of customers believe in “customer first” messaging, and 81% of brands had stagnant scores for customer experience in 2019.\_\_, key: 7471c586"
+            label: Text
+            name: 7471c586
+            widget: text
+          - hint: >-
+              Original text: True customer focus means big gains for modern
+              companies, key: 372c96e7
+            label: Text
+            name: 372c96e7
+            widget: string
+          - hint: >-
+              Original text: Forrester identified moving up just one point on
+              their Customer Experience Index can translate into an extra $244
+              million in incremental revenue for big box retailers. And
+              Product-Led Growth SaaS companies, which put customer value at the
+              heart of product and company, have over 2x valuation, 1.5x higher
+              revenue, and 9% higher revenue growth., key: -28676b38
+            label: Text
+            name: '-28676b38'
+            widget: text
+          - hint: >-
+              Original text: Customer discovery unlocks why customers behave the
+              way they do, key: -63b625ac
+            label: Text
+            name: '-63b625ac'
+            widget: string
+          - hint: "Original text: Quantitative data helps teams track market and product trends. But without qualitative data, teams are left guessing as to why customers behave in certain ways. Qualitative customer understanding reduces time-to-learning, reduces opportunity costs, and unlocks sustainable company growth.\_, key: 1e02314f"
+            label: Text
+            name: 1e02314f
+            widget: text
+          - hint: "Original text: You can learn more about your customers in minutes, not months\_, key: 5e2a0801"
+            label: Text
+            name: 5e2a0801
+            widget: string
+          - hint: 'Original text: A , key: 7ff'
+            label: Text
+            name: 7ff
+            widget: string
+          - hint: 'Original text: Discovery Sprint, key: 22264eca'
+            label: Text
+            name: 22264eca
+            widget: string
+          - hint: "Original text:  is designed to help your team glean actionable customer insights: from identifying the right segments to survey, to asking powerful questions, to analyzing data for trend analysis and patterns.\_, key: -620ce9e0"
+            label: Text
+            name: '-620ce9e0'
+            widget: text
+          - hint: "Original text: Customer insights are the secret to SaaS success\_, key: 31f4d7ca"
+            label: Text
+            name: 31f4d7ca
+            widget: string
+          - hint: "Original text: Product-Led Growth forerunners, such as Trello, Hubspot, and Appcues, showcase how insights can translate into major results such as 150% more users signing up and 37% more demo requests.\_, key: -1000bb3d"
+            label: Text
+            name: '-1000bb3d'
+            widget: text
+          - hint: 'Original text: Table of contents, key: -55e4e2f'
+            label: Text
+            name: '-55e4e2f'
+            widget: string
+          - hint: >-
+              Original text: Part 1: Most companies don’t know their customer,
+              key: 6b8b567f
+            label: Text
+            name: 6b8b567f
+            widget: string
+          - hint: >-
+              Original text: The customer matters, but processes don’t show it,
+              key: 164e9d7
+            label: Text
+            name: 164e9d7
+            widget: string
+          - hint: >-
+              Original text: The further you are from the customer, the worse
+              your product performs, key: -218a7932
+            label: Text
+            name: '-218a7932'
+            widget: string
+          - hint: >-
+              Original text: Customer understanding isn’t a nice-to-have, key:
+              -59686978
+            label: Text
+            name: '-59686978'
+            widget: string
+          - hint: >-
+              Original text: Part 2: Customer discovery, or how to know your
+              customer, key: -504a365
+            label: Text
+            name: '-504a365'
+            widget: string
+          - hint: >-
+              Original text: What qualitative discovery is and isn’t, key:
+              -10e8ce5f
+            label: Text
+            name: '-10e8ce5f'
+            widget: string
+          - hint: "Original text: What are the objectives of customer discovery?\_, key: -55bbd057"
+            label: Text
+            name: '-55bbd057'
+            widget: string
+          - hint: >-
+              Original text: Part 3: How to implement a customer discovery
+              process, key: -4d1b36fe
+            label: Text
+            name: '-4d1b36fe'
+            widget: string
+          - hint: >-
+              Original text: Right people, right time, right information, key:
+              -54631044
+            label: Text
+            name: '-54631044'
+            widget: string
+          - hint: 'Original text: Analyze what you collect, key: -791a24bf'
+            label: Text
+            name: '-791a24bf'
+            widget: string
+          - hint: "Original text: Leverage insights for growth\_, key: 137e4488"
+            label: Text
+            name: '137e4488'
+            widget: string
+          - hint: >-
+              Original text: Part 4: Applying and benefitting from customer
+              insights, key: -6fca4856
+            label: Text
+            name: '-6fca4856'
+            widget: string
+          - hint: >-
+              Original text: Marketing: Improve positioning, copy, and content
+              strategy, key: 7ddaaca5
+            label: Text
+            name: 7ddaaca5
+            widget: string
+          - hint: >-
+              Original text: Product: Remove roadblocks and prioritize value,
+              key: -3546eed4
+            label: Text
+            name: '-3546eed4'
+            widget: string
+          - hint: >-
+              Original text: Sales: Optimize onboarding and improve
+              time-to-value, key: 1b7bec1a
+            label: Text
+            name: 1b7bec1a
+            widget: string
+          - hint: 'Original text: Chapter 1, key: -2daf3f02'
+            label: Text
+            name: '-2daf3f02'
+            widget: string
+          - hint: >-
+              Original text: Getting started with customer discovery, key:
+              -4c440a13
+            label: Text
+            name: '-4c440a13'
+            widget: string
+          - hint: >-
+              Original text: In the Product-Led Growth era, customer
+              understanding is more important than ever. Yet most companies
+              aren’t prioritizing customers, and the symptoms are troubling.,
+              key: -8eaf78c
+            label: Text
+            name: '-8eaf78c'
+            widget: text
+          - hint: "Original text: The customer matters, but processes don’t show it\_, key: 2b3851a9"
+            label: Text
+            name: 2b3851a9
+            widget: string
+          - hint: "Original text: Companies know the customer matters. However, data shows most companies aren’t talking with customers or leveraging customer insights for scalable growth.\_, key: -69fa63da"
+            label: Text
+            name: '-69fa63da'
+            widget: text
+          - hint: 'Original text: A Capgemini , key: 1b8855d8'
+            label: Text
+            name: 1b8855d8
+            widget: string
+          - hint: 'Original text: study, key: 68b0dc9'
+            label: Text
+            name: 68b0dc9
+            widget: string
+          - hint: >-
+              Original text:  found that while 75 percent of companies believe
+              themselves to be customer-centric, only 30 percent of customers
+              believe this to be the case. When ProfitWell , key: 53dd4a11
+            label: Text
+            name: 53dd4a11
+            widget: text
+          - hint: >-
+              Original text: analyzed over 3,000 subscription companies, key:
+              53c24de5
+            label: Text
+            name: 53c24de5
+            widget: string
+          - hint: >-
+              Original text:  and 1.2 million consumers, SaaS executives
+              indicated that 7 out 10 organizations are speaking to less than 10
+              customers per month in a non-sales research capacity., key:
+              -4de49b9
+            label: Text
+            name: '-4de49b9'
+            widget: text
+          - hint: >-
+              Original text: Other research indicates nearly half of companies
+              aren’t even asking customers for feedback, let alone researching
+              them. A HubSpot analysis found that 42% of companies don’t ask
+              customers for feedback, and only 19% have a formal customer
+              advocacy program. Even in the few companies where customer
+              insights are a priority, , key: -32115ad
+            label: Text
+            name: '-32115ad'
+            widget: text
+          - hint: 'Original text: User Interview research, key: -4e771031'
+            label: Text
+            name: '-4e771031'
+            widget: string
+          - hint: "Original text:  indicates less than 40% of stakeholders know how to access research findings. Many major companies aren’t collecting qualitative customer data or don’t know how to act on that data when they do collect it.\_, key: -5dfc120a"
+            label: Text
+            name: '-5dfc120a'
+            widget: text
+          - hint: >-
+              Original text: Worse, while companies may fool themselves into
+              thinking they’re customer-centric, they’re not fooling customers.
+              Only 12% of people , key: -12fc14fe
+            label: Text
+            name: '-12fc14fe'
+            widget: text
+          - hint: 'Original text: believe company messaging, key: 49186ad5'
+            label: Text
+            name: 49186ad5
+            widget: string
+          - hint: "Original text:  that claims to put the “customer first.”\_, key: -25ff5d64"
+            label: Text
+            name: '-25ff5d64'
+            widget: string
+          - hint: >-
+              Original text: “Saying your company is customer-centric is easy.
+              Actually being customer-centric requires that you lead by example
+              and walk the walk every day in every situation.” , key: 7a397276
+            label: Text
+            name: 7a397276
+            widget: text
+          - hint: 'Original text: – Todd Olson, CEO/Founder at Pendo, key: -4e3ac785'
+            label: Text
+            name: '-4e3ac785'
+            widget: string
+          - hint: "Original text: Companies say the customer matters, but most internal processes, practices, and budgets reflect otherwise. And this gap manifests itself in a number of expensive and troubling ways.\_\_, key: -44c58e7"
+            label: Text
+            name: '-44c58e7'
+            widget: text
+          - hint: >-
+              Original text: 7 out of 10 organizations speak to less than 10
+              customers per month; only 19% of companies have a formal customer
+              advocacy programer; only 12% of customer believe “customer first”
+              company messaging, key: 18125ec4
+            label: Text
+            name: 18125ec4
+            widget: text
+          - hint: "Original text: When a company fails to research customers, processize insight collection, and implement understanding, certain symptoms routinely appear. Most often, this looks like poor product engagement, flailing customer experiences, and expensive support inefficiencies.\_, key: 227b5e55"
+            label: Text
+            name: 227b5e55
+            widget: text
+          - hint: "Original text: Wasted features and poor product engagement\_, key: -5c724e38"
+            label: Text
+            name: '-5c724e38'
+            widget: string
+          - hint: >-
+              Original text: When ProfitWell asked product leaders to assess the
+              last 5,000 features they’ve built, leaders were confident they
+              delivered high value features customers are willing to pay for.
+              Yet when ProfitWell then asked , key: 69bdf236
+            label: Text
+            name: 69bdf236
+            widget: text
+          - hint: 'Original text: customers, key: 600e7c55'
+            label: Text
+            name: 600e7c55
+            widget: string
+          - hint: 'Original text:  to assess features,, key: -5c43cf48'
+            label: Text
+            name: '-5c43cf48'
+            widget: string
+          - hint: 'Original text:  the data, key: -399661e7'
+            label: Text
+            name: '-399661e7'
+            widget: string
+          - hint: "Original text:  told a different story. Customers ranked the majority of features as both low value and low willingness to pay, or high value but low willingness to pay.\_\_\_, key: -2b282646"
+            label: Text
+            name: '-2b282646'
+            widget: text
+          - hint: 'Original text: Via , key: 28adf2'
+            label: Text
+            name: 28adf2
+            widget: string
+          - hint: >-
+              Original text:
+              https://www.profitwell.com/blog/customer-research-benchmarks, key:
+              -7332eebe
+            label: Text
+            name: '-7332eebe'
+            widget: string
+          - hint: >-
+              Original text: This is in line with earlier research from The
+              Standish Group that , key: -49cf64cb
+            label: Text
+            name: '-49cf64cb'
+            widget: string
+          - hint: 'Original text: indicated, key: -2a704335'
+            label: Text
+            name: '-2a704335'
+            widget: string
+          - hint: "Original text:  45% of features software projects ship are never even used. The opportunity costs from producing these features, not to mention the ones that teams abandon and never launch, are enormous.\_, key: -77fe67f7"
+            label: Text
+            name: '-77fe67f7'
+            widget: text
+          - hint: >-
+              Original text: “It’s impossible to be customer-obsessed without
+              addressing the digital expectations of those customers. But too
+              often, those efforts get swallowed by technical minutia and fall
+              prey to a pursuit of digital for the sake of digital. One common
+              example is the proliferation of new mobile apps created to attract
+              customers but that go unused. Despite the more than 1.6 million
+              apps available to Android users and 1.5 million apps available in
+              Apple’s App Store, customers still spend 84% of their time in just
+              five of their favorite apps. The result: lots of shiny new
+              (digital) objects that your customers don’t like or even care
+              about.” , key: -1073502f
+            label: Text
+            name: '-1073502f'
+            widget: text
+          - hint: "Original text: – Forrester, The Operating model for Customer Obsession\_, key: -284148ae"
+            label: Text
+            name: '-284148ae'
+            widget: string
+          - hint: >-
+              Original text: Rising acquisition costs and poor customer
+              experiences, key: -2ed836eb
+            label: Text
+            name: '-2ed836eb'
+            widget: string
+          - hint: >-
+              Original text: Software is easier and cheaper to produce than
+              ever. Because of this lower production bar and increased
+              competition, customer acquisition costs (CAC) are rising for both
+              B2B and B2C companies. Research from ProfitWell indicates that CAC
+              is up , key: -3b53d92f
+            label: Text
+            name: '-3b53d92f'
+            widget: text
+          - hint: 'Original text: nearly 60%, key: 206aa5c0'
+            label: Text
+            name: 206aa5c0
+            widget: string
+          - hint: "Original text:  across all sectors. For B2B markets that have been established for a decade and a half, the competition is even more fierce. In those sectors, CAC has increased by 70-75%.\_, key: -1baf492a"
+            label: Text
+            name: '-1baf492a'
+            widget: text
+          - hint: >-
+              Original text: Given how expensive it is to acquire customers,
+              companies would do well to focus on customer experience and
+              retention. But while executives know this is good practice, data
+              shows there is disconnect here as well. According to Forrester, an
+              overwhelming 87% of marketing decision makers say improving
+              customer experience is their top priority, but Forrester’s
+              research also indicates that , key: -573073db
+            label: Text
+            name: '-573073db'
+            widget: text
+          - hint: 'Original text: customer experiences, key: 28942307'
+            label: Text
+            name: '28942307'
+            widget: string
+          - hint: >-
+              Original text:  aren’t getting better. In 2019, 81% of brands had,
+              key: 39fd76a0
+            label: Text
+            name: 39fd76a0
+            widget: string
+          - hint: 'Original text:  stagnant scores, key: 189f82a1'
+            label: Text
+            name: 189f82a1
+            widget: string
+          - hint: "Original text:  for customer experiences.\_, key: aa6e4d0"
+            label: Text
+            name: aa6e4d0
+            widget: string
+          - hint: "Original text: Expensive support inefficiencies\_\_, key: 544ffe32"
+            label: Text
+            name: 544ffe32
+            widget: string
+          - hint: >-
+              Original text: When Hubspot analyzed a year’s worth of support
+              cases, they discovered an expensive problem—41% of support
+              requests were solved with a documented solution. When they tallied
+              up the time support employees had spent addressing these cases,
+              Hubspot realized they , key: -511d2e55
+            label: Text
+            name: '-511d2e55'
+            widget: text
+          - hint: 'Original text: spent $7M, key: -51c24b98'
+            label: Text
+            name: '-51c24b98'
+            widget: string
+          - hint: "Original text:  helping customers find existing answers.\_, key: 1bfb308f"
+            label: Text
+            name: 1bfb308f
+            widget: string
+          - hint: >-
+              Original text: Because Hubspot prioritizes customer success, they
+              were able to correct this expensive flaw and serve customers even
+              better. But for the 56% of companies who don’t offer a knowledge
+              base at all, the annual costs are even higher. Especially in light
+              of research from Forrester that indicates , key: -f739065
+            label: Text
+            name: '-f739065'
+            widget: text
+          - hint: 'Original text: 72% of US online customers, key: -318e7389'
+            label: Text
+            name: '-318e7389'
+            widget: string
+          - hint: "Original text:  prefer to use a company’s website to get answers to their questions.\_, key: d813b33"
+            label: Text
+            name: d813b33
+            widget: string
+          - hint: "Original text: 72% of customers prefer to use a company’s website to get answers; 56% of companies don’t offer any knowledge base\_, key: 428a6445"
+            label: Text
+            name: 428a6445
+            widget: text
+          - hint: "Original text: Customer understanding isn’t a nice-to-have; it’s essential\_, key: 63237cc0"
+            label: Text
+            name: 63237cc0
+            widget: string
+          - hint: 'Original text: Back in 2011, Forrester , key: -7366eeb6'
+            label: Text
+            name: '-7366eeb6'
+            widget: string
+          - hint: 'Original text: predicted, key: -505910c8'
+            label: Text
+            name: '-505910c8'
+            widget: string
+          - hint: "Original text:  our current time period would be the age of the customer.\_, key: 4fc46dad"
+            label: Text
+            name: 4fc46dad
+            widget: string
+          - hint: "Original text: “The only source of competitive advantage is the one that can survive technology-fueled disruption — an obsession with understanding, delighting, connecting with, and serving customers. In this age, companies that thrive are those that tilt their budgets toward customer knowledge and relationships.”\_ , key: 2f3f78da"
+            label: Text
+            name: 2f3f78da
+            widget: text
+          - hint: >-
+              Original text: – Forrester, Competitive Strategy in the Age of the
+              Customer, key: -ba7236a
+            label: Text
+            name: '-ba7236a'
+            widget: string
+          - hint: >-
+              Original text: Their prediction proved true. In 2019, Forrester
+              found that moving up just one point on Forrester’s Customer
+              Experience Index , key: -1656706f
+            label: Text
+            name: '-1656706f'
+            widget: text
+          - hint: 'Original text: translated, key: -66a2c72a'
+            label: Text
+            name: '-66a2c72a'
+            widget: string
+          - hint: "Original text:  into an extra $244 million in incremental revenue for big box retailers. A decrease in experience translated to an equally dramatic loss.\_, key: -1c667252"
+            label: Text
+            name: '-1c667252'
+            widget: text
+          - hint: 'Original text: Today’s top , key: -7e6533f0'
+            label: Text
+            name: '-7e6533f0'
+            widget: string
+          - hint: 'Original text: Product-Led Growth, key: 16185d7a'
+            label: Text
+            name: 16185d7a
+            widget: string
+          - hint: >-
+              Original text:  (PLG) companies indicate that customer-centricity
+              has a proportionately large impact in SaaS as well. Compared to
+              other players in the SaaS market, PLG companies have over 2x
+              valuation, over 1.5x higher revenue, and over 9% higher revenue
+              growth., key: 1f008a93
+            label: Text
+            name: 1f008a93
+            widget: text
+          - hint: >-
+              Original text:
+              https://openviewpartners.com/product-led-growth-index/, key:
+              202852f0
+            label: Text
+            name: 202852f0
+            widget: string
+          - hint: >-
+              Original text: In today’s climate, SaaS companies can’t win their
+              markets without strong products. But teams can’t build strong
+              products without rich customer understanding. As Hiten Shah , key:
+              3163597c
+            label: Text
+            name: 3163597c
+            widget: text
+          - hint: 'Original text: observes, key: 14c752d7'
+            label: Text
+            name: 14c752d7
+            widget: string
+          - hint: >-
+              Original text: , “You’ll create the best product if you know more
+              about customers than your competitors and you act on that
+              knowledge.”, key: 3031f136
+            label: Text
+            name: 3031f136
+            widget: text
+          - hint: >-
+              Original text: So how do teams get closer to the customer, not
+              just in theory, but in revenue-boosting practice? , key: 3755e992
+            label: Text
+            name: '3755e992'
+            widget: text
+          - hint: 'Original text: Chapter 2, key: -2daf3f01'
+            label: Text
+            name: '-2daf3f01'
+            widget: string
+          - hint: >-
+              Original text: Customer discovery, or how to know your customer,
+              key: -4baba6b0
+            label: Text
+            name: '-4baba6b0'
+            widget: string
+          - hint: "Original text: Quantitative data identifies what is happening in our products and markets. Qualitative data helps you learn \"why\" your customers buy and identifies new opportunities. Your team needs both.\_, key: -577e0b2c"
+            label: Text
+            name: '-577e0b2c'
+            widget: text
+          - hint: >-
+              Original text: What qualitative customer discovery is and isn’t,
+              key: 5328d4e1
+            label: Text
+            name: 5328d4e1
+            widget: string
+          - hint: >-
+              Original text: Customer discovery is more than interaction, key:
+              -4826df26
+            label: Text
+            name: '-4826df26'
+            widget: string
+          - hint: "Original text: By necessity, SaaS businesses interact with their customers. They send marketing emails, make sales pitches, and provide timely support. Leaders often look at this activity and say, “We’re talking with customers all the time!”\_\_, key: 17d50e7c"
+            label: Text
+            name: 17d50e7c
+            widget: text
+          - hint: >-
+              Original text: However, having conversations with customers
+              doesn’t make a company customer-driven. And it doesn’t mean the
+              company is conducting customer discovery., key: -229049ba
+            label: Text
+            name: '-229049ba'
+            widget: text
+          - hint: >-
+              Original text: Sales, support, and marketing conversations all
+              happen in a specific context where, 99% of the time, the point of
+              these conversations isn’t to learn about the customer. These
+              activities aren’t wrong, but they aren’t discovery., key: 3b647b50
+            label: Text
+            name: 3b647b50
+            widget: text
+          - hint: >-
+              Original text: What’s more, employees having these conversations
+              usually aren’t , key: -23568388
+            label: Text
+            name: '-23568388'
+            widget: string
+          - hint: 'Original text: incentivized, key: 6e798eca'
+            label: Text
+            name: 6e798eca
+            widget: string
+          - hint: >-
+              Original text:  to learn about the customer. They’re incentivized
+              to perform or deliver; their metrics are activities such as
+              tickets closed, sprints completed, hours spent, and amount of data
+              collected—metrics misaligned with the customer., key: -5631add9
+            label: Text
+            name: '-5631add9'
+            widget: text
+          - hint: >-
+              Original text: Customer discovery is more than quantitative data
+              collection, key: -79d36c3d
+            label: Text
+            name: '-79d36c3d'
+            widget: string
+          - hint: >-
+              Original text: Other businesses assume they discover who their
+              customers are through quantitative data. Data provides valuable
+              information about what customers are doing and how, but product
+              and market metrics only paint , key: -550244cc
+            label: Text
+            name: '-550244cc'
+            widget: text
+          - hint: 'Original text: part, key: 3463f3'
+            label: Text
+            name: 3463f3
+            widget: string
+          - hint: "Original text:  of the picture teams need.\_, key: 710b252c"
+            label: Text
+            name: 710b252c
+            widget: string
+          - hint: "Original text: “...the quantitative data will tell us what’s happening or not happening; but it can’t tell us why something’s happening or not happening.”\_ , key: 24b30afd"
+            label: Text
+            name: 24b30afd
+            widget: text
+          - hint: >-
+              Original text: – Marty Cagan, Partner at Silicon Valley Product
+              Group, key: 6bb0a633
+            label: Text
+            name: 6bb0a633
+            widget: string
+          - hint: >-
+              Original text: To truly align products with customers and innovate
+              solutions that meet real needs, internal teams need to understand
+              the, key: -6e3d0a2e
+            label: Text
+            name: '-6e3d0a2e'
+            widget: text
+          - hint: 'Original text:  why , key: 1fa9d78'
+            label: Text
+            name: 1fa9d78
+            widget: string
+          - hint: 'Original text: behind the , key: -60c61f0b'
+            label: Text
+            name: '-60c61f0b'
+            widget: string
+          - hint: 'Original text: what, key: 37aac4'
+            label: Text
+            name: 37aac4
+            widget: string
+          - hint: "Original text: .\_, key: 632"
+            label: Text
+            name: '632'
+            widget: string
+          - hint: >-
+              Original text: Qualitative customer discovery is all about why,
+              key: 343195fd
+            label: Text
+            name: 343195fd
+            widget: string
+          - hint: "Original text: Qualitative customer discovery includes all the activities around aligning companies with their customers’ real lives and addressable problems.\_, key: -211d5422"
+            label: Text
+            name: '-211d5422'
+            widget: text
+          - hint: >-
+              Original text: “User research is not only about understanding your
+              users, but understanding how they think, act, and feel when it
+              comes to engaging with the product or service you are offering.
+              Companies have plenty of demographic data about their audience
+              (age, gender, location), but user research can actually give you
+              qualitative, behavioral insights about what your users do or how
+              they use your product. In all these years working in UX, there has
+              never been a single time when I did user research and learned
+              nothing new. You simply cannot ‘know your users too much.” , key:
+              -fb159ae
+            label: Text
+            name: '-fb159ae'
+            widget: text
+          - hint: >-
+              Original text: – Fabricio Teixeira, Founder of UX Collective, key:
+              63e24322
+            label: Text
+            name: '63e24322'
+            widget: string
+          - hint: "Original text: And while some customer discovery tactics, such as group studies, can be expensive, many are not. Surveys (in-app or otherwise) and conversations with customers can take minutes and happen every day.\_, key: -371612fc"
+            label: Text
+            name: '-371612fc'
+            widget: text
+          - hint: "Original text: For example, Discovery Sprints are designed to help you collect and leverage qualitative customer feedback without hiring an expensive in-house UX research team. Our service is powered by smart humans running constantly improving playbooks to help you collect, identity, and leverage qualitative insights on a daily basis.\_, key: 68dfe62e"
+            label: Text
+            name: 68dfe62e
+            widget: text
+          - hint: >-
+              Original text: What are the objectives of customer discovery?,
+              key: -5d9ab429
+            label: Text
+            name: '-5d9ab429'
+            widget: string
+          - hint: 'Original text: Improve time to learning, key: 5ef58218'
+            label: Text
+            name: 5ef58218
+            widget: string
+          - hint: "Original text: There are two stages of producing a product or feature. The first stage is discovery, where a company or team determines what to pursue. The second stage is delivery, where a company or team delivers what they decided to pursue. In discovery, time to learning is priority; in delivery, time to market is the primary concern.\_, key: -527ef086"
+            label: Text
+            name: '-527ef086'
+            widget: text
+          - hint: 'Original text: The 2020 , key: -dc9b9eb'
+            label: Text
+            name: '-dc9b9eb'
+            widget: string
+          - hint: 'Original text: State of User Research report, key: 3dc8d0fe'
+            label: Text
+            name: 3dc8d0fe
+            widget: string
+          - hint: >-
+              Original text: , which surveyed over 300 user researchers,
+              identified that the top goal of most research programs is
+              understanding customer needs. Among teams who gather qualitative
+              customer insights, their favorite outcome is making decisions with
+              better evidence., key: 34725487
+            label: Text
+            name: '34725487'
+            widget: text
+          - hint: >-
+              Original text: Customer understanding illuminates the discovery
+              process for teams. When teams know what the customer wants and
+              why, they can easily identify the next product improvement. This
+              understanding speeds up time to learning in discovery, and it
+              helps teams get to market quickly in delivery as well. Qualitative
+              insights speed up the entire process of producing a product or
+              feature., key: -31ab69aa
+            label: Text
+            name: '-31ab69aa'
+            widget: text
+          - hint: "Original text: Cultivate continuous understanding\_, key: 73fb1038"
+            label: Text
+            name: 73fb1038
+            widget: string
+          - hint: >-
+              Original text: Customers’ lives aren’t stagnant. To stay relevant
+              and maintain growth, companies must continuously assess what is
+              and isn’t important to their customer base. In light of the global
+              pandemic of 2020, positioning expert April Dunford explains:, key:
+              3a249341
+            label: Text
+            name: 3a249341
+            widget: text
+          - hint: >-
+              Original text: “The key thing is that you need to be tuned into
+              what's valuable for your customers right now. You need to be open
+              to the idea that their priorities may have shifted and the way you
+              position your offering might have to shift to stay aligned with
+              them.”, key: 4a976fdb
+            label: Text
+            name: 4a976fdb
+            widget: text
+          - hint: "Original text: Customer discovery keeps companies aligned with customer needs, whether the market shifts slightly to accommodate a new player or the entire economy shifts dramatically in light of world events.\_, key: -718f7bbb"
+            label: Text
+            name: '-718f7bbb'
+            widget: text
+          - hint: 'Original text: Reduce expensive opportunity costs, key: 15752a4a'
+            label: Text
+            name: 15752a4a
+            widget: string
+          - hint: "Original text: Companies often cite reasons such as “it’s too expensive” or “it’s too time consuming” for why they don’t invest more in customer understanding. However, building the wrong features (not to mention product) is significantly more expensive and time consuming.\_, key: 42238e56"
+            label: Text
+            name: '42238e56'
+            widget: text
+          - hint: "Original text: Imagine 1 frontend developer, 1 backend developer, 1 designer, and 1 project manager spend two weeks producing a small feature. If you assumed the average hourly rate for each of these, and assume the developers each spend 30 hours on the product, the designer 50, and the project manager 30, the cost for this small feature would be around [cost].\_, key: -679a717c"
+            label: Text
+            name: '-679a717c'
+            widget: text
+          - hint: >-
+              Original text: This is the price of building one small feature
+              that delivers little to no value for the customers and business.
+              The true opportunity cost is much higher, because opportunity cost
+              accounts for , key: -48abd56c
+            label: Text
+            name: '-48abd56c'
+            widget: text
+          - hint: 'Original text: not, key: 1aad3'
+            label: Text
+            name: 1aad3
+            widget: string
+          - hint: "Original text:  building the right feature as well.\_, key: -e09e87b"
+            label: Text
+            name: '-e09e87b'
+            widget: string
+          - hint: "Original text: Collecting and organizing customer insights lowers or eliminates these opportunity costs by reducing guesswork for the product teams.\_, key: 1424aef3"
+            label: Text
+            name: 1424aef3
+            widget: text
+          - hint: >-
+              Original text: “...it’s critical to avoid guessing as much as
+              possible. Talk to your customers, understand the value you’re
+              delivering. Do all the homework to make sure that you’re getting
+              all the details right.” , key: -625fde36
+            label: Text
+            name: '-625fde36'
+            widget: text
+          - hint: >-
+              Original text: – Scott Williamson, Vice President of Product
+              Management at GitLab, key: 4ef035eb
+            label: Text
+            name: 4ef035eb
+            widget: string
+          - hint: 'Original text: Unlock sustainable growth, key: -1490e07a'
+            label: Text
+            name: '-1490e07a'
+            widget: string
+          - hint: >-
+              Original text: Companies are increasingly data-rich. They have
+              reports on the market, metrics on product usage, social media
+              counts, and countless tracking around events. In fact, most
+              companies have more data than they know what to do with, but fewer
+              insights than they need. According to Forrester, only , key:
+              1453028b
+            label: Text
+            name: 1453028b
+            widget: text
+          - hint: 'Original text: 29% of companies, key: 63e4e4f4'
+            label: Text
+            name: 63e4e4f4
+            widget: string
+          - hint: "Original text:  say they’re good at mapping data and analytics to measurable business outcomes.\_, key: 2064352d"
+            label: Text
+            name: 2064352d
+            widget: string
+          - hint: >-
+              Original text: However, the companies that can both identify and
+              act on customer insights are the ones who get ahead., key:
+              -77d9e0f4
+            label: Text
+            name: '-77d9e0f4'
+            widget: text
+          - hint: >-
+              Original text: “Customer-obsessed firms embed digital capabilities
+              in every nook and cranny of the organization. Dominos, for
+              example, has used digital technology to push customer interactions
+              to new heights with features like text-based ordering and to
+              iterate quickly based on consumer feedback. This type of
+              leadership has spurred 9.8% projected growth over the past two
+              years.” , key: 38ee523d
+            label: Text
+            name: 38ee523d
+            widget: text
+          - hint: "Original text: –\_Forrester, The Operating Model for Customer Obsession , key: 57ecc732"
+            label: Text
+            name: 57ecc732
+            widget: string
+          - hint: 'Original text: Chapter 3, key: -2daf3f00'
+            label: Text
+            name: '-2daf3f00'
+            widget: string
+          - hint: >-
+              Original text: How to implement ongoing qualitative customer
+              discovery, key: 7bc276da
+            label: Text
+            name: 7bc276da
+            widget: string
+          - hint: >-
+              Original text: Capture the right information, analyze what you
+              collect for insights, leverage those insights for growth. Rinse
+              and repeat., key: 377b234a
+            label: Text
+            name: 377b234a
+            widget: text
+          - hint: >-
+              Original text: First things first: lay a sure foundation, key:
+              5deaf3b8
+            label: Text
+            name: 5deaf3b8
+            widget: string
+          - hint: "Original text: Introducing a customer discovery process is worthwhile, but it can be tricky. To orchestrate change well, you'll need stakeholder and team buy-in. You'll also need to lay groundwork around why the process matters, how it will work, and what results your company can expect.\_, key: -1f63129e"
+            label: Text
+            name: '-1f63129e'
+            widget: text
+          - hint: "Original text: Here are several steps you can take to lay a foundation in your organization:\_, key: -47cb9779"
+            label: Text
+            name: '-47cb9779'
+            widget: string
+          - hint: 'Original text: Establish vision:, key: e6f454b'
+            label: Text
+            name: e6f454b
+            widget: string
+          - hint: "Original text:  If your team or stakeholders aren't sold on understanding the customer, you'll want to start here. Use data and evidence from this guide to explain the benefits of understanding your customer. Paint a vivid picture of customer insights ROI.\_\_, key: 300b5bc6"
+            label: Text
+            name: 300b5bc6
+            widget: text
+          - hint: 'Original text: Determine process:, key: -5a448308'
+            label: Text
+            name: '-5a448308'
+            widget: string
+          - hint: "Original text:  Identify what type of data teams will collect, how they will gather it, and where it will live. Define the shelf-life of your data as well. Will you keep all of it for three years? Or might some insights expire?\_, key: 3ae6c213"
+            label: Text
+            name: 3ae6c213
+            widget: text
+          - hint: 'Original text: Create organization: , key: -5eb62ce3'
+            label: Text
+            name: '-5eb62ce3'
+            widget: string
+          - hint: >-
+              Original text: Provide clarity around how you'll organize and
+              label insights. What kind of taxonomy or classification system
+              will you use? How will you store insights in a clear and useful
+              way?, key: -33e1161d
+            label: Text
+            name: '-33e1161d'
+            widget: text
+          - hint: 'Original text: Invite ownership:, key: -286ff3fe'
+            label: Text
+            name: '-286ff3fe'
+            widget: string
+          - hint: "Original text:  Decide whether one person or the entire team will be responsible for managing insights. Explain who will have access to the insights, and who is responsible for their upkeep.\_, key: -d3f5e61"
+            label: Text
+            name: '-d3f5e61'
+            widget: text
+          - hint: 'Original text: Plan distribution:, key: 5cc7c19f'
+            label: Text
+            name: 5cc7c19f
+            widget: string
+          - hint: "Original text:  An insight locked in a vault is hardly useful. Determine how teams will access and leverage insights for their own uses. How will teams collaborate around the collected information?\_, key: -566183fa"
+            label: Text
+            name: '-566183fa'
+            widget: text
+          - hint: 'Original text: Select a tool: , key: 7aa311e1'
+            label: Text
+            name: 7aa311e1
+            widget: string
+          - hint: "Original text: What tool(s) will you use to interact with the customer and aggregate insights? Consider security, data structure, integrations, and features like search.\_, key: 7b1bd2f2"
+            label: Text
+            name: 7b1bd2f2
+            widget: text
+          - hint: 'Original text: Define success:, key: -6b66bec4'
+            label: Text
+            name: '-6b66bec4'
+            widget: string
+          - hint: "Original text:  If your process is working, what will success look like? And how will you measure progress along the way? Identify what a successful customer discovery process will produce for your organization.\_, key: 36720bf4"
+            label: Text
+            name: 36720bf4
+            widget: text
+          - hint: "Original text: Once you lay a foundation, you’re ready to start collecting insights.\_, key: 52562f60"
+            label: Text
+            name: 52562f60
+            widget: string
+          - hint: 'Original text: Engage the right people, key: 211a5b21'
+            label: Text
+            name: 211a5b21
+            widget: string
+          - hint: "Original text: The “right” customer will always depend on what question your team is asking. In many cases, the right customer will fall in one of three broad categories: recent sign-ups, recent cancellations, and product advocates.\_, key: 235b0788"
+            label: Text
+            name: 235b0788
+            widget: text
+          - hint: "Original text: Recent sign-ups can help answer questions such as, “why are customers choosing our product?” and “what’s going on in their lives that caused them to sign up?” The responses and patterns in the responses here can heavily influence landing page strategy, acquisition channels, and onboarding flows.\_, key: -c166518"
+            label: Text
+            name: '-c166518'
+            widget: text
+          - hint: "Original text: Recent cancellations can help answer questions such as, “why did you quit our product?” Insights here can help teams make strategic improvements such as improving positioning (perhaps customers cite unmet expectations) and reducing churn (by addressing major frustrations).\_, key: 3f176e2b"
+            label: Text
+            name: 3f176e2b
+            widget: text
+          - hint: "Original text: And product advocates, or those who excel with your product and advocate it to others, help teams answer “who is our ideal customer” and “what job are they trying to do?” Insights here help hone segmentation and positioning, as well as feature prioritization.\_\_\_, key: -3272bc51"
+            label: Text
+            name: '-3272bc51'
+            widget: text
+          - hint: "Original text: The right segment varies by company and question, which is why we'll help your team identify the right time and place to interact with customers, such as immediately after a customers first project completion or 5 consecutive days of activity.\_, key: 6442357b"
+            label: Text
+            name: 6442357b
+            widget: text
+          - hint: 'Original text: Ask at the right time, key: 5818bae6'
+            label: Text
+            name: 5818bae6
+            widget: string
+          - hint: "Original text: Imagine your team is surveying recent sign-ups. The responses your team will receive if they prompt customers within 24 hours of signing up will be very different than the responses they will receive if they prompt customers within 3 weeks of signing up. With the first group, the customer’s motivations and expectations will be much fresher and much more relevant to targeting and converting other new customers.\_, key: 52562e7f"
+            label: Text
+            name: 52562e7f
+            widget: text
+          - hint: >-
+              Original text: Similar logic applies for any other segment your
+              team targets. Not only do they want to select the right segment to
+              engage, they want to engage them at the right time. The “right”
+              time means the time most likely to deliver actionable feedback
+              relative to the problem your team is trying to solve., key:
+              -51c227aa
+            label: Text
+            name: '-51c227aa'
+            widget: text
+          - hint: "Original text:  can help you target the right customers at the right event-driven intervals for fresh insights.\_, key: 7f3400ee"
+            label: Text
+            name: 7f3400ee
+            widget: text
+          - hint: "Original text: Pose the right questions\_, key: 2a75155"
+            label: Text
+            name: 2a75155
+            widget: string
+          - hint: "Original text: Once your team has identified the right people to ask and the right time to ask them, they’ll need to ask the right questions. And counterintuitively, the right question is never a leading question or one that asks the customer to speculate on future behavior (all people are notoriously bad at predicting this).\_, key: -3556ae5e"
+            label: Text
+            name: '-3556ae5e'
+            widget: text
+          - hint: >-
+              Original text: “Always be talking to your customers. Uncover the
+              pain, solve the problem and then build on ramps that allow
+              customers to share more of their pain so you can repeat the cycle.
+              Note that I don’t mean ask customers what features will satisfy
+              them—that’s an endless and thankless dark path. Instead, focus on
+              core needs and use the team’s ingenuity to find solutions
+              consistent with your vision.” , key: -2ec97b94
+            label: Text
+            name: '-2ec97b94'
+            widget: text
+          - hint: >-
+              Original text: – Oji Udezue, Vice President of Product, Calendly,
+              key: 5e2bb3b8
+            label: Text
+            name: 5e2bb3b8
+            widget: string
+          - hint: >-
+              Original text: A Discovery Sprint provides the ability to gather
+              valuable customer feedback at key milestones using , key:
+              -6df13886
+            label: Text
+            name: '-6df13886'
+            widget: text
+          - hint: 'Original text: Jobs-to-be-done interviews, key: 1d8bf761'
+            label: Text
+            name: 1d8bf761
+            widget: string
+          - hint: "Original text:  and targeted surveys.\_ \_\_, key: 7968ca7c"
+            label: Text
+            name: 7968ca7c
+            widget: string
+          - hint: 'Original text: Analyze what you’ve collected, key: -18492226'
+            label: Text
+            name: '-18492226'
+            widget: string
+          - hint: "Original text: Once your team collects qualitative data, they need a way to separate signals from noise. We use a mix of human intelligence and natural language processing (NLP) to run sentiment and trend analyses, helping your team quickly identify patterns.\_, key: aecc302"
+            label: Text
+            name: aecc302
+            widget: text
+          - hint: "Original text: Additional tools and sorting, such as word clouds that help identify key phrases, enable teams to parse the motivations and needs of customers. An emphasis on Jobs-to-be-done (JTBD) enables teams to highlight desired outcomes, identify powerful motivations, and categorize alternative solutions.\_Build and market products to the whole customer, in the context of their busy lives, with rich and visually represented insights.\_, key: d75366c"
+            label: Text
+            name: d75366c
+            widget: text
+          - hint: >-
+              Original text: “The advantage we have as modern marketers is
+              access to a wealth of data generated via online interactions. Each
+              interaction is an opportunity to collect additional data points
+              not only about individual prospects, but also about what the
+              customer journey looks like overall. The key to extracting value
+              from all this information is knowing how to harness it to reveal
+              insights that inform your sales and marketing efforts.” , key:
+              d80f266
+            label: Text
+            name: d80f266
+            widget: text
+          - hint: "Original text: – Laura Borghesi, Senior Director, Growth Marketing, MongoDB\_, key: -b635dc8"
+            label: Text
+            name: '-b635dc8'
+            widget: string
+          - hint: >-
+              Original text: Leverage customer insights for growth, key:
+              15b1f20c
+            label: Text
+            name: 15b1f20c
+            widget: string
+          - hint: "Original text: In the final stage of customer discovery, teams map customer insights to business goals or opportunities. They also begin building feedback loops into the product that deliver a continuous flow of insights for ongoing collection and analysis.\_This can lead to higher ROI on resources, higher feature engagement, lower CAC, greater retention, more positive future feedback, and , key: 50748bb"
+            label: Text
+            name: 50748bb
+            widget: text
+          - hint: 'Original text: high brand affinity, key: 2b3ef7df'
+            label: Text
+            name: 2b3ef7df
+            widget: string
+          - hint: 'Original text: . (See examples below.), key: 56eeead8'
+            label: Text
+            name: 56eeead8
+            widget: string
+          - hint: 'Original text: Chapter 4, key: -2daf3eff'
+            label: Text
+            name: '-2daf3eff'
+            widget: string
+          - hint: >-
+              Original text: Applying and benefitting from qualitative insights,
+              key: -6e1c16a
+            label: Text
+            name: '-6e1c16a'
+            widget: string
+          - hint: >-
+              Original text: Successful Product-Led Growth companies prove that
+              collecting and , key: -1dc71e3f
+            label: Text
+            name: '-1dc71e3f'
+            widget: string
+          - hint: 'Original text: leveraging customer insights, key: -6f65d611'
+            label: Text
+            name: '-6f65d611'
+            widget: string
+          - hint: "Original text:  can boost every area of operations.\_, key: 5d1bda26"
+            label: Text
+            name: 5d1bda26
+            widget: string
+          - hint: "Original text: Marketing: Improve positioning, copy, and content strategy\_\_, key: 71e22b65"
+            label: Text
+            name: 71e22b65
+            widget: string
+          - hint: "Original text: Understanding the customer’s journey, from initial trigger to raving success, is the easiest way to create an effective marketing strategy. From improved positioning to more compelling landing page copy to content strategies that convert, there’s no substitute for qualitative customer understanding.\_, key: 6f604588"
+            label: Text
+            name: 6f604588
+            widget: text
+          - hint: "Original text: Align positioning with product value\_, key: -16bd9988"
+            label: Text
+            name: '-16bd9988'
+            widget: string
+          - hint: "Original text: Trello could have positioned itself as a to-do list, notes-app, or organization system. It certainly shares features with each of those categories. But this isn’t how customers use the product, nor does it match how the product provides value.\_, key: 373e1c4b"
+            label: Text
+            name: 373e1c4b
+            widget: text
+          - hint: >-
+              Original text: “In Trello, we have two different kinds of users:
+              creators (people who add cards, move them around, write comments,
+              attach files, etc.) and observers (managers, executives and so
+              forth who view boards to follow progress, but aren’t creating as
+              often).” , key: -5f51b857
+            label: Text
+            name: '-5f51b857'
+            widget: text
+          - hint: "Original text: – Justin Gallagher, Head of Product Management at Trello\_, key: 46fcf787"
+            label: Text
+            name: 46fcf787
+            widget: string
+          - hint: >-
+              Original text: Instead, the team at Trello positions their product
+              as a collaborative tool. This positioning immediately sets the
+              expectation that Trello is something you use with colleagues. Not
+              only does this promote word-of-mouth virality as customers invite
+              collaborators, it aligns with how customers actually use the
+              product—a key reason Trello now has over 35,000,000 registered
+              users today., key: 52f0845a
+            label: Text
+            name: 52f0845a
+            widget: text
+          - hint: "Original text: Craft landing page copy that converts\_, key: -7445cab6"
+            label: Text
+            name: '-7445cab6'
+            widget: string
+          - hint: "Original text: Marketing teams often realize when their landing pages are dated. What they’re less equipped to do is update them in an effective manner.\_, key: 62365398"
+            label: Text
+            name: '62365398'
+            widget: text
+          - hint: >-
+              Original text: When Hubspot updated their website copy as part of
+              a redesign, they didn’t simply guess at which words to put on the
+              screen. Instead, they researched their customers to see what
+              language would resonate the most with , key: 1d8b8a9
+            label: Text
+            name: 1d8b8a9
+            widget: text
+          - hint: 'Original text: them, key: 364e1c'
+            label: Text
+            name: 364e1c
+            widget: string
+          - hint: "Original text: . With the help of several copywriters, Hubspot identified three important customer segments to talk with and prompted those segments to understand pain points, anxieties, desired outcomes, and priorities.\_, key: 550280f6"
+            label: Text
+            name: 550280f6
+            widget: text
+          - hint: "Original text: They then organized these insights and analyzed them to unearth recurring themes, frequently used words, and well-said soundbites. From there, Hubspot applied those patterns and insights to the homepage, product pages, and other parts of the website.\_, key: -4658d575"
+            label: Text
+            name: '-4658d575'
+            widget: text
+          - hint: "Original text: Within a few weeks of going live, a new flow doubled the site’s overall conversion rate. Hubspot also saw a 35% increase in the total volume of demo requests and a 27% increase in product signup’s post launch.\_, key: -1583e40d"
+            label: Text
+            name: '-1583e40d'
+            widget: text
+          - hint: "Original text: Solidify an effective content marketing strategy\_, key: -191c5211"
+            label: Text
+            name: '-191c5211'
+            widget: string
+          - hint: >-
+              Original text: ProfitWell research found that content CAC is about
+              , key: 403a4603
+            label: Text
+            name: 403a4603
+            widget: string
+          - hint: 'Original text: 15% less, key: 16dcbbd8'
+            label: Text
+            name: 16dcbbd8
+            widget: string
+          - hint: "Original text:  than paid CAC and that companies with a blog receive 67% more leads than companies without a blog. While it’s clear that content works, it’s less clear exactly how you make it work—especially if your market is anything but new.\_, key: 1167a84b"
+            label: Text
+            name: 1167a84b
+            widget: text
+          - hint: >-
+              Original text: Casper, the mattress startup with a $1B valuation,
+              used customer insights to figure out to make content work for
+              them. They identified that customers are most likely to consider a
+              new mattress between , key: -4141bdbf
+            label: Text
+            name: '-4141bdbf'
+            widget: text
+          - hint: 'Original text: 1-3 AM, key: 562f4755'
+            label: Text
+            name: 562f4755
+            widget: string
+          - hint: "Original text: . Through engaging with customers, they learned that a unique set of triggers (like getting a dog) prompted potential buyers to think seriously about better sleep. Based on this customer journey, Casper produced content for their 2am restless sleepers and targeted keywords such as “how to go to sleep earlier.”\_, key: -6211d87c"
+            label: Text
+            name: '-6211d87c'
+            widget: text
+          - hint: "Original text: Casper then retargeted readers through ads to move them further along the buying decision. Overall, knowing what their customer’s journey looked like enabled Casper to create a smart and effective content marketing strategy that set them above competitors in an already crowded marketplace.\_, key: 2a3b2884"
+            label: Text
+            name: 2a3b2884
+            widget: text
+          - hint: "Original text: Product: Remove roadblocks and prioritize value\_, key: -7396eb0c"
+            label: Text
+            name: '-7396eb0c'
+            widget: string
+          - hint: "Original text: When a product or product feature falls flat, it can be difficult to know what to improve. Customer insights help solve the mystery and illuminate pathways to creating more profitable user experiences.\_, key: -3793c2e8"
+            label: Text
+            name: '-3793c2e8'
+            widget: text
+          - hint: "Original text: Remove roadblocks and increase activation\_\_, key: 47e58e2d"
+            label: Text
+            name: 47e58e2d
+            widget: string
+          - hint: >-
+              Original text: Appcues was sitting at a 13% completion rate for
+              moving new users from sign up to the “, key: -2d448c58
+            label: Text
+            name: '-2d448c58'
+            widget: string
+          - hint: 'Original text: aha moment, key: -7af6203a'
+            label: Text
+            name: '-7af6203a'
+            widget: string
+          - hint: "Original text: ”—the moment when everything clicks and customers realize the value in a product. Thirteen percent was an okay rate, but Appcues knew they could improve.\_, key: 469e128f"
+            label: Text
+            name: 469e128f
+            widget: text
+          - hint: >-
+              Original text: When they closely monitored onboarding sessions,
+              they made a crucial discovery: most customers weren’t making it to
+              a critical value page. With the help of a simple redirect, Appcues
+              improved the value journey in onboarding, and , key: -1c38ac80
+            label: Text
+            name: '-1c38ac80'
+            widget: text
+          - hint: 'Original text: completion rates jumped to 32%., key: -7a882015'
+            label: Text
+            name: '-7a882015'
+            widget: string
+          - hint: 'Original text:  Director of Marketing, Ty Magnin, , key: 452776a'
+            label: Text
+            name: 452776a
+            widget: string
+          - hint: 'Original text: explains, key: -72ff25a4'
+            label: Text
+            name: '-72ff25a4'
+            widget: string
+          - hint: >-
+              Original text: , “That means 150% more new users signing up for
+              Appcues are finding their Aha Moment. Which means the world for
+              our activation rate.”, key: 3737d79a
+            label: Text
+            name: 3737d79a
+            widget: text
+          - hint: >-
+              Original text: Identify features correlated to success and
+              retention, key: -22f9ff41
+            label: Text
+            name: '-22f9ff41'
+            widget: string
+          - hint: >-
+              Original text: As a Product-Led Growth company, Typeform
+              prioritizes customer understanding. And thanks to quantitative and
+              qualitative , key: -4bb69fa
+            label: Text
+            name: '-4bb69fa'
+            widget: text
+          - hint: 'Original text: data collection, key: -1ec6772c'
+            label: Text
+            name: '-1ec6772c'
+            widget: string
+          - hint: "Original text: , they’ve been able to isolate a powerful leading indicator that correlates with higher retention. That indicator is the number of Typeforms a customer creates. This knowledge gives Typeform clarity around what to promote in education content and what to document in the Help Center.\_, key: 3a17b9c1"
+            label: Text
+            name: 3a17b9c1
+            widget: text
+          - hint: "Original text: Another way Typeform leverages customer understanding is through their quarterly “customer voice” report. The customer experience (CX) team generates this report by pulling data from support tickets, churn surveys, sales calls, and other touch points. In one instance, the CX team identified that the majority of Typeform’s churn is due to the fact that customers don’t know what to do next, once they’ve created their initial form. This insight drove creation of the “What’s your next Typeform” campaign, that promotes inspirational content to a specific customer segment at a critical point in their journey.\_, key: -64d7c036"
+            label: Text
+            name: '-64d7c036'
+            widget: text
+          - hint: >-
+              Original text: “Through our churn survey, we found that a lot of
+              our churn isn’t actually due to customers being unhappy, but
+              rather from people successfully completing a project and not
+              knowing what to do next. As a result, beyond the typical
+              ‘feature-based’ content one would expect in a help center, our
+              education team also creates content that is ‘job-to-be-done-based’
+              in order to inspire customers to do more with Typeform than they
+              had initially intended.” , key: -526c0c61
+            label: Text
+            name: '-526c0c61'
+            widget: text
+          - hint: >-
+              Original text: – David Apple, VP of Customer Success and Sales at
+              Typeform (former), key: -1c4f5b77
+            label: Text
+            name: '-1c4f5b77'
+            widget: string
+          - hint: >-
+              Original text: Sales: Improve onboarding and time-to-value, key:
+              -265222d5
+            label: Text
+            name: '-265222d5'
+            widget: string
+          - hint: "Original text: For many companies, the product experience is now integral to converting customers. This means that it’s more important than ever to attract the right customers and provide a frictionless way for them to experience the value of your product.\_, key: 37623ba2"
+            label: Text
+            name: 37623ba2
+            widget: text
+          - hint: >-
+              Original text: Reducing onboarding friction for higher MRR, key:
+              -c25076f
+            label: Text
+            name: '-c25076f'
+            widget: string
+          - hint: 'Original text: OpenView , key: -2ce67e2f'
+            label: Text
+            name: '-2ce67e2f'
+            widget: string
+          - hint: 'Original text: surveyed 500+ SaaS leaders, key: 1fa8d28d'
+            label: Text
+            name: 1fa8d28d
+            widget: string
+          - hint: "Original text:  and found that, for companies who offer a free version of their product, only 13% believe the product can explain itself to new users. Among companies without a free version, the results were even worse—only 5% felt the product can thoroughly explain itself to new users.\_, key: 50a93f78"
+            label: Text
+            name: 50a93f78
+            widget: text
+          - hint: >-
+              Original text: In most companies, there are enormous opportunities
+              to improve onboarding and a wide variety of associated metrics,
+              such as ARR and MRR., key: -32333df3
+            label: Text
+            name: '-32333df3'
+            widget: text
+          - hint: >-
+              Original text: For example, it’s standard practice to require an
+              email address activation before users can log into a product. And
+              that’s exactly what Christopher Gimmer, CEO of Snappa, was doing
+              before , key: 7023e0b0
+            label: Text
+            name: 7023e0b0
+            widget: text
+          - hint: 'Original text: he realized, key: 33350bf1'
+            label: Text
+            name: 33350bf1
+            widget: string
+          - hint: "Original text:  27% of signups never activated their email address. Meaning 27% of new users never even set foot in the product. When Gimmer removed the email activation step, he quickly saw a 20% boost in MRR.\_, key: -7bb3b927"
+            label: Text
+            name: '-7bb3b927'
+            widget: text
+          - hint: >-
+              Original text: “Experience has shown us that even a moderate level
+              of effort can deliver huge returns, and a strategic effort can
+              shift a business’ growth substantially. More than just a way to
+              get your customers started with your product, onboarding is a
+              powerful tool that helps you deliver value, provide support and
+              improve ease of use, all of which result in happier customers,
+              improved activation, increased retention and higher
+              profitability.” , key: -48f86833
+            label: Text
+            name: '-48f86833'
+            widget: text
+          - hint: 'Original text: – Jonathan Kim, Founder at Appcues, key: -74d3bb32'
+            label: Text
+            name: '-74d3bb32'
+            widget: string
+          - hint: >-
+              Original text: Want us to take customer research off your plate?,
+              key: 72b1a99c
+            label: Text
+            name: 72b1a99c
+            widget: string
+          - hint: >-
+              Original text: If you’re overwhelmed by where to start and how to
+              do it all, I can handle the research for you., key: 2e38b7c5
+            label: Text
+            name: 2e38b7c5
+            widget: text
+          - hint: >-
+              Original text: I’ve been doing customer discovery and Jobs to Be
+              Done interviews for more than five years and my battle-tested
+              system has you covered. From identifying who to speak with and
+              why, to organizing and sharing insights with your team, I’ll help
+              you identify the information you need so you can drive the growth
+              you want., key: -2d7cfbc0
+            label: Text
+            name: '-2d7cfbc0'
+            widget: text
+          - hint: 'Original text: Book a Strategy Call, key: 43704a55'
+            label: Text
+            name: 43704a55
+            widget: string
+          - hint: >-
+              Original text: Ready to get closer to your customers than ever
+              before?, key: 75cf2196
+            label: Text
+            name: 75cf2196
+            widget: string
+          - hint: >-
+              Original text: If you’re tired of throwing spaghetti at the wall,
+              want to feel confident in your strategic decisions, and are ready
+              to invest at least $6,500 in getting closer to your customers, we
+              can help you unlock the insights you need to grow., key: -2800b1e
+            label: Text
+            name: '-2800b1e'
+            widget: text
+          - hint: >-
+              Original text: We’ll brainstorm some ideas to identify your best
+              customers, improve messaging and prioritize your work:, key:
+              110fd73d
+            label: Text
+            name: 110fd73d
+            widget: text
+          - hint: >-
+              Original text: Take a look at your current customer discovery
+              efforts to see what is/isn't working., key: 2b77184c
+            label: Text
+            name: 2b77184c
+            widget: string
+          - hint: >-
+              Original text: Identify the best way to learn about your customers
+              based on your specific goals and target customers., key: -6623f508
+            label: Text
+            name: '-6623f508'
+            widget: text
+          - hint: >-
+              Original text: If we feel we're a good fit we’ll discuss how we’ll
+              get you deep customer insights and answers to your specific
+              challenges with our Discovery Sprint methodology., key: 232b356f
+            label: Text
+            name: 232b356f
+            widget: text
+          - hint: >-
+              Original text: Schedule a Free Customer Discovery Strategy
+              Session, key: -19abbcd1
+            label: Text
+            name: '-19abbcd1'
+            widget: string
+          - hint: >-
+              Original text: Fill out the form and book time to connect on the
+              next page., key: 776023aa
+            label: Text
+            name: 776023aa
+            widget: string
+          - hint: 'Original text: Name, key: 24eeab'
+            label: Text
+            name: 24eeab
+            widget: string
+          - hint: 'Original text: Email Address, key: -2b7010d0'
+            label: Text
+            name: '-2b7010d0'
+            widget: string
+          - hint: 'Original text: How did you hear about us?, key: -54a28412'
+            label: Text
+            name: '-54a28412'
+            widget: string
+          - hint: 'Original text: Company Name, key: 5b7f3c8e'
+            label: Text
+            name: 5b7f3c8e
+            widget: string
+          - hint: >-
+              Original text: Thank you! We'll send you an email shortly!, key:
+              284dc825
+            label: Text
+            name: 284dc825
+            widget: string
+          - hint: 'Original text: Long-term advisory, key: -175da784'
+            label: Text
+            name: '-175da784'
+            widget: string
+          - hint: 'Original text: About Long-term advisory, key: c89c40f'
+            label: Text
+            name: c89c40f
+            widget: string
+          - hint: >-
+              Original text: For founders who want to continue working with me
+              on a regular basis, I form formal advisor relationships. I can
+              help with anything from fundraising preparation, supporting you
+              through a fundraise, and other strategy + operations-related
+              challenges as an early stage founder/operator., key: -5507904e
+            label: Text
+            name: '-5507904e'
+            widget: text
+          - hint: >-
+              Original text: Short Loops Newsletter - by Stuart Balcombe, key:
+              -425a75dc
+            label: Text
+            name: '-425a75dc'
+            widget: string
+          - hint: >-
+              Original text: Here’s an example of what you’ll get >, key:
+              -db6398c
+            label: Text
+            name: '-db6398c'
+            widget: string
+          - hint: 'Original text: Heading, key: -6d5fea1e'
+            label: Text
+            name: '-6d5fea1e'
+            widget: string
+          - hint: 'Original text: Home, key: 2268ff'
+            label: Text
+            name: 2268ff
+            widget: string
+          - hint: 'Original text: Button Text, key: -8fb26a5'
+            label: Text
+            name: '-8fb26a5'
+            widget: string
+          - hint: 'Original text: Offerings, key: -149ceef3'
+            label: Text
+            name: '-149ceef3'
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: 'Original link: /articles, key: -10aecc94'
+            label: Link
+            name: '-10aecc94'
+            widget: string
+          - hint: 'Original link: /about, key: 55b8e8be'
+            label: Link
+            name: 55b8e8be
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: https://arrows.to, key: 59095770'
+            label: Link
+            name: '59095770'
+            widget: string
+          - hint: 'Original link: https://www.useprocket.com, key: 572e6a36'
+            label: Link
+            name: 572e6a36
+            widget: string
+          - hint: >-
+              Original link:
+              https://us16.campaign-archive.com/?u=48e1b3ba91c1e492cfb326e7a&id=ef002747bc,
+              key: -2f09699d
+            label: Link
+            name: '-2f09699d'
+            widget: string
+          - hint: 'Original link: https://twitter.com/stubalcombe, key: -6750fced'
+            label: Link
+            name: '-6750fced'
+            widget: string
+          - hint: >-
+              Original link: https://www.linkedin.com/in/stuartbalcombe/, key:
+              -34bfa589
+            label: Link
+            name: '-34bfa589'
+            widget: string
+          - hint: 'Original link: mailto:stuart@stuartbalcombe.com, key: 1740d702'
+            label: Link
+            name: 1740d702
+            widget: string
+          - hint: 'Original link: https://paymentlink.me/, key: 5debfafa'
+            label: Link
+            name: 5debfafa
+            widget: string
+          - hint: 'Original link: https://www.discoverysprints.com, key: -2dc04a3e'
+            label: Link
+            name: '-2dc04a3e'
+            widget: string
+          - hint: 'Original link: mailto:hello@useprocket.com, key: -7d6862da'
+            label: Link
+            name: '-7d6862da'
+            widget: string
+          - hint: >-
+              Original link: https://buy.stripe.com/aEUdUt7Oj14N8Ja002, key:
+              662152c6
+            label: Link
+            name: 662152c6
+            widget: string
+          - hint: >-
+              Original link: https://buy.stripe.com/eVa6s12tZeVDaRi003, key:
+              -79f9602e
+            label: Link
+            name: '-79f9602e'
+            widget: string
+          - hint: 'Original link: https://www.crossbeam.com, key: -12513804'
+            label: Link
+            name: '-12513804'
+            widget: string
+          - hint: 'Original link: https://savvycal.com/stuart/1b379ccc, key: 754c7415'
+            label: Link
+            name: 754c7415
+            widget: string
+          - hint: 'Original link: https://www.crossbeam.com/, key: -37d5c84d'
+            label: Link
+            name: '-37d5c84d'
+            widget: string
+          - hint: 'Original link: https://coldbru.digital/, key: 2f0b0873'
+            label: Link
+            name: 2f0b0873
+            widget: string
+          - hint: 'Original link: /playground/register, key: -41770018'
+            label: Link
+            name: '-41770018'
+            widget: string
+          - hint: 'Original link: https://google.com, key: -2d5347a5'
+            label: Link
+            name: '-2d5347a5'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.stuartbalcombe.com/a/why-product-led-growth-is-really-customer-led,
+              key: 43f1649e
+            label: Link
+            name: 43f1649e
+            widget: string
+          - hint: 'Original link: https://www.hubspot.com/, key: -d1df955'
+            label: Link
+            name: '-d1df955'
+            widget: string
+          - hint: 'Original link: https://www.coldbru.digital, key: -2ad0939b'
+            label: Link
+            name: '-2ad0939b'
+            widget: string
+          - hint: >-
+              Original link:
+              https://sales.rocks/blog/the-ultimate-guide-to-b2b-sales-triggers-and-how-to-track-them/,
+              key: -970d054
+            label: Link
+            name: '-970d054'
+            widget: string
+          - hint: 'Original link: #ch1, key: 116969'
+            label: Link
+            name: '116969'
+            widget: string
+          - hint: 'Original link: #ch2, key: 11696a'
+            label: Link
+            name: 11696a
+            widget: string
+          - hint: 'Original link: #ch3, key: 11696b'
+            label: Link
+            name: 11696b
+            widget: string
+          - hint: 'Original link: #ch4, key: 11696c'
+            label: Link
+            name: 11696c
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.capgemini.com/wp-content/uploads/2017/07/the_disconnected_customer-what_digital_customer_experience_leaders_teach_us_about_reconnecting_with_customers.pdf,
+              key: 9586514
+            label: Link
+            name: '9586514'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.profitwell.com/blog/customer-research-benchmarks, key:
+              -7332eebe
+            label: Link
+            name: '-7332eebe'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.userinterviews.com/blog/the-state-of-user-research-report-2020,
+              key: -1bbf0965
+            label: Link
+            name: '-1bbf0965'
+            widget: string
+          - hint: >-
+              Original link:
+              https://blog.hubspot.com/service/state-of-service-2019-customer-first,
+              key: -4f26c2ae
+            label: Link
+            name: '-4f26c2ae'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.mindtheproduct.com/product-research-rules-by-c-todd-lombardo/,
+              key: 6490705
+            label: Link
+            name: '6490705'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.profitwell.com/blog/how-is-cac-changing-over-time,
+              key: 1ee7b88b
+            label: Link
+            name: 1ee7b88b
+            widget: string
+          - hint: >-
+              Original link:
+              https://go.forrester.com/blogs/prioritize-customer-value-not-just-customer-experience/,
+              key: -46abfc07
+            label: Link
+            name: '-46abfc07'
+            widget: string
+          - hint: >-
+              Original link:
+              https://go.forrester.com/wp-content/uploads/2019/07/Forrester-Light-On-The-Horizon.pdf?utm_source=forrester_com&utm_medium=web&utm_campaign=cxindex19&utm_content=button&utm_source=forrester_pros&utm_medium=web&utm_campaign=cxindex19&utm_content=button,
+              key: -53a04bf8
+            label: Link
+            name: '-53a04bf8'
+            widget: string
+          - hint: >-
+              Original link:
+              https://blog.hubspot.com/service/help-me-help-you-by-helping-myself?utm_source=state-of-service-2019,
+              key: -7ee9bbdf
+            label: Link
+            name: '-7ee9bbdf'
+            widget: string
+          - hint: >-
+              Original link:
+              https://go.forrester.com/blogs/10-04-06-do_your_customers_want_to_telephone_you_for_service/,
+              key: -45a72579
+            label: Link
+            name: '-45a72579'
+            widget: string
+          - hint: >-
+              Original link:
+              https://boxonline.s3.amazonaws.com/SM/Forrester_Age_of_Customer_Report.pdf,
+              key: -29d848f7
+            label: Link
+            name: '-29d848f7'
+            widget: string
+          - hint: >-
+              Original link:
+              https://openviewpartners.com/product-led-growth-index/, key:
+              202852f0
+            label: Link
+            name: 202852f0
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.slideshare.net/hiten1/measuring-understanding-productmarket-fit-qualitatively/29-Youll_create_the_best_product,
+              key: -30f05443
+            label: Link
+            name: '-30f05443'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.forrester.com/staticassets/marketing/Forrester_Operating_Model_For_Customer_Obsession_125961.pdf,
+              key: -2454ceed
+            label: Link
+            name: '-2454ceed'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.profitwell.com/blog/does-content-marketing-pay-off,
+              key: -64673b9c
+            label: Link
+            name: '-64673b9c'
+            widget: string
+          - hint: >-
+              Original link:
+              https://katelynbourgoin.com/marketing-buying-triggers-to-outsmart/,
+              key: -363ca7fc
+            label: Link
+            name: '-363ca7fc'
+            widget: string
+          - hint: >-
+              Original link: https://www.appcues.com/blog/aha-moment-guide, key:
+              -67df09f2
+            label: Link
+            name: '-67df09f2'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.appcues.com/blog/improving-customer-experience-with-fullstory,
+              key: -1b933b09
+            label: Link
+            name: '-1b933b09'
+            widget: string
+          - hint: >-
+              Original link:
+              https://cdn2.hubspot.net/hubfs/366266/BUILD_Ebook.pdf, key:
+              -647a7cff
+            label: Link
+            name: '-647a7cff'
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.amazon.com/Product-Led-Growth-Build-Product-Itself-ebook/dp/B07P6288ZF,
+              key: -bc860d4
+            label: Link
+            name: '-bc860d4'
+            widget: string
+          - hint: >-
+              Original link:
+              https://web.archive.org/web/20210722010303/https://www.stuartbalcombe.com/articles,
+              key: -4586405c
+            label: Link
+            name: '-4586405c'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: 37bc3b8a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i89936e4
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: icadd6da
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 411cbbe9
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-f9ea96d'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1c078178
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '0'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4658e92f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2b1beb3c'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 179aa8bc
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-5ac88dae'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6e5a394d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5ecd186a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-563440f4'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2f588820'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1baa048b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5b483dce
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-30b8f2fa'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4b0645f6
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4c6a6cae'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-102e2b25'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2b6d828
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1d4de7e6'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2a6707f6
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-25549184'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-18606a22'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 794de16a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 562a22a4
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4fb36dae
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-782735a9'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-178286e8'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-148e7dff'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4ca7b363'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-73dc4500'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 63d265cc
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: d93d99d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-343e65dc'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-25c7f4b7'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-571b43ab'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: bcbb413
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 48d36ba4
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-69b02dd3'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3264323a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-378874f5'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 1197e5c9
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 63af2f50
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 317f733b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
